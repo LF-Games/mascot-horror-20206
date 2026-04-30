@@ -43,6 +43,7 @@ func _do_generate(sprites: Array[Sprite2D]):
 		last_generated_collision_shape = collision_shape
 	EditorInterface.get_selection().clear()
 	EditorInterface.get_selection().add_node(last_generated_collision_shape)
+	EditorInterface.edit_node(last_generated_collision_shape)
 	
 
 func _undo_generate(sprites: Array[Sprite2D]):
