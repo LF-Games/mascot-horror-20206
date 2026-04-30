@@ -1461,7 +1461,7 @@ rotation = 0.5599635
 texture = ExtResource("69_epkg2")
 
 [node name="Player" parent="." unique_id=156382088 node_paths=PackedStringArray("battery", "recharge_bar") instance=ExtResource("2_16ei5")]
-position = Vector2(902, 1317)
+position = Vector2(21, 573)
 battery = NodePath("Battery")
 recharge_bar = NodePath("../CanvasLayer/GameplayUI/RechargeBar")
 
