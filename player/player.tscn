@@ -90,6 +90,12 @@ shape = SubResource("CircleShape2D_qjkh3")
 [node name="Battery" type="Node" parent="." unique_id=737240493 node_paths=PackedStringArray("point_light")]
 script = ExtResource("5_qjkh3")
 point_light = NodePath("../MainLight")
+duration_modifier1 = 5
+duration_modifier2 = 3
+duration_modifier3 = 2
+light_scale_lv2 = 1.3
+light_scale_lv1 = 0.9
+light_scale_lv0 = 0.65
 
 [node name="LowBatteryAudio" type="AudioStreamPlayer" parent="Battery" unique_id=906385151 node_paths=PackedStringArray("battery", "timer")]
 stream = ExtResource("6_boad6")

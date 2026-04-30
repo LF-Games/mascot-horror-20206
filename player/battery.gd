@@ -9,10 +9,14 @@ extends Node
 var max_battery_count := 3 # bateria máxima
 var current_level := 2
 var current_level_duration := 100.0
-var light_scale_lv2 := 1.0
-var light_scale_lv1 := 0.75
-var light_scale_lv0 := 0.5
+@export var light_scale_lv2 := 1.0
+@export var light_scale_lv1 := 0.75
+@export var light_scale_lv0 := 0.5
 var tween: Tween
+
+
+func _ready():
+	point_light.texture_scale = light_scale_lv2
 
 
 func _process(delta: float) -> void:
@@ -32,7 +36,7 @@ func _set_current_level():
 	if current_level_duration < 0:
 		current_level -= 1 # diminui o nivel
 		
-		if current_level < 0:# checa se a luz acabou
+		if current_level < 0: # checa se a luz acabou
 			GameManager.game_over()
 		
 		current_level_duration = 100.0 # reinicia o timer
