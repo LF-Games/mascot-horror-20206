@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmeh60tsbkveh"
-path="res://.godot/imported/Cadeira.png-e93ddba411103e489dd9a0e79aea755a.ctex"
+uid="uid://ctraa6ql42f6d"
+path="res://.godot/imported/caixa aberta 1.png-7f20f07d424552b43e15f54b9ff2ac11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maps/house_map/kitchen/sprites/Cadeira.png"
-dest_files=["res://.godot/imported/Cadeira.png-e93ddba411103e489dd9a0e79aea755a.ctex"]
+source_file="res://maps/house_map/empty_room/caixa aberta 1.png"
+dest_files=["res://.godot/imported/caixa aberta 1.png-7f20f07d424552b43e15f54b9ff2ac11.ctex"]
 
 [params]
 
