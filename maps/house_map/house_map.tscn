@@ -545,6 +545,24 @@ position = Vector2(164, -389)
 scale = Vector2(0.41484123, 0.41484123)
 texture = ExtResource("18_u4u11")
 
+[node name="EmptyRoom" type="Node2D" parent="." unique_id=1613998592]
+position = Vector2(-752, 659)
+
+[node name="GrandparentsRoom" type="Node2D" parent="." unique_id=716823442]
+position = Vector2(8, -471)
+
+[node name="SecretRoom" type="Node2D" parent="." unique_id=1503970292]
+position = Vector2(-550, -821)
+
+[node name="LivingRoom" type="Node2D" parent="." unique_id=618345019]
+position = Vector2(841, -173)
+
+[node name="Kitchen" type="Node2D" parent="." unique_id=1054182255]
+position = Vector2(659, -1768)
+
+[node name="Entrance" type="Node2D" parent="." unique_id=22930848]
+position = Vector2(864, 1430)
+
 [node name="Player" parent="." unique_id=156382088 node_paths=PackedStringArray("battery", "recharge_bar") instance=ExtResource("2_16ei5")]
 position = Vector2(27, 577)
 battery = NodePath("Battery")
