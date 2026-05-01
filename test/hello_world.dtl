@@ -1,2 +1,2 @@
-Hello world
+Hello world #id:4a
 do GlobalState.add_inventory_item("TEST_ITEM")

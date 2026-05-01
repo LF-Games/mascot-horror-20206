@@ -27,14 +27,32 @@ GameManager="*uid://ony54a1c5afg"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"Boy_char": "res://dialogic/characters/boy/Boy_char.dch",
+"character test": "res://dialogic/characters/character test.dch",
+"eggwatch_char": "res://dialogic/characters/eggwatch/eggwatch_char.dch",
+"grandma_char": "res://dialogic/characters/grandma/grandma_char.dch",
+"grandpa_char": "res://dialogic/characters/grandpa/grandpa_char.dch"
+}
 directories/dtl_directory={
+"Endquest_tml": "res://dialogic/Endquest_tml.dtl",
+"Lastitem_tml": "res://dialogic/Lastitem_tml.dtl",
+"badend_tml": "res://dialogic/badend_tml.dtl",
+"bedroomstart_tml": "res://dialogic/bedroomstart_tml.dtl",
+"firsquest_tml": "res://dialogic/firsquest_tml.dtl",
+"goodend_tml": "res://dialogic/goodend_tml.dtl",
+"grandparents_tml": "res://dialogic/grandparents_tml.dtl",
 "hello_world": "res://test/hello_world.dtl",
-"remove_item_test": "res://test/remove_item_test.dtl"
+"introduction_tml": "res://dialogic/introduction_tml.dtl",
+"remove_item_test": "res://test/remove_item_test.dtl",
+"secondquest_tml": "res://dialogic/secondquest_tml.dtl",
+"timeline test": "res://dialogic/timeline test.dtl"
 }
 layout/style_directory={
 "": "res://dialogic/custom_style.tres",
-"custom_style": "res://dialogic/custom_style.tres"
+"custom_style": "res://dialogic/custom_style.tres",
+"style_base": "res://dialogic/style_base.tres",
+"style_eggwatch": "res://dialogic/style_eggwatch.tres"
 }
 variables={}
 extensions_folder="res://addons/dialogic_additions"
@@ -71,8 +89,19 @@ audio/channel_defaults={
 }
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://dialogic/custom_style.tres"]
-layout/default_style="res://dialogic/custom_style.tres"
+layout/style_list=["res://dialogic/custom_style.tres", "res://dialogic/style_base.tres", "res://dialogic/style_eggwatch.tres"]
+layout/default_style="res://dialogic/style_base.tres"
+translation/enabled=true
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder="res://dialogic/characters/translation"
+translation/save_mode=0
+translation/add_separator=false
+translation/intern/save_mode=0
+translation/intern/file_mode=1
+translation/intern/translation_folder="res://dialogic/characters/translation"
+translation/id_counter=81
+translation/locales=[]
 
 [display]
 
@@ -151,6 +180,11 @@ death_test={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194334,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://dialogic/characters/translation/dialogic_badend_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_bedroomstart_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_character_translations.en.translation", "res://dialogic/characters/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_firsquest_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_goodend_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_grandparents_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_hello_world_translation.en.translation", "res://dialogic/characters/translation/dialogic_introduction_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_Lastitem_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_remove_item_test_translation.en.translation", "res://dialogic/characters/translation/dialogic_secondquest_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_timeline test_translation.en.translation")
+locale/test="pt_BR"
 
 [navigation]
 

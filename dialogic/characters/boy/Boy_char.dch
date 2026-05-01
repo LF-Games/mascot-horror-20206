@@ -1,0 +1,49 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "4d",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "style_base",
+"suffix": ""
+},
+&"default_portrait": "boybase",
+&"description": "",
+&"display_name": "Boy",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"boybase": {
+"export_overrides": {
+"image": "\"res://dialogic/characters/boy/boybase.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"boyhappy": {
+"export_overrides": {
+"image": "\"res://dialogic/characters/boy/boyhappy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"boyscared": {
+"export_overrides": {
+"image": "\"res://dialogic/characters/boy/boyscared.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 0.8
+}
