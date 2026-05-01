@@ -1,4 +1,4 @@
-Hello world #id:59
+Hello world
 label test
 Hello world
 do GlobalState.add_inventory_item("TEST_ITEM")
