@@ -12,7 +12,7 @@ var _can_move := true
 var _can_interact := true
 var time_pressed := 0.0
 var recharge_completed := false
-@onready var _sprite := $Sprite as Sprite2D
+@onready var _sprite := $Sprite as AnimatedSprite2D
 @onready var _interaction_detector := $InteractionDetector as InteractionDetector
 
 
@@ -34,6 +34,11 @@ func _physics_process(_delta):
 	elif direction.x > 0 and _flipped:
 		_sprite.transform.x *= -1
 		_flipped = false
+	
+	if direction.length_squared() == 0:
+		_sprite.play("idle")
+	else:
+		_sprite.play("walk")
 
 	move_and_slide()
 
