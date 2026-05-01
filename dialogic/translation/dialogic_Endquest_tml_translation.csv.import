@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://hvq38weqfvki"
+
+[deps]
+
+files=["res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation"]
+
+source_file="res://dialogic/translation/dialogic_Endquest_tml_translation.csv"
+dest_files=["res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
