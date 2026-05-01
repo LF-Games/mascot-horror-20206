@@ -1,0 +1,6 @@
+if GlobalState.get_flag(GRANDPARENTSBEDROOM_BATTERY_GET) == false:
+	I hope they don’t catch me doing this.
+	do GlobalState.set_flag("GRANDPARENTSBEDROOM_BATTERY_GET")
+	jump hello_world/test
+else:
+	If they find out, I'm done...

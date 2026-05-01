@@ -12,7 +12,8 @@ var _can_move := true
 var _can_interact := true
 var time_pressed := 0.0
 var recharge_completed := false
-@onready var _sprite := $Sprite as Sprite2D
+@export var _sprite: AnimatedSprite2D
+@export var _silhouette_sprite: AnimatedSprite2D
 @onready var _interaction_detector := $InteractionDetector as InteractionDetector
 
 
@@ -34,6 +35,13 @@ func _physics_process(_delta):
 	elif direction.x > 0 and _flipped:
 		_sprite.transform.x *= -1
 		_flipped = false
+	
+	if direction.length_squared() == 0:
+		_silhouette_sprite.play("idle")
+		_sprite.play("idle")
+	else:
+		_silhouette_sprite.play("walk")
+		_sprite.play("walk")
 
 	move_and_slide()
 
@@ -42,7 +50,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("interact") and _can_interact:
 		_interaction_detector.try_interaction()
 	
-	if Input.is_action_pressed("recharge_battery") and !recharge_completed: # and battery_count > 0:
+	if Input.is_action_pressed("recharge_battery") and !recharge_completed and GlobalState.has_inventory_item("BATTERY"):
 		if !recharge_audio.playing:
 			recharge_audio.play()
 		
@@ -59,6 +67,7 @@ func _process(_delta):
 			battery.current_level_duration = 100
 			time_pressed = 0
 			recharge_completed = true
+			GlobalState.remove_intentory_item("BATTERY")
 	else:
 		time_pressed = 0
 		recharge_bar.visible = false # pode ser colocado no control depois

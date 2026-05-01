@@ -1,0 +1,2 @@
+You got a battery!
+do GlobalState.add_inventory_item("BATTERY")

@@ -1,0 +1,6 @@
+if GlobalState.get_flag("REMOTE_BATTERY_GET") == false:
+	It keeps falling over and the battery keeps dropping out; I hope it’s still here.
+	do GlobalState.set_flag("REMOTE_BATTERY_GET")
+	jump hello_world/test
+else:
+	I need to put the battery back later, or Grandpa will get mad.

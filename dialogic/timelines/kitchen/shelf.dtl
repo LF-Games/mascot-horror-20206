@@ -1,0 +1,15 @@
+if GlobalState.get_flag("CANDLES_GET") == false:
+	if GlobalState.has_inventory_item("LADDER"):
+		Got it — now I just need to take it to my room.
+		do GlobalState.remove_intentory_item("LADDER")
+		You found candles.
+		do GlobalState.add_inventory_item("CANDLES")
+		do GlobalState.set_flag("CANDLES_GET")
+	else:
+		I can see the candles from my last birthday up there, but I can’t reach them.
+if GlobalState.get_flag("SHELF_BATTERY_GET") == false:
+	What a lucky find — a brand-new set of batteries.
+	jump hello_world/test
+	do GlobalState.set_flag("SHELF_BATTERY_GET")
+else:
+	There’s nothing else useful here

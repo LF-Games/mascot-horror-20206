@@ -1,0 +1,5 @@
+Excuse me, Miss Flower, but I need your color
+if GlobalState.get_flag("ENTRANCE_FLOWER_ITEM_GET") == false:
+	You got flower item
+	do GlobalState.add_inventory_item("FLOWER_ITEM")
+	do GlobalState.set_flag("ENTRANCE_FLOWER_ITEM_GET")

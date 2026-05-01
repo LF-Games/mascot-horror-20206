@@ -1,0 +1,6 @@
+if GlobalState.get_flag("REMOTE_BATTERY_GET") == false:
+	Grandpa used to listen to that all the time… I remember that sometimes he’d change the batteries in that radio.
+	do GlobalState.set_flag("REMOTE_BATTERY_GET")
+	jump hello_world/test
+else:
+	They won't even notice...

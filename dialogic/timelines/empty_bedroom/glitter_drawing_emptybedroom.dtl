@@ -1,0 +1,4 @@
+I loved drawing with Mom and Dad; they used to say that one day I’d shine just like glitter — I just had to try…
+if GlobalState.get_flag("EMPTY_BEDROOM_GLITTER_GET") == false:
+	You got glitter.
+	do GlobalState.set_flag("EMPTY_BEDROOM_GLITTER_GET")

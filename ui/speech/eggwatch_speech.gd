@@ -55,7 +55,7 @@ func _reset_cooldown():
 
 func _speak():
 	show()
-	text = speech_lines.pick_random().to_upper()
+	text = "[shake rate=20.0 level=5 connected=1]%s[/shake]" % speech_lines.pick_random().to_upper()
 	visible_characters = 0
 	_tracked_characters = 0
 	_speaking = true

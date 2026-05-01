@@ -1,0 +1,5 @@
+Sorry, Ms. Flower, but I'm going to need this
+if GlobalState.get_flag("GRANDPARENTSBEDROOM_FLOWER_ITEM_GET") == false:
+	You got flower item
+	do GlobalState.add_inventory_item("FLOWER ITEM")
+	do GlobalState.set_flag("GRANDPARENTSBEDROOM_FLOWER_ITEM_GET")
