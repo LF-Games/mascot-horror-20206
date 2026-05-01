@@ -12,8 +12,8 @@ var _can_move := true
 var _can_interact := true
 var time_pressed := 0.0
 var recharge_completed := false
-@onready var _sprite := $Sprite as AnimatedSprite2D
-@onready var _silhouette_sprite := $Sprite/Silhouette as AnimatedSprite2D
+@export var _sprite: AnimatedSprite2D
+@export var _silhouette_sprite: AnimatedSprite2D
 @onready var _interaction_detector := $InteractionDetector as InteractionDetector
 
 
