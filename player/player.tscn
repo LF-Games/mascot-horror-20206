@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cra1o42ydg1fi"]
 
 [ext_resource type="Script" uid="uid://dbp4k7ly8a0qv" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Shader" uid="uid://bo1qkomtqc0xd" path="res://player/player_silhouette.gdshader" id="2_2ieo8"]
 [ext_resource type="Texture2D" uid="uid://b1fmpigo8tbpi" path="res://mockup/mockup_player.png" id="2_g1dw6"]
-[ext_resource type="Texture2D" uid="uid://bi7yohiyug4sw" path="res://player/sprites/player_idle.png" id="2_hg6s5"]
-[ext_resource type="Texture2D" uid="uid://dhadoa1gwfkf" path="res://player/sprites/player_walk.png" id="3_8t03j"]
+[ext_resource type="SpriteFrames" uid="uid://dx13s8vg0sbcs" path="res://player/player_sprite_frames.tres" id="2_hg6s5"]
 [ext_resource type="Script" uid="uid://b5jr5qc0lxppc" path="res://util/runtime_enabler.gd" id="3_g1dw6"]
 [ext_resource type="Script" uid="uid://cc4fxn06eev2b" path="res://player/interaction_detector.gd" id="4_yw30f"]
 [ext_resource type="Script" uid="uid://inme7x5jjr38" path="res://player/battery.gd" id="5_qjkh3"]
@@ -11,77 +11,9 @@
 [ext_resource type="Script" uid="uid://du8qu2wuirakh" path="res://player/low_battery_audio.gd" id="7_rgyib"]
 [ext_resource type="AudioStream" uid="uid://cwcj3xvuln0hc" path="res://player/battery_recharge.wav" id="8_rgyib"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ieo8"]
-atlas = ExtResource("3_8t03j")
-region = Rect2(0, 0, 100, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ebec5"]
-atlas = ExtResource("3_8t03j")
-region = Rect2(100, 0, 100, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yllr7"]
-atlas = ExtResource("3_8t03j")
-region = Rect2(200, 0, 100, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kb6p2"]
-atlas = ExtResource("3_8t03j")
-region = Rect2(300, 0, 100, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wodsf"]
-atlas = ExtResource("3_8t03j")
-region = Rect2(400, 0, 100, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_32hag"]
-atlas = ExtResource("3_8t03j")
-region = Rect2(500, 0, 100, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tqiix"]
-atlas = ExtResource("3_8t03j")
-region = Rect2(600, 0, 100, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7oew"]
-atlas = ExtResource("3_8t03j")
-region = Rect2(700, 0, 100, 110)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8t03j"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_hg6s5")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2ieo8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ebec5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yllr7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kb6p2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wodsf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_32hag")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tqiix")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e7oew")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 12.0
-}]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8t03j"]
+shader = ExtResource("2_2ieo8")
+shader_parameter/silhouette_color = Color(0, 0, 0, 0.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1dw6"]
 radius = 8.0
@@ -119,12 +51,19 @@ recharge_audio = NodePath("ReloadAudio")
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=291888030]
 light_mask = 4
 position = Vector2(-1, -49)
-sprite_frames = SubResource("SpriteFrames_8t03j")
+sprite_frames = ExtResource("2_hg6s5")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.6063588
+frame_progress = 0.0033779046
+
+[node name="Silhouette" type="AnimatedSprite2D" parent="Sprite" unique_id=348961671]
+z_index = 100
+material = SubResource("ShaderMaterial_8t03j")
+sprite_frames = ExtResource("2_hg6s5")
+animation = &"idle"
 
 [node name="PointLight2D" type="PointLight2D" parent="Sprite" unique_id=1546439123]
+visible = false
 color = Color(0.8992584, 0.8992584, 0.8992584, 1)
 energy = 0.67
 blend_mode = 2
