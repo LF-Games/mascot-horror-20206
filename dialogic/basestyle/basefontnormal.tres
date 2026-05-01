@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://bw06quwny0yb5"]
+
+[ext_resource type="FontFile" uid="uid://dh8yr3sl1ka7u" path="res://Junction-regular.otf" id="1_yfw45"]
+
+[resource]
+base_font = ExtResource("1_yfw45")
+spacing_top = 6
+spacing_bottom = 6

@@ -27,11 +27,21 @@ GameManager="*uid://ony54a1c5afg"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"Boy_char": "res://dialogic/characters/boy/Boy_char.dch",
+"character test": "res://dialogic/characters/character test.dch",
+"eggwatch_char": "res://dialogic/characters/eggwatch/eggwatch_char.dch",
+"grandma_char": "res://dialogic/characters/grandma/grandma_char.dch",
+"grandpa_char": "res://dialogic/characters/grandpa/grandpa_char.dch"
+}
 directories/dtl_directory={
+"Endquest_tml": "res://dialogic/timelinescutscenes/Endquest_tml.dtl",
+"Lastitem_tml": "res://dialogic/timelinescutscenes/Lastitem_tml.dtl",
+"badend_tml": "res://dialogic/timelinescutscenes/badend_tml.dtl",
 "bathroom_door": "res://dialogic/timelines/bathroom/bathroom_door.dtl",
 "battery_collect": "res://dialogic/timelines/battery_collect.dtl",
 "bed_car": "res://dialogic/timelines/child_bedroom/bed_car.dtl",
+"bedroomstart_tml": "res://dialogic/timelinescutscenes/bedroomstart_tml.dtl",
 "bookcase": "res://dialogic/timelines/child_bedroom/bookcase.dtl",
 "boxes": "res://dialogic/timelines/empty_bedroom/boxes.dtl",
 "cabinet": "res://dialogic/timelines/kitchen/cabinet.dtl",
@@ -47,6 +57,7 @@ directories/dtl_directory={
 "fake_drawing3": "res://dialogic/timelines/fake_drawings/fake_drawing3.dtl",
 "fake_fruit_table": "res://dialogic/timelines/dinner_room/fake_fruit_table.dtl",
 "family_picture": "res://dialogic/timelines/dinner_room/family_picture.dtl",
+"firsquest_tml": "res://dialogic/timelinescutscenes/firsquest_tml.dtl",
 "food_pot": "res://dialogic/timelines/entrance/food_pot.dtl",
 "freezer": "res://dialogic/timelines/kitchen/freezer.dtl",
 "fridge": "res://dialogic/timelines/kitchen/fridge.dtl",
@@ -55,10 +66,13 @@ directories/dtl_directory={
 "glitter_drawing_dinnerroom": "res://dialogic/timelines/dinner_room/glitter_drawing_dinnerroom.dtl",
 "glitter_drawing_emptybedroom": "res://dialogic/timelines/empty_bedroom/glitter_drawing_emptybedroom.dtl",
 "glitter_drawing_hallway": "res://dialogic/timelines/hallway/glitter_drawing_hallway.dtl",
+"goodend_tml": "res://dialogic/timelinescutscenes/goodend_tml.dtl",
 "grandchildren_picture": "res://dialogic/timelines/grandparents_bedroom/grandchildren_picture.dtl",
 "grandparents_picture": "res://dialogic/timelines/dinner_room/grandparents_picture.dtl",
+"grandparents_tml": "res://dialogic/timelinescutscenes/grandparents_tml.dtl",
 "hanging_keys": "res://dialogic/timelines/entrance/hanging_keys.dtl",
 "hello_world": "res://test/hello_world.dtl",
+"introduction_tml": "res://dialogic/timelinescutscenes/introduction_tml.dtl",
 "ladder": "res://dialogic/timelines/empty_bedroom/ladder.dtl",
 "landline": "res://dialogic/timelines/dinner_room/landline.dtl",
 "old_boombox": "res://dialogic/timelines/entrance/old_boombox.dtl",
@@ -72,10 +86,12 @@ directories/dtl_directory={
 "remote_controller": "res://dialogic/timelines/dinner_room/remote_controller.dtl",
 "remove_item_test": "res://test/remove_item_test.dtl",
 "saints_shrine": "res://dialogic/timelines/dinner_room/saints_shrine.dtl",
+"secondquest_tml": "res://dialogic/timelinescutscenes/secondquest_tml.dtl",
 "secret_door": "res://dialogic/timelines/grandparents_bedroom/secret_door.dtl",
 "shelf": "res://dialogic/timelines/kitchen/shelf.dtl",
 "snailcat_plush": "res://dialogic/timelines/child_bedroom/snailcat_plush.dtl",
 "television": "res://dialogic/timelines/dinner_room/television.dtl",
+"timeline test": "res://dialogic/timelinescutscenes/timeline test.dtl",
 "toy_chest": "res://dialogic/timelines/child_bedroom/toy_chest.dtl",
 "toy_rat": "res://dialogic/timelines/entrance/toy_rat.dtl",
 "toy_robot": "res://dialogic/timelines/child_bedroom/toy_robot.dtl",
@@ -84,8 +100,9 @@ directories/dtl_directory={
 "window_kitchen": "res://dialogic/timelines/kitchen/window_kitchen.dtl"
 }
 layout/style_directory={
-"": "res://dialogic/custom_style.tres",
-"custom_style": "res://dialogic/custom_style.tres"
+"custom_style": "res://dialogic/custom_style.tres",
+"style_base": "res://dialogic/basestyle/style_base.tres",
+"style_eggwatch": "res://dialogic/eggwatchstyle/style_eggwatch.tres"
 }
 variables={}
 extensions_folder="res://addons/dialogic_additions"
@@ -122,8 +139,21 @@ audio/channel_defaults={
 }
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://dialogic/custom_style.tres"]
-layout/default_style="res://dialogic/custom_style.tres"
+layout/style_list=["res://dialogic/custom_style.tres", "res://dialogic/basestyle/style_base.tres", "res://dialogic/eggwatchstyle/style_eggwatch.tres"]
+layout/default_style="res://dialogic/style_base.tres"
+translation/enabled=true
+translation/original_locale=""
+translation/file_mode=1
+translation/translation_folder="res://dialogic/translation"
+translation/save_mode=0
+translation/add_separator=false
+translation/id_counter=96
+translation/locales=[]
+animations/join_default="Fade In"
+animations/leave_default="Fade Out"
+translation/intern/save_mode=0
+translation/intern/file_mode=1
+translation/intern/translation_folder="res://dialogic/translation"
 
 [display]
 
@@ -206,6 +236,11 @@ death_test={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194334,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://dialogic/characters/translation/dialogic_badend_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_bedroomstart_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_character_translations.en.translation", "res://dialogic/characters/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_firsquest_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_goodend_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_grandparents_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_hello_world_translation.en.translation", "res://dialogic/characters/translation/dialogic_introduction_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_Lastitem_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_remove_item_test_translation.en.translation", "res://dialogic/characters/translation/dialogic_secondquest_tml_translation.en.translation", "res://dialogic/characters/translation/dialogic_timeline test_translation.en.translation", "res://dialogic/translation/dialogic_badend_tml_translation.en.translation", "res://dialogic/translation/dialogic_bedroomstart_tml_translation.en.translation", "res://dialogic/translation/dialogic_character_translations.en.translation", "res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_firsquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_goodend_tml_translation.en.translation", "res://dialogic/translation/dialogic_grandparents_tml_translation.en.translation", "res://dialogic/translation/dialogic_hello_world_translation.en.translation", "res://dialogic/translation/dialogic_introduction_tml_translation.en.translation", "res://dialogic/translation/dialogic_Lastitem_tml_translation.en.translation", "res://dialogic/translation/dialogic_remove_item_test_translation.en.translation", "res://dialogic/translation/dialogic_secondquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_timeline test_translation.en.translation", "res://dialogic/translation/dialogic_badend_tml_translation.pt_BR.translation", "res://dialogic/translation/dialogic_bedroomstart_tml_translation.pt_BR.translation", "res://dialogic/translation/dialogic_character_translations.pt_BR.translation", "res://dialogic/translation/dialogic_firsquest_tml_translation.pt_BR.translation")
+locale/test="pt_BR"
 
 [navigation]
 

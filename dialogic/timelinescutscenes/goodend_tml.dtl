@@ -1,0 +1,14 @@
+Boy_char: *The demon breaks down the door and you begin to recite the incantation.* #id:38
+Boy_char: *The room's temperature rises, your body becomes soaked in sweat as you continue reading.* #id:39
+Boy_char: *The demon lets out a loud scream, leaps towards you, entering the circle, and a bright light blinds you once more.* #id:3a
+
+Boy_char: Do you really think empty words can hold me back??? I AM AZAZEL, PRINCE OF HELL, you are NOTHING at my feet. #id:3b
+
+Boy_char: *While he speaks, you can perceive your grandparents repeating the same words as you from inside the Eggwatch.* #id:3c
+Boy_char: *Even while crying, you don't stop reading.* #id:3d
+join grandma_char (grandmabase) right
+join grandpa_char (grandpabase) rightmost
+
+Boy_char: *Your grandparents are back, the demon has vanished, and you are greeted with a warm embrace* #id:3e
+Boy_char: *As if you had woken from a terrible nightmare.* #id:3f
+Boy_char: Later that day, you discover that your family comes from a lineage of exorcists. #id:40
