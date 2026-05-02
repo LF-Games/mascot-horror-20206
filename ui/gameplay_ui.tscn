@@ -5,6 +5,9 @@
 [ext_resource type="Script" uid="uid://dwtfo8h87ttty" path="res://ui/speech/eggwatch_speech.gd" id="3_7e4rd"]
 [ext_resource type="AudioStream" uid="uid://cohfta0h04k68" path="res://ui/speech/eggwatch_voice.mp3" id="4_w5py3"]
 [ext_resource type="Texture2D" uid="uid://djvrt732u1cj5" path="res://ui/speech/minicaixa_dialogo_tamagochi.png" id="5_w5py3"]
+[ext_resource type="FontFile" uid="uid://dh8yr3sl1ka7u" path="res://Junction-regular.otf" id="6_hp7tp"]
+[ext_resource type="FontFile" uid="uid://bsx6t4q8efypk" path="res://Junction-bold.otf" id="7_bs7q0"]
+[ext_resource type="Script" uid="uid://b0qtyx8ycedsi" path="res://ui/objective_display_label.gd" id="8_yvhg4"]
 
 [sub_resource type="Animation" id="Animation_hp7tp"]
 length = 0.001
@@ -111,6 +114,10 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5py3"]
 bg_color = Color(0.15487596, 0.154876, 0.1548759, 0.3764706)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bs7q0"]
+font = ExtResource("6_hp7tp")
+font_size = 30
 
 [node name="GameplayUI" type="Control" unique_id=1269869551 node_paths=PackedStringArray("bar")]
 layout_mode = 3
@@ -275,3 +282,63 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_w5py3")
 text = "E"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Objective Display" type="VBoxContainer" parent="." unique_id=516838634]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 640.0
+offset_bottom = 121.0
+
+[node name="ToDoLabel" type="Label" parent="Objective Display" unique_id=1560609164]
+layout_mode = 2
+text = "To-Do"
+label_settings = SubResource("LabelSettings_bs7q0")
+
+[node name="CandleDisplayLabel" type="RichTextLabel" parent="Objective Display" unique_id=129328706]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_hp7tp")
+theme_override_fonts/bold_font = ExtResource("7_bs7q0")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[ul]Find a candle (0/3)[/ul]"
+fit_content = true
+scroll_active = false
+script = ExtResource("8_yvhg4")
+item_key = "CANDLES"
+returned_flag = "CANDLES_RETURNED"
+find_label = "Find a candle"
+return_label = "Return the candle to your room"
+search_amount = 1
+
+[node name="GlitterDisplayLabel2" type="RichTextLabel" parent="Objective Display" unique_id=509958913]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_hp7tp")
+theme_override_fonts/bold_font = ExtResource("7_bs7q0")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[ul]Find a candle (0/3)[/ul]"
+fit_content = true
+scroll_active = false
+script = ExtResource("8_yvhg4")
+item_key = "GLITTER"
+returned_flag = "GLITTER_RETURNED"
+find_label = "Find glitter"
+return_label = "Return the glitter to your room"
+search_amount = 3
+
+[node name="PaintDisplayLabel3" type="RichTextLabel" parent="Objective Display" unique_id=148182336]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_hp7tp")
+theme_override_fonts/bold_font = ExtResource("7_bs7q0")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[ul]Find a candle (0/3)[/ul]"
+fit_content = true
+scroll_active = false
+script = ExtResource("8_yvhg4")
+item_key = "RED_PAINT"
+returned_flag = "RED_PAINT_RETURNED"
+find_label = "Find some red paint"
+return_label = "Return the red paint to your room"
+search_amount = 1
