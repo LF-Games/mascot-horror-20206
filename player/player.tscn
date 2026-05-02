@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://ddxjpfhsmremb" path="res://player/low_battery.wav" id="6_boad6"]
 [ext_resource type="Script" uid="uid://du8qu2wuirakh" path="res://player/low_battery_audio.gd" id="7_rgyib"]
 [ext_resource type="AudioStream" uid="uid://cwcj3xvuln0hc" path="res://player/battery_recharge.wav" id="8_rgyib"]
+[ext_resource type="Script" uid="uid://dcmi4wwybhrn0" path="res://player/death_detector.gd" id="10_8t03j"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hg6s5"]
 light_mode = 1
@@ -45,6 +46,9 @@ fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qjkh3"]
 radius = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hg6s5"]
+radius = 16.03122
 
 [node name="Player" type="CharacterBody2D" unique_id=156382088 node_paths=PackedStringArray("recharge_audio", "_sprite", "_silhouette_sprite")]
 script = ExtResource("1_rkbax")
@@ -123,3 +127,11 @@ autostart = true
 
 [node name="ReloadAudio" type="AudioStreamPlayer" parent="." unique_id=845499018]
 stream = ExtResource("8_rgyib")
+
+[node name="DeathDetector" type="Area2D" parent="." unique_id=151458236]
+script = ExtResource("10_8t03j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathDetector" unique_id=1243426393]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_hg6s5")
+debug_color = Color(0.9939596, 0, 0.23671135, 0.41960785)

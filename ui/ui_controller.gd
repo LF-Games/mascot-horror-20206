@@ -11,6 +11,7 @@ func _ready():
 	current_ui.show()
 	Dialogic.timeline_started.connect(_on_timeline_started)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	GameManager.player_died.connect(_on_game_over)
 
 
 func request_visibility(node: Control):
@@ -31,3 +32,7 @@ func _on_timeline_started():
 
 func _on_timeline_ended():
 	current_ui.show()
+
+
+func _on_game_over():
+	current_ui.hide()

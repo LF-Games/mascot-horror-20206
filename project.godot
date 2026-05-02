@@ -171,6 +171,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/stat
 [global_group]
 
 nav_obstacle=""
+death=""
 
 [input]
 
