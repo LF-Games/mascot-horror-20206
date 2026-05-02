@@ -1995,10 +1995,14 @@ metadata/_custom_type_script = "uid://35dh8yuu4xlt"
 position = Vector2(-1.000061, -12)
 shape = SubResource("RectangleShape2D_ai0ry")
 
-[node name="Player" parent="." unique_id=156382088 node_paths=PackedStringArray("battery", "recharge_bar") instance=ExtResource("2_16ei5")]
+[node name="Player" parent="." unique_id=156382088 node_paths=PackedStringArray("battery", "recharge_bar", "battery_text_animation") instance=ExtResource("2_16ei5")]
 position = Vector2(21, 573)
+_speed = 300
 battery = NodePath("Battery")
 recharge_bar = NodePath("../CanvasLayer/GameplayUI/RechargeBar")
+battery_text_animation = NodePath("../CanvasLayer/GameplayUI/BatteryTextAnimation")
+recharge_duration = 2.0
+death_fade_duration = 0.3
 
 [node name="InteractionDetector" parent="Player" index="4" unique_id=13955611 node_paths=PackedStringArray("interact_button")]
 interact_button = NodePath("../../CanvasLayer/GameplayUI/InteractButton")

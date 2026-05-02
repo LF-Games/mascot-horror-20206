@@ -97,11 +97,13 @@ directories/dtl_directory={
 "toy_chest": "res://dialogic/timelines/child_bedroom/toy_chest.dtl",
 "toy_rat": "res://dialogic/timelines/entrance/toy_rat.dtl",
 "toy_robot": "res://dialogic/timelines/child_bedroom/toy_robot.dtl",
+"walking_stick": "res://dialogic/timelines/grandparents_bedroom/cane.dtl",
 "water_filter": "res://dialogic/timelines/kitchen/water_filter.dtl",
 "window": "res://dialogic/timelines/dinner_room/window.dtl",
 "window_kitchen": "res://dialogic/timelines/kitchen/window_kitchen.dtl"
 }
 layout/style_directory={
+"": "res://dialogic/basestyle/style_base.tres",
 "custom_style": "res://dialogic/custom_style.tres",
 "style_base": "res://dialogic/basestyle/style_base.tres",
 "style_eggwatch": "res://dialogic/eggwatchstyle/style_eggwatch.tres"
@@ -142,7 +144,7 @@ audio/channel_defaults={
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://dialogic/custom_style.tres", "res://dialogic/basestyle/style_base.tres", "res://dialogic/eggwatchstyle/style_eggwatch.tres"]
-layout/default_style="res://dialogic/style_base.tres"
+layout/default_style="res://dialogic/basestyle/style_base.tres"
 translation/enabled=true
 translation/original_locale=""
 translation/file_mode=1

@@ -1,0 +1,2 @@
+You got a cane.
+do GlobalState.add_inventory_item("CANE")

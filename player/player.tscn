@@ -52,7 +52,10 @@ radius = 16.03122
 
 [node name="Player" type="CharacterBody2D" unique_id=156382088 node_paths=PackedStringArray("recharge_audio", "_sprite", "_silhouette_sprite")]
 script = ExtResource("1_rkbax")
+_speed = null
 recharge_audio = NodePath("ReloadAudio")
+recharge_duration = null
+death_fade_duration = null
 _sprite = NodePath("Sprite")
 _silhouette_sprite = NodePath("Sprite/Silhouette")
 
