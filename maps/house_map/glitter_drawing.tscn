@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://rw6em71w2q5v"]
+
+[ext_resource type="Texture2D" uid="uid://nnriccdwh3th" path="res://maps/house_map/player_room/drawing_items/desenho_20260424222307.png" id="1_ck2wp"]
+[ext_resource type="Script" uid="uid://35dh8yuu4xlt" path="res://interactable/timeline_interactable.gd" id="2_6j3vq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxxd7"]
+size = Vector2(154.6365, 113.25491)
+
+[node name="GlitterDrawing" type="Sprite2D" unique_id=1448662481]
+self_modulate = Color(1, 0, 1, 1)
+light_mask = 2
+scale = Vector2(0.45914125, 0.45914125)
+texture = ExtResource("1_ck2wp")
+
+[node name="TimelinetInteractable" type="Area2D" parent="." unique_id=1972992679]
+script = ExtResource("2_6j3vq")
+timeline_name = "glitter_drawing_emptybedroom"
+metadata/_custom_type_script = "uid://35dh8yuu4xlt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TimelinetInteractable" unique_id=1411059600]
+position = Vector2(-7.6229243, 1.0385413e-06)
+shape = SubResource("RectangleShape2D_pxxd7")

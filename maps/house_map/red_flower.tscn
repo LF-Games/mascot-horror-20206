@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://duvt04eyx1k68"]
+
+[ext_resource type="Texture2D" uid="uid://dmk0jdcriq8jl" path="res://maps/house_map/entrance/sprites/florvermelha.png" id="1_q8skc"]
+[ext_resource type="Script" uid="uid://35dh8yuu4xlt" path="res://interactable/timeline_interactable.gd" id="2_veyy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ai0ry"]
+size = Vector2(37, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36ixg"]
+size = Vector2(54, 49)
+
+[node name="RedFlower" type="Sprite2D" unique_id=217043840 groups=["nav_obstacle"]]
+texture = ExtResource("1_q8skc")
+offset = Vector2(-19, -53)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=769955158]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="StaticBody2D" unique_id=1160131360]
+position = Vector2(3.5, -16)
+shape = SubResource("RectangleShape2D_ai0ry")
+
+[node name="Interactable" type="Area2D" parent="." unique_id=383267909]
+script = ExtResource("2_veyy6")
+timeline_name = "red_flower_entrance"
+metadata/_custom_type_script = "uid://35dh8yuu4xlt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1997623968]
+position = Vector2(3, -14.5)
+shape = SubResource("RectangleShape2D_36ixg")
