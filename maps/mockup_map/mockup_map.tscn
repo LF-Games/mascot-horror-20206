@@ -208,6 +208,9 @@ position = Vector2(97, 496)
 battery = NodePath("Battery")
 recharge_bar = NodePath("../CanvasLayer/GameplayUI/RechargeBar")
 
+[node name="InteractionDetector" parent="Player" index="4" unique_id=13955611 node_paths=PackedStringArray("interact_button")]
+interact_button = NodePath("../../CanvasLayer/GameplayUI/InteractButton")
+
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=317658340]
 position = Vector2(0, -55.345)
 zoom = Vector2(1.1, 1.1)
@@ -234,10 +237,6 @@ default_ui = NodePath("GameplayUI")
 
 [node name="GameplayUI" parent="CanvasLayer" unique_id=1269869551 node_paths=PackedStringArray("battery") instance=ExtResource("4_0w2j5")]
 process_mode = 1
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
 battery = NodePath("../../Player/Battery")
 
 [node name="RechargeBar" parent="CanvasLayer/GameplayUI" index="0" unique_id=543826916]
@@ -282,6 +281,16 @@ timeline_name = "remove_item_test"
 metadata/_custom_type_script = "uid://35dh8yuu4xlt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TimelinetInteractable2" unique_id=1505760639]
+position = Vector2(-2, -21)
+shape = SubResource("CircleShape2D_l7mbp")
+
+[node name="BatteryInteractable" type="Area2D" parent="." unique_id=920706188]
+position = Vector2(-29, 593)
+script = ExtResource("5_fdedp")
+timeline_name = "battery_collect"
+metadata/_custom_type_script = "uid://35dh8yuu4xlt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BatteryInteractable" unique_id=2120479158]
 position = Vector2(-2, -21)
 shape = SubResource("CircleShape2D_l7mbp")
 

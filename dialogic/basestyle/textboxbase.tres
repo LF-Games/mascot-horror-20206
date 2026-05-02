@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://c2p4fwlikko5e"]
+
+[ext_resource type="Texture2D" uid="uid://doy84ygc1bnkr" path="res://dialogic/basestyle/caixadefala_geral 1.png" id="1_xl58e"]
+
+[resource]
+content_margin_left = 76.0
+content_margin_top = 58.0
+content_margin_right = 40.0
+content_margin_bottom = 25.0
+texture = ExtResource("1_xl58e")

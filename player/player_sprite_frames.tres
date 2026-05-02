@@ -1,0 +1,76 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dx13s8vg0sbcs"]
+
+[ext_resource type="Texture2D" uid="uid://bi7yohiyug4sw" path="res://player/sprites/player_idle.png" id="1_e2h3v"]
+[ext_resource type="Texture2D" uid="uid://dhadoa1gwfkf" path="res://player/sprites/player_walk.png" id="2_pqije"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ieo8"]
+atlas = ExtResource("2_pqije")
+region = Rect2(0, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebec5"]
+atlas = ExtResource("2_pqije")
+region = Rect2(100, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yllr7"]
+atlas = ExtResource("2_pqije")
+region = Rect2(200, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb6p2"]
+atlas = ExtResource("2_pqije")
+region = Rect2(300, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wodsf"]
+atlas = ExtResource("2_pqije")
+region = Rect2(400, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32hag"]
+atlas = ExtResource("2_pqije")
+region = Rect2(500, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqiix"]
+atlas = ExtResource("2_pqije")
+region = Rect2(600, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7oew"]
+atlas = ExtResource("2_pqije")
+region = Rect2(700, 0, 100, 110)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e2h3v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ieo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebec5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yllr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb6p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wodsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32hag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqiix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7oew")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 12.0
+}]

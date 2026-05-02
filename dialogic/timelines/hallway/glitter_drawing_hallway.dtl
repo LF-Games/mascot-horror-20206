@@ -1,0 +1,5 @@
+Grandpa and Grandma are really cool; as soon as I arrived here, they gave me an brand new art kit.
+if GlobalState.get_flag("HALLWAY_GLITTER_GET") == false:
+	You got glitter.
+	do GlobalState.add_inventory_item("GLITTER")
+	do GlobalState.set_flag("HALLWAY_GLITTER_GET")

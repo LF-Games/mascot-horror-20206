@@ -1,0 +1,5 @@
+Sorry, Ms. Flower, but I'm going to need this
+if GlobalState.get_flag("GRANDPARENTSBEDROOM_FLOWER_ITEM_GET") == false:
+	You got red pigment
+	do GlobalState.add_inventory_item("RED PIGMENT")
+	do GlobalState.set_flag("GRANDPARENTSBEDROOM_FLOWER_ITEM_GET")

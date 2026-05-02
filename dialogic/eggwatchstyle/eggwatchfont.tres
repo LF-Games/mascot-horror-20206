@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://bg2yoc5voer2e"]
+
+[ext_resource type="FontFile" uid="uid://da6yh4nsiosqc" path="res://PixelifySans-VariableFont_wght.ttf" id="1_17uev"]
+
+[resource]
+base_font = ExtResource("1_17uev")
+spacing_top = 12
+spacing_bottom = -24
