@@ -224,7 +224,7 @@ script = ExtResource("3_a4pk8")
 metadata/_custom_type_script = "uid://b5jr5qc0lxppc"
 
 [node name="Monstro" parent="." unique_id=1310309185 node_paths=PackedStringArray("target") instance=ExtResource("monstro4_0w2j5")]
-position = Vector2(797, -57)
+position = Vector2(797, -58)
 target = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=250710723 node_paths=PackedStringArray("default_ui")]
@@ -240,11 +240,11 @@ offset_right = 0.0
 offset_bottom = 0.0
 battery = NodePath("../../Player/Battery")
 
-[node name="BatteryBar1" parent="CanvasLayer/GameplayUI" index="0" unique_id=17593348]
-value = 100.0
-
-[node name="RechargeBar" parent="CanvasLayer/GameplayUI" index="3" unique_id=543826916]
+[node name="RechargeBar" parent="CanvasLayer/GameplayUI" index="0" unique_id=543826916]
 visible = false
+
+[node name="BatteryBar1" parent="CanvasLayer/GameplayUI/EggwatchDisplay/Control" parent_id_path=PackedInt32Array(1269869551, 167874359) index="0" unique_id=17593348]
+value = 100.0
 
 [node name="PauseUI" parent="CanvasLayer" unique_id=402355377 instance=ExtResource("6_f0hdj")]
 process_mode = 3
