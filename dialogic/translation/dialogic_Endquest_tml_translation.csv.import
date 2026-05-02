@@ -6,10 +6,10 @@ uid="uid://hvq38weqfvki"
 
 [deps]
 
-files=["res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation"]
+files=["res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_Endquest_tml_translation.pt_BR.translation"]
 
 source_file="res://dialogic/translation/dialogic_Endquest_tml_translation.csv"
-dest_files=["res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation"]
+dest_files=["res://dialogic/translation/dialogic_Endquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_Endquest_tml_translation.pt_BR.translation"]
 
 [params]
 

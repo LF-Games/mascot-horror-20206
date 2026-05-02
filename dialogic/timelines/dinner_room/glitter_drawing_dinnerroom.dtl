@@ -1,5 +1,5 @@
-I drew this as soon as I got Batata… I was so happy and used up almost all my glitter.
+I drew this as soon as I got Batata… I was so happy and used up almost all my glitter. #id:6e
 if GlobalState.get_flag("DINNERROOM_GLITTER_GET") == false:
-	You found some glitter.
+	You found some glitter. #id:6f
 	do GlobalState.add_inventory_item("GLITTER")
 	do GlobalState.set_flag("DINNERROOM_GLITTER_GET")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ypco5do521qj"
+
+[deps]
+
+files=["res://dialogic/translation/dialogic_battery_collect_translation.en.translation", "res://dialogic/translation/dialogic_battery_collect_translation.pt_BR.translation"]
+
+source_file="res://dialogic/translation/dialogic_battery_collect_translation.csv"
+dest_files=["res://dialogic/translation/dialogic_battery_collect_translation.en.translation", "res://dialogic/translation/dialogic_battery_collect_translation.pt_BR.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

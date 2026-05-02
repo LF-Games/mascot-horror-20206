@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://8v1k6hr1ksbj"
+
+[deps]
+
+files=["res://dialogic/translation/dialogic_window_translation.en.translation", "res://dialogic/translation/dialogic_window_translation.pt_BR.translation"]
+
+source_file="res://dialogic/translation/dialogic_window_translation.csv"
+dest_files=["res://dialogic/translation/dialogic_window_translation.en.translation", "res://dialogic/translation/dialogic_window_translation.pt_BR.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

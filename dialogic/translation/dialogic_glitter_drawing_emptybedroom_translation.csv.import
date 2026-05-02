@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://nx33t8nepnlc"
+
+[deps]
+
+files=["res://dialogic/translation/dialogic_glitter_drawing_emptybedroom_translation.en.translation", "res://dialogic/translation/dialogic_glitter_drawing_emptybedroom_translation.pt_BR.translation"]
+
+source_file="res://dialogic/translation/dialogic_glitter_drawing_emptybedroom_translation.csv"
+dest_files=["res://dialogic/translation/dialogic_glitter_drawing_emptybedroom_translation.en.translation", "res://dialogic/translation/dialogic_glitter_drawing_emptybedroom_translation.pt_BR.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
