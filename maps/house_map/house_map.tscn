@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://dlry8rt775oeu" path="res://maps/house_map/grandparents_room/sprites/tapete 1.png" id="28_7a1wx"]
 [ext_resource type="PackedScene" uid="uid://rw6em71w2q5v" path="res://maps/house_map/glitter_drawing.tscn" id="28_bfa4y"]
 [ext_resource type="Texture2D" uid="uid://dcqygvywur1ho" path="res://maps/house_map/grandparents_room/sprites/retrato 1.png" id="29_7881t"]
+[ext_resource type="PackedScene" uid="uid://dy8rm40amgyax" path="res://maps/house_map/door_interactable.tscn" id="29_cf860"]
 [ext_resource type="Texture2D" uid="uid://cesxqar5n2f73" path="res://maps/house_map/grandparents_room/sprites/cruz_parede.png" id="30_c8wsn"]
 [ext_resource type="Texture2D" uid="uid://ok7d27dk5n1u" path="res://maps/house_map/grandparents_room/sprites/cadeirinha 1.png" id="31_ij0h1"]
 [ext_resource type="Texture2D" uid="uid://i6s5ekmmsgxe" path="res://maps/house_map/grandparents_room/sprites/penteadeira 1.png" id="32_cs2b2"]
@@ -945,6 +946,15 @@ shape = SubResource("RectangleShape2D_s4y5k")
 [node name="GlitterDrawing" parent="EmptyRoom" unique_id=1448662481 instance=ExtResource("28_bfa4y")]
 position = Vector2(-197, -53)
 
+[node name="DoorInteractable" parent="EmptyRoom" unique_id=981518599 node_paths=PackedStringArray("tilemap_layer") instance=ExtResource("29_cf860")]
+position = Vector2(-52, -393)
+closed_timeline = "closed_door"
+open_timeline = "opening_door"
+tilemap_layer = NodePath("../../Walls")
+map_coords = Vector2i(-9, 2)
+tileset_atlas_coord = Vector2i(4, 0)
+key_inventory_item = "DOOR_KEY"
+
 [node name="GrandparentsRoom" type="Node2D" parent="." unique_id=716823442]
 y_sort_enabled = true
 position = Vector2(8, -471)
@@ -1097,13 +1107,11 @@ metadata/_custom_type_script = "uid://35dh8yuu4xlt"
 position = Vector2(-23, 113)
 shape = SubResource("RectangleShape2D_ce3bs")
 
-[node name="Node2D" type="Node2D" parent="GrandparentsRoom" unique_id=486729935]
-position = Vector2(-519, -18)
-
-[node name="Bengala1" type="Sprite2D" parent="GrandparentsRoom/Node2D" unique_id=1873222932]
-light_mask = 3
-position = Vector2(0, -48)
+[node name="Bengala1" type="Sprite2D" parent="GrandparentsRoom" unique_id=1873222932]
+light_mask = 2
+position = Vector2(-523, -44)
 texture = ExtResource("33_m3g6t")
+offset = Vector2(4, -32)
 
 [node name="Armário2" type="Node2D" parent="GrandparentsRoom" unique_id=1282972006 groups=["nav_obstacle"]]
 position = Vector2(281, -243)
@@ -1133,6 +1141,18 @@ position = Vector2(-181, -101)
 
 [node name="Interactable" parent="GrandparentsRoom/RedFlower" index="1" unique_id=383267909]
 timeline_name = "red_flower_grandparentsbedroom"
+
+[node name="DoorInteractable2" parent="GrandparentsRoom" unique_id=1155359967 node_paths=PackedStringArray("tilemap_layer") instance=ExtResource("29_cf860")]
+position = Vector2(-408, -67)
+closed_timeline = "secret_door"
+open_timeline = "opening_door"
+tilemap_layer = NodePath("../../Walls")
+map_coords = Vector2i(-5, -6)
+tileset_atlas_coord = Vector2i(4, 0)
+key_inventory_item = "SECRET_KEY"
+
+[node name="CollisionShape2D" parent="GrandparentsRoom/DoorInteractable2" index="0" unique_id=974393112]
+position = Vector2(0, 47)
 
 [node name="SecretRoom" type="Node2D" parent="." unique_id=1503970292]
 y_sort_enabled = true
@@ -2041,6 +2061,7 @@ pause_button = NodePath("../CanvasLayer/PauseUI/Button")
 
 [editable path="EmptyRoom/GlitterDrawing"]
 [editable path="GrandparentsRoom/RedFlower"]
+[editable path="GrandparentsRoom/DoorInteractable2"]
 [editable path="LivingRoom/GlitterDrawing"]
 [editable path="TopHallway/RedFlower"]
 [editable path="TopHallway/GlitterDrawing"]
