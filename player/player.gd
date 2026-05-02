@@ -86,6 +86,8 @@ func _process(_delta):
 func _on_timeline_started():
 	_can_move = false
 	_can_interact = false
+	_silhouette_sprite.play("idle")
+	_sprite.play("idle")
 	set_process(false)
 
 

@@ -44,7 +44,7 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qjkh3"]
-radius = 73.0
+radius = 18.0
 
 [node name="Player" type="CharacterBody2D" unique_id=156382088 node_paths=PackedStringArray("recharge_audio", "_sprite", "_silhouette_sprite")]
 script = ExtResource("1_rkbax")
@@ -98,7 +98,7 @@ metadata/_custom_type_script = "uid://b5jr5qc0lxppc"
 script = ExtResource("4_yw30f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector" unique_id=49913016]
-position = Vector2(0, -25)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_qjkh3")
 
 [node name="Battery" type="Node" parent="." unique_id=737240493 node_paths=PackedStringArray("point_light")]
