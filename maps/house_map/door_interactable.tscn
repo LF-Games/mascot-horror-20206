@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dy8rm40amgyax"]
+
+[ext_resource type="Script" uid="uid://brnhyvvfbeljl" path="res://interactable/door_interactable.gd" id="1_jb1aq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb1aq"]
+size = Vector2(116, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ni1lp"]
+size = Vector2(116, 34)
+
+[node name="DoorInteractable" type="Area2D" unique_id=981518599]
+z_index = 1
+script = ExtResource("1_jb1aq")
+metadata/_custom_type_script = "uid://brnhyvvfbeljl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=974393112]
+position = Vector2(0, -12.5)
+shape = SubResource("RectangleShape2D_jb1aq")
+debug_color = Color(0.55812645, 0.54581845, 0.37119827, 0.41960785)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=390707315]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=110725132]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_ni1lp")

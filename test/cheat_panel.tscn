@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ccgdwt45hj41c"]
+
+[ext_resource type="Script" uid="uid://0vut4ek7ih0s" path="res://test/cheat_panel.gd" id="1_s37gq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6i0m"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+
+[node name="CheatPanel" type="PanelContainer" unique_id=422745530]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k6i0m")
+script = ExtResource("1_s37gq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=8617118]
+layout_mode = 2
+
+[node name="GetItemsButton" type="Button" parent="VBoxContainer" unique_id=912538826]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Get items"
+
+[node name="KillMonstersButton" type="Button" parent="VBoxContainer" unique_id=296555732]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Kill Monsters"
+
+[node name="RevealMapButton" type="Button" parent="VBoxContainer" unique_id=1215781394]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Reveal Map"
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=2027276943]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Restart"
+
+[connection signal="pressed" from="VBoxContainer/GetItemsButton" to="." method="_on_get_items_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/KillMonstersButton" to="." method="_on_kill_monsters_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RevealMapButton" to="." method="_on_reveal_map_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
