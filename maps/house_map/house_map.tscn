@@ -1184,7 +1184,7 @@ offset = Vector2(4, -32)
 [node name="Interactable2" type="Area2D" parent="GrandparentsRoom/Bengala1" unique_id=1109143700 node_paths=PackedStringArray("pickup_sprite")]
 position = Vector2(-16, 27)
 script = ExtResource("4_54nda")
-timeline_name = "walking_stick"
+timeline_name = "cane"
 pickup = true
 pickup_flag = "CANE_PICKUP"
 pickup_sprite = NodePath("..")

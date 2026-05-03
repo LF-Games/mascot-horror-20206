@@ -46,6 +46,7 @@ directories/dtl_directory={
 "boxes": "res://dialogic/timelines/empty_bedroom/boxes.dtl",
 "cabinet": "res://dialogic/timelines/kitchen/cabinet.dtl",
 "candles_delivery": "res://dialogic/timelines/quest_delivery/candles_delivery.dtl",
+"cane": "res://dialogic/timelines/grandparents_bedroom/cane.dtl",
 "carranca": "res://dialogic/timelines/entrance/carranca.dtl",
 "cat_bed": "res://dialogic/timelines/grandparents_bedroom/cat_bed.dtl",
 "chest": "res://dialogic/timelines/grandparents_bedroom/chest.dtl",
@@ -101,7 +102,6 @@ directories/dtl_directory={
 "toy_chest": "res://dialogic/timelines/child_bedroom/toy_chest.dtl",
 "toy_rat": "res://dialogic/timelines/entrance/toy_rat.dtl",
 "toy_robot": "res://dialogic/timelines/child_bedroom/toy_robot.dtl",
-"walking_stick": "res://dialogic/timelines/grandparents_bedroom/cane.dtl",
 "water_filter": "res://dialogic/timelines/kitchen/water_filter.dtl",
 "window": "res://dialogic/timelines/dinner_room/window.dtl",
 "window_kitchen": "res://dialogic/timelines/kitchen/window_kitchen.dtl"
