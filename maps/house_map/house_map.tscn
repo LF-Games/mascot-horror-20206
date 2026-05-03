@@ -30,11 +30,14 @@
 [ext_resource type="Texture2D" uid="uid://2yif22jk2jsf" path="res://maps/house_map/player_room/sprites/Poster 2_20260424221423.png" id="18_u4u11"]
 [ext_resource type="Texture2D" uid="uid://tdym3w07iao5" path="res://maps/house_map/grandparents_room/sprites/Cama.png" id="20_767af"]
 [ext_resource type="Texture2D" uid="uid://bjr567yqtic7e" path="res://maps/house_map/empty_room/relógio velho 2.png" id="21_c8wsn"]
+[ext_resource type="Script" uid="uid://bbmygs5ofxev0" path="res://interactable/quest_delivery_interactable.gd" id="21_cklsf"]
 [ext_resource type="Texture2D" uid="uid://ctraa6ql42f6d" path="res://maps/house_map/empty_room/caixa aberta 1.png" id="22_ij0h1"]
+[ext_resource type="Texture2D" uid="uid://b08l8h4e0jc4j" path="res://maps/house_map/player_room/quest_items/pote de glitter vazio_20260424213647.png" id="23_8g47l"]
 [ext_resource type="Texture2D" uid="uid://pmws2de6wc3i" path="res://maps/house_map/empty_room/caixas fechadas 3.png" id="23_cs2b2"]
 [ext_resource type="Texture2D" uid="uid://rfx3j1hg5wxl" path="res://maps/house_map/empty_room/caixas fechadas 1.png" id="23_ij0h1"]
 [ext_resource type="Texture2D" uid="uid://dvq37svsahuf2" path="res://maps/house_map/grandparents_room/sprites/baú 1.png" id="24_6fca6"]
 [ext_resource type="Texture2D" uid="uid://c4qlu0f3tip01" path="res://maps/house_map/empty_room/caixas fechadas 2.png" id="24_cs2b2"]
+[ext_resource type="Texture2D" uid="uid://ddu3kgrnkfmr2" path="res://maps/house_map/player_room/quest_items/tinta_20260424220558.png" id="24_e1ha5"]
 [ext_resource type="Texture2D" uid="uid://b2jmfnks7rsq7" path="res://maps/house_map/empty_room/escada 1.png" id="25_m3g6t"]
 [ext_resource type="Texture2D" uid="uid://jtkbpuyohwv3" path="res://maps/house_map/grandparents_room/sprites/comoda.png" id="25_m7s4p"]
 [ext_resource type="Texture2D" uid="uid://tqv3dodips67" path="res://maps/house_map/grandparents_room/sprites/cama_gato.png" id="26_rwhxl"]
@@ -187,6 +190,9 @@ size = Vector2(191, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6egu2"]
 size = Vector2(66, 28)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epkg2"]
+radius = 73.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7881t"]
 size = Vector2(416, 264)
@@ -820,6 +826,51 @@ z_index = 1
 position = Vector2(117, -386.00003)
 scale = Vector2(0.41484123, 0.41484123)
 texture = ExtResource("18_u4u11")
+
+[node name="QuestDelivery" type="Area2D" parent="PlayerRoom" unique_id=76634032 node_paths=PackedStringArray("candles_sprite", "glitter_sprite", "red_paint_sprite")]
+position = Vector2(23, 3)
+script = ExtResource("21_cklsf")
+no_delivery_timeline = "no_delivery"
+candles_delivery_timeline = "candles_delivery"
+glitter_delivery_timeline = "glitter_delivery"
+red_paint_delivery_timeline = "red_paint_delivery"
+final_timeline = "final_cutscene"
+candles_sprite = NodePath("Velas")
+glitter_sprite = NodePath("Glitter")
+red_paint_sprite = NodePath("Tinta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRoom/QuestDelivery" unique_id=1448171963]
+shape = SubResource("CircleShape2D_epkg2")
+
+[node name="Velas" type="Node2D" parent="PlayerRoom/QuestDelivery" unique_id=163591583]
+visible = false
+
+[node name="Vela20260424213143" type="Sprite2D" parent="PlayerRoom/QuestDelivery/Velas" unique_id=1888106130]
+position = Vector2(62, 33)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("69_5u111")
+
+[node name="Vela20260424213145" type="Sprite2D" parent="PlayerRoom/QuestDelivery/Velas" unique_id=586931292]
+position = Vector2(4.0000076, -88.999985)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("69_5u111")
+
+[node name="Vela20260424213144" type="Sprite2D" parent="PlayerRoom/QuestDelivery/Velas" unique_id=1551144335]
+position = Vector2(-57.999992, 33)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("69_5u111")
+
+[node name="Glitter" type="Sprite2D" parent="PlayerRoom/QuestDelivery" unique_id=1466769937]
+visible = false
+position = Vector2(47, -34)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("23_8g47l")
+
+[node name="Tinta" type="Sprite2D" parent="PlayerRoom/QuestDelivery" unique_id=143038916]
+visible = false
+position = Vector2(-50.000004, -18.999996)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("24_e1ha5")
 
 [node name="EmptyRoom" type="Node2D" parent="." unique_id=1613998592]
 y_sort_enabled = true
@@ -1997,7 +2048,7 @@ position = Vector2(-1.000061, -12)
 shape = SubResource("RectangleShape2D_ai0ry")
 
 [node name="Player" parent="." unique_id=156382088 node_paths=PackedStringArray("battery", "recharge_bar", "battery_text_animation") instance=ExtResource("2_16ei5")]
-position = Vector2(21, 573)
+position = Vector2(-11, 798)
 _speed = 300
 battery = NodePath("Battery")
 recharge_bar = NodePath("../CanvasLayer/GameplayUI/RechargeBar")
