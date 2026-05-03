@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtekjqqu1wbii"
-path="res://.godot/imported/eggwatch_pause_menu.png-16a7d29d0810899f1776b55c2e79bf1d.ctex"
+uid="uid://c032rqs51u81i"
+path="res://.godot/imported/sound-off.png-25ef475caa22bd05fbfba2c2397077b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/eggwatch_sprites/eggwatch_pause_menu.png"
-dest_files=["res://.godot/imported/eggwatch_pause_menu.png-16a7d29d0810899f1776b55c2e79bf1d.ctex"]
+source_file="res://ui/interface_sprites/sound-off.png"
+dest_files=["res://.godot/imported/sound-off.png-25ef475caa22bd05fbfba2c2397077b5.ctex"]
 
 [params]
 
