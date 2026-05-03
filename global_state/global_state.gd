@@ -3,11 +3,17 @@ extends Node
 ##
 ## Utilize set_flag(key) e get_flag(key) para registrar/acessar dados booleanos.
 
+signal item_added(key: String)
+signal flag_raised(key: String)
+
 var _flags: Dictionary[StringName, bool] = {}
 var _inventory_items: Dictionary[StringName, int] = {}
 
 func set_flag(key: StringName, value := true) -> bool:
 	_flags[key] = value
+	
+	if value:
+		flag_raised.emit(key)
 	return value
 
 
@@ -20,6 +26,7 @@ func add_inventory_item(key: StringName) -> void:
 		_inventory_items[key] = 1
 	else:
 		_inventory_items[key] += 1
+	item_added.emit(key)
 
 
 func remove_intentory_item(key: StringName, value := 1) -> void:
@@ -33,6 +40,12 @@ func remove_intentory_item(key: StringName, value := 1) -> void:
 
 func has_inventory_item(key: StringName) -> bool:
 	return _inventory_items.has(key)
+
+
+func get_item_count(key: StringName) -> int:
+	if !_inventory_items.has(key):
+		return 0
+	return _inventory_items[key]
 
 
 ## Returns an array of dictionaries with keys "key" and "amount"

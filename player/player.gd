@@ -6,7 +6,10 @@ extends CharacterBody2D
 @export var battery: Battery
 @export var recharge_bar: ProgressBar
 @export var recharge_audio: AudioStreamPlayer
+@export var battery_text_animation : AnimationPlayer
 @export var recharge_duration := 2.0
+@export var death_fade_duration := 0.3
+
 var _flipped := false
 var _can_move := true
 var _can_interact := true
@@ -20,6 +23,7 @@ var recharge_completed := false
 func _ready():
 	Dialogic.timeline_started.connect(_on_timeline_started)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	GameManager.player_died.connect(_on_game_over)
 
 
 func _physics_process(_delta):
@@ -50,24 +54,27 @@ func _process(_delta):
 	if Input.is_action_just_pressed("interact") and _can_interact:
 		_interaction_detector.try_interaction()
 	
-	if Input.is_action_pressed("recharge_battery") and !recharge_completed and GlobalState.has_inventory_item("BATTERY"):
-		if !recharge_audio.playing:
-			recharge_audio.play()
+	if Input.is_action_pressed("recharge_battery") and !recharge_completed:
+		if GlobalState.has_inventory_item("BATTERY"):
+			if !recharge_audio.playing:
+				recharge_audio.play()
 		
 		
-		_can_move = false
-		_can_interact = false
-		recharge_bar.visible = true # pode ser colocado no control depois
+			_can_move = false
+			_can_interact = false
+			recharge_bar.visible = true # pode ser colocado no control depois
 		
-		recharge_bar.value = time_pressed # pode ser colocado no control depois
-		time_pressed += _delta
+			recharge_bar.value = time_pressed # pode ser colocado no control depois
+			time_pressed += _delta
 		
-		if time_pressed > recharge_duration:
-			battery.current_level = 2
-			battery.current_level_duration = 100
-			time_pressed = 0
-			recharge_completed = true
-			GlobalState.remove_intentory_item("BATTERY")
+			if time_pressed > recharge_duration:
+				battery.set_current_level(2)
+				time_pressed = 0
+				recharge_completed = true
+				GlobalState.remove_intentory_item("BATTERY")
+		
+		else:
+			battery_text_animation.play("no battery text pop up")
 	else:
 		time_pressed = 0
 		recharge_bar.visible = false # pode ser colocado no control depois
@@ -96,3 +103,12 @@ func _on_timeline_ended():
 	_can_move = true
 	_can_interact = true
 	set_process(true)
+
+
+func _on_game_over():
+	set_process(false)
+	set_physics_process(false)
+	_sprite.play("idle")
+	_silhouette_sprite.play("idle")
+	var tween = create_tween()
+	tween.tween_property(_sprite, "modulate", Color.TRANSPARENT, death_fade_duration)
