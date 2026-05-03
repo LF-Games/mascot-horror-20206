@@ -59,13 +59,6 @@ func _state_idle(delta: float, distance: float) -> void:
 		velocity = direction * idle_speed
 	else:
 		velocity = Vector2.ZERO
-	## inverter sprite
-	if direction.x < 0:
-		animation.flip_h = true
-		silhouetteavo.flip_h = true
-	else:
-		animation.flip_h = false
-		silhouetteavo.flip_h = false
 	move_and_slide()
 
 
@@ -85,6 +78,13 @@ func _state_chase(distance: float) -> void:
 	var next_pos = navegant.get_next_path_position()
 	var direction = (next_pos - global_position).normalized()
 	velocity = direction * speed
+	## inverter sprite
+	if direction.x < 0:
+		animation.flip_h = true
+		silhouetteavo.flip_h = true
+	else:
+		animation.flip_h = false
+		silhouetteavo.flip_h = false
 	move_and_slide()
 
 # ── WANDER — sorteia ponto dentro dos polígonos navegáveis ──
