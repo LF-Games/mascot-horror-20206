@@ -17,8 +17,11 @@ var current_state: State = State.IDLE
 var _wander_timer: float = 0.0
 var _nav_ready: bool = false
 
-# ── READY ────────────────────────────────────────────────
+# ── READY ───────────────────────────────────────────────
 func _ready() -> void:
+	Dialogic.timeline_ended.connect(_timeline_end)    
+	Dialogic.timeline_started.connect(_timeline_start)
+	
 	navegant.path_desired_distance = 4.0
 	navegant.target_desired_distance = 16.0
 	
@@ -120,6 +123,14 @@ func _pick_wander_target() -> void:
 func _update_target_position() -> void:
 	if target != null and current_state == State.CHASE:
 		navegant.target_position = target.global_position
+
+
+func _timeline_start():
+	set_physics_process(false) #Pausa o monstro durante a abertura de um dialogo
+
+
+func _timeline_end():
+	set_physics_process(true) #Reativa o monstro quando dialogo é fechado
 
 
 func _on_timer_timeout() -> void:
