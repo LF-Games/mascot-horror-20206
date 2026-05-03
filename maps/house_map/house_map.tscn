@@ -261,6 +261,9 @@ size = Vector2(119.5, 281.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ce3bs"]
 size = Vector2(84, 282)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv4ep"]
+size = Vector2(54, 49)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjeoe"]
 size = Vector2(156, 323.5)
 
@@ -1000,6 +1003,9 @@ shape = SubResource("RectangleShape2D_s4y5k")
 [node name="GlitterDrawing" parent="EmptyRoom" unique_id=1448662481 instance=ExtResource("28_bfa4y")]
 position = Vector2(-197, -53)
 
+[node name="TimelinetInteractable" parent="EmptyRoom/GlitterDrawing" index="0" unique_id=1972992679]
+pickup_flag = "EMPTY_ROOM_GLITTER"
+
 [node name="DoorInteractable" parent="EmptyRoom" unique_id=981518599 node_paths=PackedStringArray("tilemap_layer") instance=ExtResource("29_cf860")]
 position = Vector2(-52, -393)
 closed_timeline = "closed_door"
@@ -1166,6 +1172,19 @@ light_mask = 2
 position = Vector2(-523, -44)
 texture = ExtResource("33_m3g6t")
 offset = Vector2(4, -32)
+
+[node name="Interactable2" type="Area2D" parent="GrandparentsRoom/Bengala1" unique_id=1109143700 node_paths=PackedStringArray("pickup_sprite")]
+position = Vector2(-16, 27)
+script = ExtResource("4_54nda")
+timeline_name = "walking_stick"
+pickup = true
+pickup_flag = "CANE_PICKUP"
+pickup_sprite = NodePath("..")
+metadata/_custom_type_script = "uid://35dh8yuu4xlt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrandparentsRoom/Bengala1/Interactable2" unique_id=2052872982]
+position = Vector2(1, -10)
+shape = SubResource("RectangleShape2D_jv4ep")
 
 [node name="Armário2" type="Node2D" parent="GrandparentsRoom" unique_id=1282972006 groups=["nav_obstacle"]]
 position = Vector2(281, -243)
@@ -1534,6 +1553,7 @@ rotation = 0.79175717
 
 [node name="TimelinetInteractable" parent="LivingRoom/GlitterDrawing" index="0" unique_id=1972992679]
 timeline_name = "glitter_drawing_dinnerroom"
+pickup_flag = "LIVING_ROOM_GLITTER"
 
 [node name="Kitchen" type="Node2D" parent="." unique_id=1054182255]
 y_sort_enabled = true
@@ -1807,6 +1827,7 @@ position = Vector2(124, -42)
 
 [node name="TimelinetInteractable" parent="TopHallway/GlitterDrawing" index="0" unique_id=1972992679]
 timeline_name = "glitter_drawing_hallway"
+pickup_flag = "HALLWAY_GLITTER"
 
 [node name="Entrance" type="Node2D" parent="." unique_id=22930848]
 y_sort_enabled = true
@@ -2085,6 +2106,7 @@ target = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=250710723 node_paths=PackedStringArray("default_ui")]
 process_mode = 3
+visible = false
 script = ExtResource("5_sl6ml")
 default_ui = NodePath("GameplayUI")
 

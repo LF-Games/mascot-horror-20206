@@ -12,14 +12,15 @@ _data = [Vector2(0.21856289, 0.11774945), 0.0, 0.0, 0, 0, Vector2(0.61377245, 0.
 point_count = 3
 
 [node name="GlitterDrawing" type="Sprite2D" unique_id=1448662481]
-self_modulate = Color(1, 0, 1, 1)
 light_mask = 2
 scale = Vector2(0.45914125, 0.45914125)
 texture = ExtResource("1_ck2wp")
 
-[node name="TimelinetInteractable" type="Area2D" parent="." unique_id=1972992679]
+[node name="TimelinetInteractable" type="Area2D" parent="." unique_id=1972992679 node_paths=PackedStringArray("pickup_sprite")]
 script = ExtResource("2_6j3vq")
 timeline_name = "glitter_drawing_emptybedroom"
+pickup = true
+pickup_sprite = NodePath("..")
 metadata/_custom_type_script = "uid://35dh8yuu4xlt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TimelinetInteractable" unique_id=1411059600]
