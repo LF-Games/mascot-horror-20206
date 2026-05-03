@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcf8gu7gdafau"
-path="res://.godot/imported/monstro_avó.png-56677610fa16fa893bd53e375b92e006.ctex"
+path="res://.godot/imported/monstro_avó.png-8f10c6d3cdd9a6540f67597f263aae34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://monster/monstro_avó.png"
-dest_files=["res://.godot/imported/monstro_avó.png-56677610fa16fa893bd53e375b92e006.ctex"]
+source_file="res://Monster/monstro_avó.png"
+dest_files=["res://.godot/imported/monstro_avó.png-8f10c6d3cdd9a6540f67597f263aae34.ctex"]
 
 [params]
 
