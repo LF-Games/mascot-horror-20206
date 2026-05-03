@@ -19,7 +19,6 @@ var _nav_ready: bool = false
 
 # ── READY ────────────────────────────────────────────────
 func _ready() -> void:
-	animation.play("Avo_monstro")
 	navegant.path_desired_distance = 4.0
 	navegant.target_desired_distance = 16.0
 	
