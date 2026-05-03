@@ -6,10 +6,10 @@ uid="uid://djm1c5vr2wm1l"
 
 [deps]
 
-files=["res://dialogic/translation/dialogic_secondquest_tml_translation.en.translation"]
+files=["res://dialogic/translation/dialogic_secondquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_secondquest_tml_translation.en.translation"]
 
 source_file="res://dialogic/translation/dialogic_secondquest_tml_translation.csv"
-dest_files=["res://dialogic/translation/dialogic_secondquest_tml_translation.en.translation"]
+dest_files=["res://dialogic/translation/dialogic_secondquest_tml_translation.en.translation", "res://dialogic/translation/dialogic_secondquest_tml_translation.en.translation"]
 
 [params]
 
