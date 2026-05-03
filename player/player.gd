@@ -58,7 +58,14 @@ func _process(_delta):
 		if GlobalState.has_inventory_item("BATTERY"):
 			if !recharge_audio.playing:
 				recharge_audio.play()
-		
+				_sprite.stop() ## Pausa o player sprite quando estiver recarregando
+				_sprite.play("idle")
+				_sprite.frame = 0
+				_sprite.pause()
+				_silhouette_sprite.stop() ## Pausa a silhueta do player quando estiver recarregando
+				_silhouette_sprite.play("idle")
+				_silhouette_sprite.frame = 0
+				_silhouette_sprite.pause()
 		
 			_can_move = false
 			_can_interact = false
@@ -85,9 +92,6 @@ func _process(_delta):
 	if Input.is_action_just_released("recharge_battery"):
 		recharge_completed = false
 		recharge_audio.stop()
-	
-	if Input.is_action_pressed("death_test"):
-		GameManager.game_over()
 
 
 func _on_timeline_started():
