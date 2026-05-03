@@ -1503,7 +1503,7 @@ scale = Vector2(1.0316604, 1.0316604)
 texture = ExtResource("55_2gpvc")
 offset = Vector2(0, -55.922333)
 region_enabled = true
-region_rect = Rect2(90.59, 13.294, 80.338, 136.126)
+region_rect = Rect2(90.59, 13.294, 74.08496, 136.126)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LivingRoom/Cadeira3" unique_id=1500977710]
 
@@ -1517,7 +1517,7 @@ scale = Vector2(1.0316604, 1.0316604)
 texture = ExtResource("55_2gpvc")
 offset = Vector2(0, -55.922333)
 region_enabled = true
-region_rect = Rect2(90.59, 13.294, 80.338, 136.126)
+region_rect = Rect2(90.59, 13.294, 74.80568, 136.126)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LivingRoom/Cadeira4" unique_id=1220993660]
 
