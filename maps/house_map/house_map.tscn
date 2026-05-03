@@ -93,6 +93,7 @@
 [ext_resource type="Texture2D" uid="uid://bqagvs8splho7" path="res://maps/house_map/player_room/quest_items/vela_20260424213143.png" id="69_5u111"]
 [ext_resource type="Texture2D" uid="uid://c1qrftwc24eom" path="res://maps/house_map/kitchen/sprites/Lixo.png" id="69_46v5m"]
 [ext_resource type="Texture2D" uid="uid://cyh7iu85numvw" path="res://maps/house_map/entrance/sprites/ratobrinquedo.png" id="69_epkg2"]
+[ext_resource type="Script" uid="uid://nijk2bopr64" path="res://maps/house_map/candles_sprite.gd" id="75_e1ha5"]
 [ext_resource type="PackedScene" uid="uid://duvt04eyx1k68" path="res://maps/house_map/red_flower.tscn" id="79_bfa4y"]
 [ext_resource type="Texture2D" uid="uid://dq2voadfi3wje" path="res://maps/house_map/kitchen/sprites/Fogão.png" id="80_kj0ua"]
 [ext_resource type="Texture2D" uid="uid://ltu1hd2tfvn4" path="res://maps/house_map/kitchen/sprites/Botijão.png" id="81_nx4ja"]
@@ -993,10 +994,13 @@ light_mask = 2
 position = Vector2(0, -37.5)
 texture = ExtResource("25_m3g6t")
 
-[node name="Interactable" type="Area2D" parent="EmptyRoom/Escada" unique_id=129142581]
+[node name="Interactable" type="Area2D" parent="EmptyRoom/Escada" unique_id=129142581 node_paths=PackedStringArray("pickup_sprite")]
 position = Vector2(-3, 12.5)
 script = ExtResource("4_54nda")
 timeline_name = "ladder"
+pickup = true
+pickup_flag = "LADDER_PICKUP"
+pickup_sprite = NodePath("../Escada")
 metadata/_custom_type_script = "uid://35dh8yuu4xlt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EmptyRoom/Escada/Interactable" unique_id=2037746712]
@@ -1775,6 +1779,15 @@ shape = SubResource("RectangleShape2D_cf860")
 position = Vector2(13.076921, -97.69231)
 scale = Vector2(0.28461543, 0.28461543)
 texture = ExtResource("69_5u111")
+script = ExtResource("75_e1ha5")
+
+[node name="Vela20260424213144" type="Sprite2D" parent="Kitchen/Armário/Vela20260424213143" unique_id=1459921864]
+position = Vector2(-37.837837, -16.216215)
+texture = ExtResource("69_5u111")
+
+[node name="Vela20260424213145" type="Sprite2D" parent="Kitchen/Armário/Vela20260424213143" unique_id=1095777828]
+position = Vector2(-27.027027, 24.324324)
+texture = ExtResource("69_5u111")
 
 [node name="TimelinetInteractable" type="Area2D" parent="Kitchen/Armário" unique_id=1037573995]
 script = ExtResource("4_54nda")
@@ -1853,12 +1866,12 @@ position = Vector2(864, 1430)
 [node name="PortachavEvisãodefrente" type="Sprite2D" parent="Entrance" unique_id=1167745247]
 light_mask = 2
 z_index = 1
-position = Vector2(-88, -426)
+position = Vector2(-88, -488)
 texture = ExtResource("56_pmh8l")
 offset = Vector2(-15, 9)
 
 [node name="Interactable6" type="Area2D" parent="Entrance/PortachavEvisãodefrente" unique_id=748846876]
-position = Vector2(23, 106)
+position = Vector2(23, 162)
 script = ExtResource("4_54nda")
 timeline_name = "hanging_keys"
 metadata/_custom_type_script = "uid://35dh8yuu4xlt"

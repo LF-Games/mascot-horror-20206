@@ -1,1 +1,10 @@
-There are a lot of keys, but I can't reach them #id:81
+if GlobalState.get_flag("DOOR_KEY_GET") == false:
+	if GlobalState.has_inventory_item("CANE"):
+		I can grab a key if I use this cane...
+		You got a door key.
+		do GlobalState.set_flag("DOOR_KEY_GET")
+		do GlobalState.add_inventory_item("DOOR_KEY")
+	else:
+		There are a lot of keys, but I can't reach them #id:81
+else:
+	I hope I don't lose those keys.
