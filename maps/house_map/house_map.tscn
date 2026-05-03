@@ -2153,7 +2153,7 @@ offset_left = -253.0
 offset_bottom = 264.0
 canvas_modulate = NodePath("../../../CanvasModulate")
 items = Array[String](["DOOR_KEY", "SECRET_KEY", "GLITTER", "BATTERY", "FLOWER_ITEM", "CANDLES", "RED_PAINT"])
-monsters = [NodePath("../../../Monstro")]
+monsters = [NodePath("../../../Monstro"), NodePath("../../../MonstroLobo")]
 
 [node name="PauseUI" parent="CanvasLayer" unique_id=402355377 instance=ExtResource("7_t1b3n")]
 process_mode = 3
