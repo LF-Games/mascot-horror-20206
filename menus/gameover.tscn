@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://d2oladwylgpxd"]
+
+[ext_resource type="Texture2D" uid="uid://ckc2wawgxva8l" path="res://menus/brokeneggwatch.png" id="1_c2w73"]
+[ext_resource type="FontVariation" uid="uid://bw06quwny0yb5" path="res://dialogic/basestyle/basefontnormal.tres" id="2_k33d8"]
+[ext_resource type="Texture2D" uid="uid://bfg20mlvmwtg3" path="res://menus/buttonpurple/telainicialpadrao.png" id="3_petbc"]
+[ext_resource type="Texture2D" uid="uid://ddl147lso0agd" path="res://menus/buttonpurple/telainicialpress.png" id="4_y3o7i"]
+[ext_resource type="Texture2D" uid="uid://w3c5o7jebarp" path="res://menus/buttonpurple/telainicialhover.png" id="5_j2nu7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qd264"]
+texture = ExtResource("3_petbc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ypjgb"]
+texture = ExtResource("4_y3o7i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vd84a"]
+texture = ExtResource("5_j2nu7")
+
+[sub_resource type="ImageTexture" id="ImageTexture_j07sl"]
+
+[node name="gameover" type="Control" unique_id=597376851]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Brokeneggwatch" type="Sprite2D" parent="." unique_id=1691193256]
+position = Vector2(1424.3983, 516.3143)
+scale = Vector2(0.4893104, 0.4893105)
+texture = ExtResource("1_c2w73")
+
+[node name="Buttonstart2" type="Button" parent="." unique_id=381366854]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 640.0
+offset_right = 930.3523
+offset_bottom = 778.8631
+scale = Vector2(0.6800006, 0.6800006)
+theme_override_fonts/font = ExtResource("2_k33d8")
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = SubResource("StyleBoxTexture_qd264")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ypjgb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vd84a")
+text = "RETRY"
+icon = SubResource("ImageTexture_j07sl")
+
+[node name="Buttonstart" type="Button" parent="." unique_id=1396151655]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 776.99994
+offset_right = 930.3523
+offset_bottom = 915.99994
+scale = Vector2(0.6800006, 0.6800006)
+theme_override_fonts/font = ExtResource("2_k33d8")
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = SubResource("StyleBoxTexture_qd264")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ypjgb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vd84a")
+text = "MENU"
+icon = SubResource("ImageTexture_j07sl")

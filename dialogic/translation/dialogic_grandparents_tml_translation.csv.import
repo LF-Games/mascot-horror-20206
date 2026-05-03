@@ -6,10 +6,10 @@ uid="uid://dpxoh4ejx0b5u"
 
 [deps]
 
-files=["res://dialogic/translation/dialogic_grandparents_tml_translation.en.translation"]
+files=["res://dialogic/translation/dialogic_grandparents_tml_translation.en.translation", "res://dialogic/translation/dialogic_grandparents_tml_translation.en.translation"]
 
 source_file="res://dialogic/translation/dialogic_grandparents_tml_translation.csv"
-dest_files=["res://dialogic/translation/dialogic_grandparents_tml_translation.en.translation"]
+dest_files=["res://dialogic/translation/dialogic_grandparents_tml_translation.en.translation", "res://dialogic/translation/dialogic_grandparents_tml_translation.en.translation"]
 
 [params]
 

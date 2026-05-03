@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c6l88og3s83l5"
+
+[deps]
+
+files=["res://dialogic/translation/dialogic_entrance_door_translation.en.translation", "res://dialogic/translation/dialogic_entrance_door_translation.pt_BR.translation"]
+
+source_file="res://dialogic/translation/dialogic_entrance_door_translation.csv"
+dest_files=["res://dialogic/translation/dialogic_entrance_door_translation.en.translation", "res://dialogic/translation/dialogic_entrance_door_translation.pt_BR.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

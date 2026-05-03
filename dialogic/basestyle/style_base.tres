@@ -36,6 +36,7 @@ script = ExtResource("2_or0b2")
 scene = ExtResource("6_osndp")
 overrides = {
 "bold_font": "\"res://Junction-bold.otf\"",
+"box_animation_in": "1",
 "box_color_custom": "Color(1, 1, 1, 1)",
 "box_panel": "\"res://dialogic/basestyle/textboxbase.tres\"",
 "box_size": "Vector2(1100, 300)",
@@ -78,4 +79,4 @@ layer_info = {
 "16": SubResource("Resource_fm3p4"),
 "17": SubResource("Resource_fmcb8")
 }
-metadata/_latest_layer = "15"
+metadata/_latest_layer = "10"

@@ -1,5 +1,5 @@
-Grandpa and Grandma are really cool; as soon as I arrived here, they gave me an brand new art kit.
+Grandpa and Grandma are really cool; as soon as I arrived here, they gave me an brand new art kit. #id:96
 if GlobalState.get_flag("HALLWAY_GLITTER_GET") == false:
-	You got glitter.
+	You got glitter. #id:97
 	do GlobalState.add_inventory_item("GLITTER")
 	do GlobalState.set_flag("HALLWAY_GLITTER_GET")

@@ -19,20 +19,3 @@ Boy_char (boyscared): Hmm... you're scaring me, I don't want to play with you an
 join grandpa_char (grandpashout) right
 
 grandpa_char: BOY, WHAT IS THAT? #id:27
-
-Boy_char: *Your grandparents jump in front, entering the circle. A bright light emanates from the fire, blinding his vision.* #id:28
-leave --All--
-Boy_char: *The spirit is transforming in front of you while giving an evil laugh.* #id:29
-
-eggwatch_char (eggsad): *His grandparents begin to scream, but now, from inside the eggwatch.* #id:2a
-
-Boy_char: Finally... After so long I managed to escape this prison. Did you really think that two dying old humans could contain me forever? #id:2b
-Boy_char: HAHAHAHA Filthy child, just like your parents, I will personally carry you to HELL!! HAHAHAHAHA #id:2c
-join Boy_char (boyscared) left
-
-Boy_char: *While the demon's soul begins to materialize, you grab the eggwatch.* #id:2d
-join eggwatch_char center
-
-eggwatch_char (eggsad): RUN BOY, GO AWAY (ಥ﹏ಥ). Value your life and get out the door, don't worry about us, run and find a convent or church to protect yourself from him. #id:2e
-
-eggwatch_char (eggmad): NO, EXORCISE THE DEMON (ᗒᗣᗕ)՞! If you don't do that, we'll be trapped forever, this spell is too strong and can only be undone by exorcising this demon. #id:2f

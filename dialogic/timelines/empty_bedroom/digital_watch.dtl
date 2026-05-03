@@ -1,6 +1,6 @@
 if GlobalState.get_flag("CLOCK_BATTERY_GET") == false:
-	Nobody even uses this room—they won’t even notice…
+	Nobody even uses this room—they won’t even notice… #id:78
 	do GlobalState.set_flag("CLOCK_BATTERY_GET")
 	jump battery_collect/
 else:
-	They won’t even notice…
+	They won’t even notice… #id:79

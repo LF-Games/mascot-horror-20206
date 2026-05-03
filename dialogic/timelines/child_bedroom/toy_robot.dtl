@@ -1,6 +1,6 @@
 if GlobalState.get_flag("ROBOT_BATTERY_GET") == false:
-	The silly robot won't mind if I take this.
+	The silly robot won't mind if I take this. #id:6a
 	do GlobalState.set_flag("ROBOT_BATTERY_GET")
 	jump battery_collect/
 else:
-	Now you're even less silly...
+	Now you're even less silly... #id:6b
