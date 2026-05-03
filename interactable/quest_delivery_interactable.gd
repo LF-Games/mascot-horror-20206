@@ -30,16 +30,19 @@ func interact():
 		Dialogic.start(candles_delivery_timeline)
 		GlobalState.remove_intentory_item(candle_item_key)
 		GlobalState.set_flag(candle_delivered_flag)
+		GlobalState.save_state()
 	elif !GlobalState.get_flag(glitter_delivered_flag) and GlobalState.get_item_count(glitter_item_key) >= glitter_amount:
 		glitter_sprite.show()
 		Dialogic.start(glitter_delivery_timeline)
 		GlobalState.remove_intentory_item(glitter_item_key, 3)
 		GlobalState.set_flag(glitter_delivered_flag)
+		GlobalState.save_state()
 	elif !GlobalState.get_flag(red_paint_delivered_flag) and GlobalState.has_inventory_item(red_paint_item_key):
 		red_paint_sprite.show()
 		Dialogic.start(red_paint_delivery_timeline)
 		GlobalState.remove_intentory_item(red_paint_item_key)
 		GlobalState.set_flag(red_paint_delivered_flag)
+		GlobalState.save_state()
 	else:
 		Dialogic.start(no_delivery_timeline)
 	
