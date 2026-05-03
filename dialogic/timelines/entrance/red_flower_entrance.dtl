@@ -1,5 +1,5 @@
-Excuse me, Miss Flower, but I need your color
+Excuse me, Miss Flower, but I need your color #id:84
 if GlobalState.get_flag("ENTRANCE_FLOWER_ITEM_GET") == false:
-	You got flower item
+	You got flower item #id:85
 	do GlobalState.add_inventory_item("FLOWER_ITEM")
 	do GlobalState.set_flag("ENTRANCE_FLOWER_ITEM_GET")

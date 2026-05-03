@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://db7ly5ht776pa"]
+
+[ext_resource type="Texture2D" uid="uid://bknyxev7tf4q6" path="res://menus/eggwatchlogo.svg" id="1_ky56e"]
+[ext_resource type="Texture2D" uid="uid://dyq22o0vc8vso" path="res://menus/particlemenu.svg" id="1_pt8jw"]
+[ext_resource type="FontVariation" uid="uid://bw06quwny0yb5" path="res://dialogic/basestyle/basefontnormal.tres" id="3_nxx8a"]
+[ext_resource type="Texture2D" uid="uid://bfg20mlvmwtg3" path="res://menus/buttonpurple/telainicialpadrao.png" id="4_0d3af"]
+[ext_resource type="Texture2D" uid="uid://ddl147lso0agd" path="res://menus/buttonpurple/telainicialpress.png" id="5_i6e26"]
+[ext_resource type="Texture2D" uid="uid://w3c5o7jebarp" path="res://menus/buttonpurple/telainicialhover.png" id="6_5m2mv"]
+[ext_resource type="Texture2D" uid="uid://77uepnev3s7b" path="res://menus/flags/Flag-Brazil 1.png" id="7_iusdk"]
+[ext_resource type="Texture2D" uid="uid://cdfonwidwat7o" path="res://menus/flags/brazilsel.png" id="8_571a5"]
+[ext_resource type="Script" uid="uid://dismhu54kxsi" path="res://menus/ptbr.gd" id="9_0d3af"]
+[ext_resource type="Texture2D" uid="uid://cg78f7vfmum2n" path="res://menus/flags/Flag_of_the_United_States 1.png" id="9_tnhg3"]
+[ext_resource type="Texture2D" uid="uid://cha1u8m71y7g2" path="res://menus/flags/usasel.png" id="10_7n5ce"]
+[ext_resource type="Script" uid="uid://b8g206a1qk7dn" path="res://menus/usa.gd" id="12_i6e26"]
+
+[sub_resource type="Curve" id="Curve_pt8jw"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5778443, 0.8718097), 0.0, 0.0, 0, 0, Vector2(0.99101794, 0.7285383), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_rolf6"]
+offsets = PackedFloat32Array(0, 0.26490065, 0.5231788, 0.7682119, 0.9966887)
+colors = PackedColorArray(0.012617188, 0.012617188, 0.012617188, 1, 1, 1, 1, 1, 0.44705883, 1, 0.5568628, 1, 0.43137255, 0.9372549, 0.9607843, 1, 0.9647059, 0.2509804, 0.58431375, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sh4tw"]
+texture = ExtResource("4_0d3af")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fw8sf"]
+texture = ExtResource("5_i6e26")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7y344"]
+texture = ExtResource("6_5m2mv")
+
+[sub_resource type="ImageTexture" id="ImageTexture_pt8jw"]
+
+[node name="mainmenu" type="Control" unique_id=419227536]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." unique_id=528774526]
+position = Vector2(933.00006, 573)
+amount = 200
+texture = ExtResource("1_pt8jw")
+lifetime = 6.46
+preprocess = 4.58
+lifetime_randomness = 0.5
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 233.91
+initial_velocity_max = 304.09
+linear_accel_min = -5.85
+linear_accel_max = -5.85
+angle_min = 90.0
+angle_max = 117.9
+scale_amount_curve = SubResource("Curve_pt8jw")
+color_ramp = SubResource("Gradient_rolf6")
+
+[node name="Eggwatchlogo" type="Sprite2D" parent="." unique_id=1702019743]
+position = Vector2(933, 370.00003)
+scale = Vector2(0.6534635, 0.64382416)
+texture = ExtResource("1_ky56e")
+
+[node name="Buttonstart" type="Button" parent="." unique_id=1515651967]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 636.0
+offset_right = 1361.0
+offset_bottom = 775.0
+scale = Vector2(0.6800006, 0.6800006)
+theme_override_fonts/font = ExtResource("3_nxx8a")
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = SubResource("StyleBoxTexture_sh4tw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fw8sf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7y344")
+text = "START"
+icon = SubResource("ImageTexture_pt8jw")
+
+[node name="Buttonexit" type="Button" parent="." unique_id=481560193]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 875.0
+offset_right = 1361.0
+offset_bottom = 1014.0
+scale = Vector2(0.6800006, 0.6800006)
+theme_override_fonts/font = ExtResource("3_nxx8a")
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = SubResource("StyleBoxTexture_sh4tw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fw8sf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7y344")
+text = "EXIT"
+icon = SubResource("ImageTexture_pt8jw")
+
+[node name="Buttonconfig" type="Button" parent="." unique_id=1282196182]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 753.99994
+offset_right = 1361.0
+offset_bottom = 892.99994
+scale = Vector2(0.6800006, 0.6800006)
+theme_override_fonts/font = ExtResource("3_nxx8a")
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = SubResource("StyleBoxTexture_sh4tw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fw8sf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7y344")
+text = "CONFIG"
+icon = SubResource("ImageTexture_pt8jw")
+
+[node name="brazil" type="TextureButton" parent="." unique_id=1398955971]
+layout_mode = 0
+offset_left = 1475.9999
+offset_top = 849.0
+offset_right = 1696.9999
+offset_bottom = 1004.0
+scale = Vector2(0.88, 0.88)
+texture_normal = ExtResource("7_iusdk")
+texture_pressed = ExtResource("8_571a5")
+script = ExtResource("9_0d3af")
+
+[node name="usa" type="TextureButton" parent="." unique_id=1750378951]
+layout_mode = 0
+offset_left = 1699.0
+offset_top = 849.0
+offset_right = 1994.0
+offset_bottom = 1004.0
+scale = Vector2(0.88, 0.88)
+texture_normal = ExtResource("9_tnhg3")
+texture_pressed = ExtResource("10_7n5ce")
+script = ExtResource("12_i6e26")

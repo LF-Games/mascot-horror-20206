@@ -1,15 +1,15 @@
-keys,en
-Text/44/text,"As night falls in a small town in Brazil, you are watching TV and start to complain:"
-Text/45/text,"Grandpa, please let me watch cartoons, there's nothing to do here!"
-Text/46/text,Why don't you go play with the new toy that your grandmother gave to you? I'm watching the news!
-Text/47/text,"But I've already done everything I could do with it, let me watch cartoons!"
-Text/48/text,"Boy, stop bothering your grandfather, the food is almost ready, why don't you walk around the house a bit? Get away from that TV!"
-Text/49/text,"*Following your grandfather's advice, you walk around the house and enter a rarely visited room, it's full of boxes and dusty things.*"
-Text/4a/text,"*Venturing among the objects, you find a pretty hand mirror with  weird symbols on the back, but it doesn't seem to have anything special.*"
-Text/4b/text,"BOY, DINNER IS READY!!!"
-Text/4c/text,"*You drop the mirror in fright and try to get back to your grandmother as quickly as possible, hoping that no one heard.*"
-Text/4d/text,"*Luckily, the TV volume was high, and they didn't suspect anything.*"
-Text/4e/text,"*At the end of the meal, you feel something vibrate and make some noises in your pocket.*"
-Text/4f/text,"*Your Eggwatch suddenly died, the brand-new toy your grandmother had given you was broken…*"
-Text/50/text,*Your sadness was so great that you went to bed crying that night.*
-Text/51/text,"*In the middle of the night, you feel a light in your eyes; you wake up.*"
+keys,en,pt_BR
+Text/44/text,"As night falls in a small town in Brazil, you are watching TV and start to complain:","*Ao cair da noite no interior em uma cidadezinha pequena no Brasil, assistindo a TV você começa a se queixar.*"
+Text/45/text,"Grandpa, please let me watch cartoons, there's nothing to do here!","Poxa vô, me deixa ver desenho por favor, não tem nada pra fazer aqui."
+Text/46/text,Why don't you go play with the new toy that your grandmother gave to you? I'm watching the news!,Porque você não vai brincar com o brinquedo que sua avó te deu? eu tô assistindo jornal.
+Text/47/text,"But I've already done everything I could do with it, let me watch cartoons!","Mas eu já fiz tudo que dava pra fazer com ele, deixa eu ver desenho."
+Text/48/text,"Boy, stop bothering your grandfather, the food is almost ready, why don't you walk around the house a bit? Get away from that TV!","Menino para de implicar com seu avô, a comida ta quase pronta, porque não anda um pouco pela casa? Sai da frente dessa TV."
+Text/49/text,"*Following your grandfather's advice, you walk around the house and enter a rarely visited room, it's full of boxes and dusty things.*","Seguindo o conselho de sua avó você anda pela casa e entra num quarto pouco visitado, ele está cheio de caixas e coisas empoeiradas."
+Text/4a/text,"*Venturing among the objects, you find a pretty hand mirror with  weird symbols on the back, but it doesn't seem to have anything special.*","*Se aventurando pelos objetos, você encontra um espelho de mão bonito com símbolos atrás, ele não parece ter nada de especial.*"
+Text/4b/text,"BOY, DINNER IS READY!!!","MENIIIIINO, A JANTA TA PROOONTA!!!"
+Text/4c/text,"*You drop the mirror in fright and try to get back to your grandmother as quickly as possible, hoping that no one heard.*","*Você larga o espelho com o susto e tenta voltar o mais rápido pra perto de sua avó, torcendo para que ninguém tenha ouvido.*"
+Text/4d/text,"*Luckily, the TV volume was high, and they didn't suspect anything.*","Por sorte, o volume da TV estava alto, e ninguém desconfiou."
+Text/4e/text,"*At the end of the meal, you feel something vibrate and make some noises in your pocket.*",*Ao final da refeição você sente algo vibrar em seu bolso e fazer alguns sons*
+Text/4f/text,"*Your Eggwatch suddenly died, the brand-new toy your grandmother had given you was broken…*","*Seu eggwatch de repente faleceu, o brinquedo novinho que sua avó havia lhe dado estava quebrado…"
+Text/50/text,*Your sadness was so great that you went to bed crying that night.*,"*Sua tristeza foi tanta que naquela noite, foi para cama chorando.*"
+Text/51/text,"*In the middle of the night, you feel a light in your eyes; you wake up.*","*No meio da madrugada sente uma luz em seus olhos, você acorda.*"

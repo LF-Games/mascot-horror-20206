@@ -2,9 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://nnriccdwh3th" path="res://maps/house_map/player_room/drawing_items/desenho_20260424222307.png" id="1_ck2wp"]
 [ext_resource type="Script" uid="uid://35dh8yuu4xlt" path="res://interactable/timeline_interactable.gd" id="2_6j3vq"]
+[ext_resource type="Texture2D" uid="uid://b1rbuu1kuy3qs" path="res://maps/house_map/glittereffect.svg" id="3_pxxd7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxxd7"]
 size = Vector2(154.6365, 113.25491)
+
+[sub_resource type="Curve" id="Curve_wt2kq"]
+_data = [Vector2(0.21856289, 0.11774945), 0.0, 0.0, 0, 0, Vector2(0.61377245, 0.71345705), 0.0, 0.0, 0, 0, Vector2(0.94610786, 0.3439675), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [node name="GlitterDrawing" type="Sprite2D" unique_id=1448662481]
 self_modulate = Color(1, 0, 1, 1)
@@ -20,3 +25,18 @@ metadata/_custom_type_script = "uid://35dh8yuu4xlt"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TimelinetInteractable" unique_id=1411059600]
 position = Vector2(-7.6229243, 1.0385413e-06)
 shape = SubResource("RectangleShape2D_pxxd7")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." unique_id=753356323]
+position = Vector2(-8.711916, -2.177979)
+amount = 14
+texture = ExtResource("3_pxxd7")
+emission_shape = 3
+emission_rect_extents = Vector2(80, 60)
+gravity = Vector2(0, 0)
+angular_velocity_min = 16.84
+angular_velocity_max = 25.26
+damping_max = 3.509
+scale_amount_min = 0.0
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_wt2kq")
+color = Color(0.44705883, 1, 0.5568628, 1)

@@ -1,6 +1,6 @@
 if GlobalState.get_flag("GRANDPARENTSBEDROOM_BATTERY_GET") == false:
-	I hope they don’t catch me doing this.
+	I hope they don’t catch me doing this. #id:91
 	do GlobalState.set_flag("GRANDPARENTSBEDROOM_BATTERY_GET")
 	jump battery_collect/
 else:
-	If they find out, I'm done...
+	If they find out, I'm done... #id:92

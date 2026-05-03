@@ -1,4 +1,5 @@
-I loved drawing with Mom and Dad; they used to say that one day I’d shine just like glitter — I just had to try…
+I loved drawing with Mom and Dad; they used to say that one day I’d shine just like glitter — I just had to try… #id:7a
 if GlobalState.get_flag("EMPTY_BEDROOM_GLITTER_GET") == false:
-	You got glitter.
+	You got glitter. #id:7b
+	do GlobalState.add_inventory_item("GLITTER")
 	do GlobalState.set_flag("EMPTY_BEDROOM_GLITTER_GET")

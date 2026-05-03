@@ -1,4 +1,4 @@
-Hello world
-label test
-Hello world
+Hello world #id:a3
+label test #id:a4
+Hello world #id:a5
 do GlobalState.add_inventory_item("TEST_ITEM")

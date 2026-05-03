@@ -1,3 +1,4 @@
+[background arg="res://dialogic/backgrounds/bglivingroom.png" fade="0.7"]
 Boy_char: As night falls in a small town in Brazil, you are watching TV and start to complain\: #id:44
 join Boy_char left
 
@@ -12,6 +13,7 @@ join grandma_char right
 
 grandma_char (grandmabase): Boy, stop bothering your grandfather, the food is almost ready, why don't you walk around the house a bit? Get away from that TV! #id:48
 leave grandma_char
+[background arg="res://dialogic/backgrounds/bgsecretroom.png" fade="0.7"]
 
 Boy_char: *Following your grandfather's advice, you walk around the house and enter a rarely visited room, it's full of boxes and dusty things.* #id:49
 
@@ -23,12 +25,14 @@ leave grandma_char
 update Boy_char (boyscared)
 
 Boy_char (boyscared): *You drop the mirror in fright and try to get back to your grandmother as quickly as possible, hoping that no one heard.* #id:4c
+[background arg="res://dialogic/backgrounds/bglivingroom.png" fade="0.0"]
 Boy_char (boybase): *Luckily, the TV volume was high, and they didn't suspect anything.* #id:4d
 join Boy_char (boybase) left
 
 Boy_char: *At the end of the meal, you feel something vibrate and make some noises in your pocket.* #id:4e
 update Boy_char (boyscared)
 Boy_char (boyscared): *Your Eggwatch suddenly died, the brand-new toy your grandmother had given you was broken…* #id:4f
+[background arg="res://dialogic/backgrounds/bgbedroom.png" fade="0.7"]
 Boy_char: *Your sadness was so great that you went to bed crying that night.* #id:50
 
 Boy_char: *In the middle of the night, you feel a light in your eyes; you wake up.* #id:51

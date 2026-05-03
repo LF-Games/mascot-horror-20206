@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cctg6xp4id26g"
+
+[deps]
+
+files=["res://dialogic/translation/dialogic_red_flower_grandparentsbedroom_translation.en.translation", "res://dialogic/translation/dialogic_red_flower_grandparentsbedroom_translation.pt_BR.translation"]
+
+source_file="res://dialogic/translation/dialogic_red_flower_grandparentsbedroom_translation.csv"
+dest_files=["res://dialogic/translation/dialogic_red_flower_grandparentsbedroom_translation.en.translation", "res://dialogic/translation/dialogic_red_flower_grandparentsbedroom_translation.pt_BR.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
