@@ -7,6 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_fdedp"]
 radius = 19.0
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kbydo"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kbydo"]
 atlas = ExtResource("2_gcmmn")
 region = Rect2(0, 0, 130, 180)
@@ -94,7 +96,7 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8nxvw"]
 shader = ExtResource("3_kbydo")
-shader_parameter/silhouette_color = Color(0, 0, 0, 0.5)
+shader_parameter/silhouette_color = Color(0, 0, 0, 0.3764706)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85jkn"]
 atlas = ExtResource("2_gcmmn")
@@ -184,11 +186,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_gcmmn"]
 radius = 43.0
 
-[node name="Monstro" type="CharacterBody2D" unique_id=1310309185]
+[node name="Monstro" type="CharacterBody2D" unique_id=1310309185 node_paths=PackedStringArray("silhouetteavo")]
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_gcmmn")
 lose_range = 550.0
+silhouetteavo = NodePath("AnimatedSprite2D/SilhouetteAvo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1220647233]
 shape = SubResource("CircleShape2D_fdedp")
@@ -196,9 +199,11 @@ shape = SubResource("CircleShape2D_fdedp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=562244146]
 light_mask = 4
 visibility_layer = 4
+material = SubResource("CanvasItemMaterial_kbydo")
 position = Vector2(-1, -56)
 sprite_frames = SubResource("SpriteFrames_p310o")
 animation = &"Avo_monstro"
+autoplay = "Avo_monstro"
 
 [node name="SilhouetteAvo" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1750437534]
 light_mask = 4
@@ -206,6 +211,7 @@ z_index = 100
 material = SubResource("ShaderMaterial_8nxvw")
 sprite_frames = SubResource("SpriteFrames_5n2t1")
 animation = &"Avo_monstro"
+autoplay = "Avo_monstro"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1094703035]
 path_desired_distance = 3.0

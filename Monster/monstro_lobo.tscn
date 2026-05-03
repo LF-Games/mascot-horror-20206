@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3f30dhan2rba"]
 
-[ext_resource type="Script" uid="uid://djwvwmjt5d6cd" path="res://Wolfmonster/monstro_lobo.gd" id="1_g2j3q"]
-[ext_resource type="Texture2D" uid="uid://2i2u3yvoc8u4" path="res://Wolfmonster/monstro_lobo.png" id="2_ks6pp"]
+[ext_resource type="Script" uid="uid://b1hikfm7thaxu" path="res://Monster/monster.gd" id="1_j6dgi"]
+[ext_resource type="Texture2D" uid="uid://2i2u3yvoc8u4" path="res://Monster/monstro_lobo.png" id="2_ks6pp"]
 [ext_resource type="Shader" uid="uid://bo1qkomtqc0xd" path="res://player/player_silhouette.gdshader" id="3_01o5v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r8j7s"]
@@ -103,12 +103,12 @@ animations = [{
 }],
 "loop": true,
 "name": &"Lobo_monstro",
-"speed": 8.0
+"speed": 12.0
 }]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rtyfh"]
 shader = ExtResource("3_01o5v")
-shader_parameter/silhouette_color = Color(0, 0, 0, 0.5)
+shader_parameter/silhouette_color = Color(0, 0, 0, 0.1254902)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2gna"]
 atlas = ExtResource("2_ks6pp")
@@ -206,31 +206,36 @@ animations = [{
 }],
 "loop": true,
 "name": &"Lobo_monstro",
-"speed": 8.0
+"speed": 12.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2j3q"]
 radius = 23.0
 
-[node name="MonstroLobo" type="CharacterBody2D" unique_id=1346569303]
+[node name="MonstroLobo" type="CharacterBody2D" unique_id=1346569303 node_paths=PackedStringArray("silhouetteavo")]
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("1_g2j3q")
+script = ExtResource("1_j6dgi")
 lose_range = 550.0
+silhouetteavo = NodePath("AnimatedSprite2D/SilhouetteWolf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587782300]
 shape = SubResource("CircleShape2D_r8j7s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=835160909]
+light_mask = 4
+visibility_layer = 4
 position = Vector2(1, -75)
 sprite_frames = SubResource("SpriteFrames_7g25e")
 animation = &"Lobo_monstro"
+autoplay = "Lobo_monstro"
 
 [node name="SilhouetteWolf" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=920062552]
 z_index = 100
 material = SubResource("ShaderMaterial_rtyfh")
 sprite_frames = SubResource("SpriteFrames_2pmp5")
 animation = &"Lobo_monstro"
+autoplay = "Lobo_monstro"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1658741359]
 path_desired_distance = 3.0

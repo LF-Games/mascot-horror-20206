@@ -3,15 +3,16 @@ extends CharacterBody2D
 enum State {IDLE, CHASE}
 
 @export var speed: float = 100.0 # speed monstro
-@export var detection_range: float = 400.0 #IDLE -> CHASE Quando player entra no range o estado muda
+@export var detection_range: float = 400.0 # IDLE -> CHASE Quando player entra no range o estado muda
 @export var lose_range: float = 450.0 # CHASE -> IDLE Quando player sai do range o monstro perde o target
-@export var target : CharacterBody2D 
+@export var target: CharacterBody2D
+@export var silhouetteavo: AnimatedSprite2D
 
 @onready var animation = $AnimatedSprite2D
-@onready var silhouetteavo = $AnimatedSprite2D/SilhouetteAvo
 @onready var navegant: NavigationAgent2D = $NavigationAgent2D
 
 var current_state: State = State.IDLE
+
 
 func _physics_process(_delta):
 	if target == null:
@@ -24,16 +25,18 @@ func _physics_process(_delta):
 		State.CHASE:
 			_state_chase(distance)
 			
+
 # ── IDLE ────────────────────────────────────────────────
-func _state_idle (distance:float) -> void:
+func _state_idle(distance: float) -> void:
 	velocity = Vector2.ZERO
 	move_and_slide()
 	
 	if distance < detection_range:
 		current_state = State.CHASE
 
+
 # ── CHASE ────────────────────────────────────────────────
-func _state_chase (distance:float) -> void:
+func _state_chase(distance: float) -> void:
 	if distance > lose_range:
 		current_state = State.IDLE
 		return
@@ -53,15 +56,15 @@ func _state_chase (distance:float) -> void:
 		animation.flip_h = false
 		silhouetteavo.flip_h = false
 
-	
+
 func _update_target_position() -> void:
 	if target != null and current_state == State.CHASE:
 		navegant.target_position = target.global_position
 
+
 func _ready() -> void:
-	animation.play("Avo_monstro")
-	silhouetteavo.play("Avo_monstro")
-	await  get_tree().physics_frame
+	await get_tree().physics_frame
+
 
 func _on_timer_timeout() -> void:
 	_update_target_position()

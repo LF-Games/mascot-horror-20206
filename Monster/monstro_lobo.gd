@@ -3,9 +3,9 @@ extends CharacterBody2D
 enum State {IDLE, CHASE}
 
 @export var speed: float = 100.0 # speed monstro
-@export var detection_range: float = 400.0 #IDLE -> CHASE Quando player entra no range o estado muda
+@export var detection_range: float = 400.0 # IDLE -> CHASE Quando player entra no range o estado muda
 @export var lose_range: float = 450.0 # CHASE -> IDLE Quando player sai do range o monstro perde o target
-@export var target : CharacterBody2D 
+@export var target: CharacterBody2D
 
 @onready var animation = $AnimatedSprite2D
 @onready var silhouetteavo = $AnimatedSprite2D/SilhouetteWolf
@@ -25,7 +25,7 @@ func _physics_process(_delta):
 			_state_chase(distance)
 			
 # ── IDLE ────────────────────────────────────────────────
-func _state_idle (distance:float) -> void:
+func _state_idle(distance: float) -> void:
 	velocity = Vector2.ZERO
 	move_and_slide()
 	
@@ -33,7 +33,7 @@ func _state_idle (distance:float) -> void:
 		current_state = State.CHASE
 
 # ── CHASE ────────────────────────────────────────────────
-func _state_chase (distance:float) -> void:
+func _state_chase(distance: float) -> void:
 	if distance > lose_range:
 		current_state = State.IDLE
 		return
@@ -60,7 +60,7 @@ func _update_target_position() -> void:
 func _ready() -> void:
 	animation.play("Lobo_monstro")
 	silhouetteavo.play("Lobo_monstro")
-	await  get_tree().physics_frame
+	await get_tree().physics_frame
 
 func _on_timer_timeout() -> void:
 	_update_target_position()
