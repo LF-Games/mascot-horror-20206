@@ -14,7 +14,7 @@ void fragment() {
 	if(all(lessThan(abs(sprite_color - screen_color), vec4(0.01)))){
 		COLOR = sprite_color;
 	} else {
-		COLOR = vec4(silhouette_color.rgb, silhouette_color.a * sprite_color.a);
+		COLOR = vec4(sprite_color.rgb, silhouette_color.a * sprite_color.a);
 	}
 }
 

@@ -12,11 +12,10 @@
 [ext_resource type="Script" uid="uid://dcmi4wwybhrn0" path="res://player/death_detector.gd" id="10_8t03j"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hg6s5"]
-light_mode = 1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8t03j"]
 shader = ExtResource("2_2ieo8")
-shader_parameter/silhouette_color = Color(0, 0, 0, 0.5)
+shader_parameter/silhouette_color = Color(0, 0, 0, 0.2509804)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1dw6"]
 radius = 8.0

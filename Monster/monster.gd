@@ -3,18 +3,19 @@ extends CharacterBody2D
 enum State {IDLE, CHASE}
 
 @export var speed: float = 100.0 # speed monstro
-@export var idle_speed: float = 60.0 #speed no modo idle/wander
-@export var detection_range: float = 400.0 #IDLE -> CHASE Quando player entra no range o estado muda
+@export var detection_range: float = 400.0 # IDLE -> CHASE Quando player entra no range o estado muda
 @export var lose_range: float = 450.0 # CHASE -> IDLE Quando player sai do range o monstro perde o target
+@export var target: CharacterBody2D
+@export var silhouetteavo: AnimatedSprite2D
+@export var idle_speed: float = 60.0 # speed no modo idle/wander
 @export var wander_range: float = 250.0 # range do Raio circular do wander(vagar)
-@export var target: CharacterBody2D 
 
 @onready var animation = $AnimatedSprite2D
 @onready var navegant: NavigationAgent2D = $NavigationAgent2D
 
 var current_state: State = State.IDLE
 var _wander_timer: float = 0.0
-var _nav_ready: bool = false 
+var _nav_ready: bool = false
 
 # ── READY ────────────────────────────────────────────────
 func _ready() -> void:
@@ -30,6 +31,7 @@ func _on_map_ready(_map_rid: RID) -> void:
 	_nav_ready = true
 	_pick_wander_target()
 
+
 func _physics_process(_delta):
 	if target == null:
 		return
@@ -40,7 +42,7 @@ func _physics_process(_delta):
 		State.CHASE: _state_chase(distance)
 
 # ── IDLE ────────────────────────────────────────────────
-func _state_idle (delta: float, distance:float) -> void:
+func _state_idle(delta: float, distance: float) -> void:
 	if not _nav_ready:
 		return
 	if distance < detection_range:
@@ -59,14 +61,15 @@ func _state_idle (delta: float, distance:float) -> void:
 		velocity = Vector2.ZERO
 	move_and_slide()
 
+
 # ── CHASE ────────────────────────────────────────────────
-func _state_chase (distance:float) -> void:
+func _state_chase(distance: float) -> void:
 	if distance > lose_range:
 		current_state = State.IDLE
 		_pick_wander_target()
 		return
 		
-	if  navegant.is_navigation_finished():
+	if navegant.is_navigation_finished():
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
@@ -75,6 +78,13 @@ func _state_chase (distance:float) -> void:
 	var next_pos = navegant.get_next_path_position()
 	var direction = (next_pos - global_position).normalized()
 	velocity = direction * speed
+	## inverter sprite
+	if direction.x < 0:
+		animation.flip_h = true
+		silhouetteavo.flip_h = true
+	else:
+		animation.flip_h = false
+		silhouetteavo.flip_h = false
 	move_and_slide()
 
 # ── WANDER — sorteia ponto dentro dos polígonos navegáveis ──
@@ -83,15 +93,15 @@ func _pick_wander_target() -> void:
 		return
 	var map = navegant.get_navigation_map()
 	var point_found = false
-	
+
 	for attempt in range(15):
 		# Sorteia ângulo em qualquer direção igualmente
-		var angle = randf()*TAU
+		var angle = randf() * TAU
 		var distance = randf_range(50.0, wander_range)
 		
 		var random_point = global_position + Vector2(
-			cos(angle)*distance, 
-			sin(angle)*distance
+			cos(angle) * distance,
+			sin(angle) * distance
 			)
 		
 		var closest = NavigationServer2D.map_get_closest_point(map, random_point)

@@ -98,6 +98,7 @@
 [ext_resource type="Texture2D" uid="uid://ltu1hd2tfvn4" path="res://maps/house_map/kitchen/sprites/Botijão.png" id="81_nx4ja"]
 [ext_resource type="Texture2D" uid="uid://cagft6pbwbhbe" path="res://maps/house_map/kitchen/sprites/Freezer.png" id="82_7bapn"]
 [ext_resource type="Texture2D" uid="uid://dybul4thpkwh1" path="res://maps/house_map/kitchen/sprites/Geladeira.png" id="83_erlh7"]
+[ext_resource type="PackedScene" uid="uid://3f30dhan2rba" path="res://Monster/monstro_lobo.tscn" id="89_cf860"]
 [ext_resource type="PackedScene" uid="uid://ccgdwt45hj41c" path="res://test/cheat_panel.tscn" id="93_nqa2f"]
 [ext_resource type="AudioStream" uid="uid://0nel6vyddjja" path="res://music/Main Theme - Eggwatch.mp3" id="97_6woio"]
 
@@ -2074,13 +2075,16 @@ color = Color(0, 0, 0, 1)
 script = ExtResource("3_wyhsf")
 metadata/_custom_type_script = "uid://b5jr5qc0lxppc"
 
+[node name="MonstroLobo" parent="." unique_id=1346569303 node_paths=PackedStringArray("target") instance=ExtResource("89_cf860")]
+position = Vector2(-1040, -1179)
+target = NodePath("../Player")
+
 [node name="Monstro" parent="." unique_id=129741262 node_paths=PackedStringArray("target") instance=ExtResource("4_pwhhv")]
 position = Vector2(797, -57)
 target = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=250710723 node_paths=PackedStringArray("default_ui")]
 process_mode = 3
-visible = false
 script = ExtResource("5_sl6ml")
 default_ui = NodePath("GameplayUI")
 
@@ -2094,6 +2098,15 @@ battery = NodePath("../../Player/Battery")
 
 [node name="RechargeBar" parent="CanvasLayer/GameplayUI" index="0" unique_id=543826916]
 visible = false
+
+[node name="EggwatchSpeech" parent="CanvasLayer/GameplayUI/EggwatchDisplay" parent_id_path=PackedInt32Array(1269869551, 1268261578) index="0" unique_id=1870333564 node_paths=PackedStringArray("battery")]
+speech_lines = Array[String](["Are your parents home? 
+╮(. ❛ ᴗ ❛.)╭", "You seem so lonely in this 
+huge house σ(ﾟДﾟ)", "ʅ（´◡｀） I'll never leave you 
+alone again", "Do you like living here?(・・?)", "(^Д^)/ I'll be your best friend 
+in this world", "We'll be an UNBEATABLE duo 
+(✧ω✧)"])
+battery = NodePath("../../../../Player/Battery")
 
 [node name="CheatPanel" parent="CanvasLayer/GameplayUI" unique_id=422745530 node_paths=PackedStringArray("canvas_modulate", "monsters") instance=ExtResource("93_nqa2f")]
 layout_mode = 1
