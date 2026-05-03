@@ -127,11 +127,13 @@ func _update_target_position() -> void:
 
 func _timeline_start():
 	set_physics_process(false) #Pausa o monstro durante a abertura de um dialogo
-
+	$AnimatedSprite2D.pause() #Pausa a animação do monstro durante o diálogo
+	silhouetteavo.pause() #Pausa animação "sombra/silhueta"
 
 func _timeline_end():
-	set_physics_process(true) #Reativa o monstro quando dialogo é fechado
-
+	set_physics_process(true) #Reativa o monstro quando diálogo é fechado
+	$AnimatedSprite2D.play() #Reativa a animação do monstro ao sair do diálogo
+	silhouetteavo.play() #Reativa animação "sombra/silhueta"
 
 func _on_timer_timeout() -> void:
 	_update_target_position()
