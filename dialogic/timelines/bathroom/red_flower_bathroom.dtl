@@ -1,5 +1,5 @@
 Boy_char: You’re so pretty, Ms. Flower. #id:62
-if GlobalState.get_flag("BATHROOM_FLOWER_ITEM_GET"):
-	You got flower item. #id:63
+if GlobalState.get_flag("BATHROOM_FLOWER_ITEM_GET") == false:
+	You got a flower. #id:63
 	do GlobalState.add_inventory_item("FLOWER_ITEM")
 	do GlobalState.set_flag("BATHROOM_FLOWER_ITEM_GET")

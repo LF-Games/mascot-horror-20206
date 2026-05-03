@@ -110,7 +110,7 @@ shape = SubResource("CircleShape2D_qjkh3")
 [node name="Battery" type="Node" parent="." unique_id=737240493 node_paths=PackedStringArray("point_light")]
 script = ExtResource("5_qjkh3")
 point_light = NodePath("../MainLight")
-duration_modifier1 = 5
+duration_modifier1 = 4
 duration_modifier2 = 3
 duration_modifier3 = 2
 light_scale_lv2 = 1.3
