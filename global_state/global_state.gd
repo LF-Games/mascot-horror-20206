@@ -8,6 +8,8 @@ signal flag_raised(key: String)
 
 var _flags: Dictionary[StringName, bool] = {}
 var _inventory_items: Dictionary[StringName, int] = {}
+var _saved_flags: Dictionary[StringName, bool] = {}
+var _saved_items: Dictionary[StringName, int] = {}
 
 func set_flag(key: StringName, value := true) -> bool:
 	_flags[key] = value
@@ -62,3 +64,13 @@ func _input(event):
 			print("Inventory items:")
 			for i in get_inventory_list():
 				print("%s x%s" % [i.key, i.amount])
+
+
+func save_state():
+	_saved_flags = _flags.duplicate()
+	_saved_items = _inventory_items.duplicate()
+
+
+func load_state():
+	_flags = _saved_flags.duplicate()
+	_inventory_items = _saved_items.duplicate()
