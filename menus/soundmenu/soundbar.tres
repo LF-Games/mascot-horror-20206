@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://xa5icqxsh4a4"]
+
+[ext_resource type="Texture2D" uid="uid://t53r8x5intf3" path="res://menus/soundmenu/barra_de_fundo 1.png" id="1_dga10"]
+
+[resource]
+texture = ExtResource("1_dga10")
+texture_margin_left = 58.0
+texture_margin_top = 18.0
+texture_margin_right = 30.0
+texture_margin_bottom = 18.0

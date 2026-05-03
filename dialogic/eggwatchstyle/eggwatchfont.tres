@@ -4,5 +4,4 @@
 
 [resource]
 base_font = ExtResource("1_17uev")
-spacing_top = 12
-spacing_bottom = -24
+spacing_bottom = -30
