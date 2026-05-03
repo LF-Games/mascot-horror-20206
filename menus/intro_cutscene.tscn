@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://yiy71x0sifbu"]
+
+[ext_resource type="Script" uid="uid://0cuvphaewfiv" path="res://cutscene_auto_start.gd" id="1_qm0nq"]
+[ext_resource type="PackedScene" uid="uid://cplc8j4jyrj65" path="res://maps/house_map/house_map.tscn" id="2_871x6"]
+[ext_resource type="AudioStream" uid="uid://bksu4gvnqq72k" path="res://music/Cutscene - Eggwatch.mp3" id="3_emaqj"]
+
+[node name="IntroCutscene" type="Node" unique_id=168302927]
+script = ExtResource("1_qm0nq")
+timeline_name = "introduction_tml"
+next_scene = ExtResource("2_871x6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=130278816]
+stream = ExtResource("3_emaqj")
+autoplay = true
+parameters/looping = false
