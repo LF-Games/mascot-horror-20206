@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://dpcf3m7dley0n"]
+
+[ext_resource type="Texture2D" uid="uid://oahqhbgmtvjc" path="res://menus/eggwatchinterface.png" id="1_q5mwc"]
+
+[resource]
+texture = ExtResource("1_q5mwc")
+texture_margin_left = 306.0
+texture_margin_top = 316.0
+texture_margin_right = 311.0
+texture_margin_bottom = 64.0

@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cpm1xcigd4yi0"]
+
+[ext_resource type="StyleBox" uid="uid://dpcf3m7dley0n" path="res://menus/eggwatchui.tres" id="1_660cl"]
+[ext_resource type="Texture2D" uid="uid://br2yewca53cty" path="res://menus/soundmenu/bolinha 1.png" id="1_xn4hn"]
+[ext_resource type="StyleBox" uid="uid://xa5icqxsh4a4" path="res://menus/soundmenu/soundbar.tres" id="2_fnkiv"]
+[ext_resource type="StyleBox" uid="uid://kdrqh864qxtm" path="res://menus/soundmenu/soundbarfull.tres" id="3_fnkiv"]
+[ext_resource type="FontVariation" uid="uid://bg2yoc5voer2e" path="res://dialogic/eggwatchstyle/eggwatchfont.tres" id="5_6gius"]
+[ext_resource type="Texture2D" uid="uid://chcenp44u53be" path="res://menus/buttongray/padrão.png" id="6_vuprn"]
+[ext_resource type="Texture2D" uid="uid://dscnab7l1alex" path="res://menus/buttongray/pressionado.png" id="7_6f0cb"]
+[ext_resource type="Texture2D" uid="uid://lyct8fp7bt1s" path="res://menus/buttongray/hover.png" id="8_ev0wk"]
+[ext_resource type="Script" uid="uid://5sqshaiq8ept" path="res://soundslider.gd" id="9_6gius"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmsme"]
+content_margin_bottom = 31.0
+texture = ExtResource("6_vuprn")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e7bgp"]
+texture = ExtResource("7_6f0cb")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8dk0h"]
+texture = ExtResource("8_ev0wk")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[sub_resource type="ImageTexture" id="ImageTexture_m6bpv"]
+
+[node name="volume screen" type="Control" unique_id=1713213530]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2123875923]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.017989006, 0.017989006, 0.017989006, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=870753453]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 392.0
+offset_top = 184.0
+offset_right = -392.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(568, 364)
+theme_override_styles/panel = ExtResource("1_660cl")
+
+[node name="buttonback" type="Button" parent="." unique_id=30245851]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 704.0
+offset_right = 1290.0
+offset_bottom = 843.0
+scale = Vector2(0.6800006, 0.6800006)
+pivot_offset = Vector2(329.4115, 69.11755)
+theme_override_colors/font_color = Color(0.28627452, 0.38431373, 0.4117647, 1)
+theme_override_fonts/font = ExtResource("5_6gius")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxTexture_cmsme")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e7bgp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8dk0h")
+text = "BACK"
+icon = SubResource("ImageTexture_m6bpv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=443559417]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38300002
+anchor_top = 0.319
+anchor_right = 0.61600006
+anchor_bottom = 0.65900004
+offset_left = 1.6399536
+offset_top = -16.52002
+offset_right = 0.27990723
+offset_bottom = -31.720032
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=317715293]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("5_6gius")
+theme_override_font_sizes/font_size = 80
+text = "SOUND"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=1717508954]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("5_6gius")
+theme_override_font_sizes/font_size = 64
+text = "Music"
+horizontal_alignment = 1
+
+[node name="soundslider" type="HSlider" parent="VBoxContainer" unique_id=766361531]
+layout_mode = 2
+theme_override_constants/grabber_offset = -7
+theme_override_icons/grabber = ExtResource("1_xn4hn")
+theme_override_icons/grabber_highlight = ExtResource("1_xn4hn")
+theme_override_styles/slider = ExtResource("2_fnkiv")
+theme_override_styles/grabber_area = ExtResource("3_fnkiv")
+theme_override_styles/grabber_area_highlight = ExtResource("3_fnkiv")
+max_value = 1.0
+step = 0.1
+value = 1.0
+ticks_position = 3
+script = ExtResource("9_6gius")
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=2060562017]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("5_6gius")
+theme_override_font_sizes/font_size = 64
+text = "Sound effects"
+horizontal_alignment = 1
+
+[node name="soundslider2" type="HSlider" parent="VBoxContainer" unique_id=2052964757]
+layout_mode = 2
+theme_override_constants/grabber_offset = -7
+theme_override_icons/grabber = ExtResource("1_xn4hn")
+theme_override_icons/grabber_highlight = ExtResource("1_xn4hn")
+theme_override_styles/slider = ExtResource("2_fnkiv")
+theme_override_styles/grabber_area = ExtResource("3_fnkiv")
+theme_override_styles/grabber_area_highlight = ExtResource("3_fnkiv")
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[connection signal="value_changed" from="VBoxContainer/soundslider" to="VBoxContainer/soundslider" method="_on_value_changed"]

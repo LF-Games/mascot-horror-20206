@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://dqhkr5hjhbh8e"]
+
+[ext_resource type="StyleBox" uid="uid://dpcf3m7dley0n" path="res://menus/eggwatchui.tres" id="1_j58qv"]
+[ext_resource type="FontVariation" uid="uid://bg2yoc5voer2e" path="res://dialogic/eggwatchstyle/eggwatchfont.tres" id="2_epavv"]
+[ext_resource type="Texture2D" uid="uid://chcenp44u53be" path="res://menus/buttongray/padrão.png" id="3_pdb3l"]
+[ext_resource type="Texture2D" uid="uid://dscnab7l1alex" path="res://menus/buttongray/pressionado.png" id="4_jqwqe"]
+[ext_resource type="Texture2D" uid="uid://lyct8fp7bt1s" path="res://menus/buttongray/hover.png" id="5_jfdbx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmsme"]
+content_margin_bottom = 31.0
+texture = ExtResource("3_pdb3l")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e7bgp"]
+texture = ExtResource("4_jqwqe")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8dk0h"]
+texture = ExtResource("5_jfdbx")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[sub_resource type="ImageTexture" id="ImageTexture_m6bpv"]
+
+[node name="volume screen" type="Control" unique_id=1713213530]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2123875923]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.017989006, 0.017989006, 0.017989006, 1)
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="." unique_id=870753453]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 136.0
+offset_top = 40.0
+offset_right = -144.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(568, 364)
+theme_override_styles/panel = ExtResource("1_j58qv")
+metadata/_edit_lock_ = true
+
+[node name="buttonback" type="Button" parent="." unique_id=30245851]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 880.0
+offset_right = 1290.0
+offset_bottom = 1019.0
+scale = Vector2(0.6800006, 0.6800006)
+pivot_offset = Vector2(329.4115, 69.11755)
+theme_override_colors/font_color = Color(0.28627452, 0.38431373, 0.4117647, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxTexture_cmsme")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e7bgp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8dk0h")
+text = "BACK"
+icon = SubResource("ImageTexture_m6bpv")
+
+[node name="Game Design" type="Label" parent="." unique_id=90680001]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 216.0
+offset_right = 756.0
+offset_bottom = 290.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+text = "Game Design"
+horizontal_alignment = 1
+
+[node name="Writing" type="Label" parent="." unique_id=1089458260]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 632.0
+offset_right = 1390.0
+offset_bottom = 706.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+text = "Writing"
+horizontal_alignment = 1
+
+[node name="Art" type="Label" parent="." unique_id=881005702]
+layout_mode = 0
+offset_left = 1176.0
+offset_top = 216.0
+offset_right = 1324.0
+offset_bottom = 290.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+text = "Art"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="." unique_id=1044729521]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 312.0
+offset_right = 831.0
+offset_bottom = 364.0
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 56
+text = "Marcos Fernando"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=932425227]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 714.0
+offset_right = 1465.0
+offset_bottom = 821.0
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 56
+text = "Julia Ricardo
+Ashley Flower"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=491807040]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.24166666
+anchor_top = -0.05740741
+anchor_right = -0.24166666
+anchor_bottom = -0.05740741
+offset_left = 1288.0
+offset_top = 374.0
+offset_right = 1749.0
+offset_bottom = 646.0
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 56
+text = "Julia Julio
+Maria Luiza Silva
+Lázaro Fonseca
+João Lucas Melo
+Evelin Gomes"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Sound and Music" type="Label" parent="." unique_id=92634163]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 688.0
+offset_right = 831.0
+offset_bottom = 762.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+text = "Sound and Music"
+horizontal_alignment = 1
+
+[node name="Programing" type="Label" parent="." unique_id=1674221155]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004166667
+anchor_top = 0.014814815
+anchor_right = 0.004166667
+anchor_bottom = 0.014814815
+offset_left = 288.0
+offset_top = 376.0
+offset_right = 737.0
+offset_bottom = 450.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+text = "Programing"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="." unique_id=407339741]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 488.0
+offset_right = 744.0
+offset_bottom = 650.0
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 56
+text = "Edmar Filho
+Luiz Felipe Falcão
+Kevin Oliveira"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=1257815019]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 768.0
+offset_right = 831.0
+offset_bottom = 820.0
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 56
+text = "Yandra*"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1950972908]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 128.0
+offset_right = 1116.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+text = "CREDITS"
+horizontal_alignment = 1
