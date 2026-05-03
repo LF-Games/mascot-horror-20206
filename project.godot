@@ -84,6 +84,7 @@ directories/dtl_directory={
 "opening_door": "res://dialogic/timelines/opening_door.dtl",
 "oven": "res://dialogic/timelines/kitchen/oven.dtl",
 "photo_album": "res://dialogic/timelines/grandparents_bedroom/photo_album.dtl",
+"pilao": "res://dialogic/timelines/dinner_room/pilao.dtl",
 "radio": "res://dialogic/timelines/grandparents_bedroom/radio.dtl",
 "red_flower_bathroom": "res://dialogic/timelines/bathroom/red_flower_bathroom.dtl",
 "red_flower_entrance": "res://dialogic/timelines/entrance/red_flower_entrance.dtl",

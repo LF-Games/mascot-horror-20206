@@ -1,0 +1,12 @@
+if GlobalState.get_flag("RED_PAINT_GET")  ==  true:
+	Those flowers made a pretty color.
+elif GlobalState.get_item_count("FLOWER_ITEM") >= 3.0:
+	If I put those flowers here...
+	do GlobalState.remove_intentory_item("FLOWER_ITEM", 3)
+	You made red paint.
+	do GlobalState.add_inventory_item("RED_PAINT")
+	do GlobalState.set_flag("RED_PAINT_GET")
+elif GlobalState.has_inventory_item("FLOWER_ITEM"):
+	I could use flowers to make paint here, but I'll need more flowers.
+else:
+	I could use this for something...

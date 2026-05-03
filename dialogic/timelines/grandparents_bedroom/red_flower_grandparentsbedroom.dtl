@@ -1,5 +1,5 @@
 Sorry, Ms. Flower, but I'm going to need this #id:93
 if GlobalState.get_flag("GRANDPARENTSBEDROOM_FLOWER_ITEM_GET") == false:
-	You got flower item #id:94
-	do GlobalState.add_inventory_item("FLOWER ITEM")
+	You got a flower. #id:94
+	do GlobalState.add_inventory_item("FLOWER_ITEM")
 	do GlobalState.set_flag("GRANDPARENTSBEDROOM_FLOWER_ITEM_GET")

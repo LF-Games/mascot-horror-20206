@@ -327,6 +327,9 @@ size = Vector2(52.81552, 75.33981)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kl2dr"]
 size = Vector2(39, 33)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70vwh"]
+size = Vector2(56.852837, 54.772858)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cklsf"]
 size = Vector2(97.500015, 115.83328)
 
@@ -1020,6 +1023,7 @@ y_sort_enabled = true
 position = Vector2(8, -471)
 
 [node name="Baú1" type="Sprite2D" parent="GrandparentsRoom" unique_id=857497574 groups=["nav_obstacle"]]
+light_mask = 2
 position = Vector2(-12, -539)
 texture = ExtResource("24_6fca6")
 
@@ -1555,20 +1559,33 @@ rotation = 0.79175717
 timeline_name = "glitter_drawing_dinnerroom"
 pickup_flag = "LIVING_ROOM_GLITTER"
 
-[node name="Kitchen" type="Node2D" parent="." unique_id=1054182255]
-y_sort_enabled = true
-position = Vector2(659, -1768)
-
-[node name="Pilão" type="Sprite2D" parent="Kitchen" unique_id=1256854073 groups=["nav_obstacle"]]
-position = Vector2(-134, 32)
+[node name="Pilão" type="Sprite2D" parent="LivingRoom" unique_id=1256854073 groups=["nav_obstacle"]]
+light_mask = 2
+position = Vector2(-380, -766)
 texture = ExtResource("56_esqt2")
 offset = Vector2(1, -53)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Kitchen/Pilão" unique_id=1502215563]
+[node name="StaticBody2D" type="StaticBody2D" parent="LivingRoom/Pilão" unique_id=1502215563]
 
-[node name="CollisionShape" type="CollisionShape2D" parent="Kitchen/Pilão/StaticBody2D" unique_id=901268485]
+[node name="CollisionShape" type="CollisionShape2D" parent="LivingRoom/Pilão/StaticBody2D" unique_id=901268485]
 position = Vector2(-0.5, -12.5)
 shape = SubResource("RectangleShape2D_kl2dr")
+
+[node name="TimelinetInteractable2" type="Area2D" parent="LivingRoom/Pilão" unique_id=2043347763]
+position = Vector2(17, 133)
+scale = Vector2(1.4423212, 1.4423213)
+script = ExtResource("4_54nda")
+timeline_name = "pilao"
+metadata/_custom_type_script = "uid://35dh8yuu4xlt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LivingRoom/Pilão/TimelinetInteractable2" unique_id=1706417393]
+position = Vector2(-11.093231, -99.49243)
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_70vwh")
+
+[node name="Kitchen" type="Node2D" parent="." unique_id=1054182255]
+y_sort_enabled = true
+position = Vector2(659, -1768)
 
 [node name="Balcão" type="Sprite2D" parent="Kitchen" unique_id=1278838722 groups=["nav_obstacle"]]
 light_mask = 2
