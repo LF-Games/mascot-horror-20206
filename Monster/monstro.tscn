@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b1hikfm7thaxu" path="res://Monster/monster.gd" id="1_gcmmn"]
 [ext_resource type="Texture2D" uid="uid://dcf8gu7gdafau" path="res://Monster/monstro_avó.png" id="2_gcmmn"]
+[ext_resource type="Shader" uid="uid://bo1qkomtqc0xd" path="res://player/player_silhouette.gdshader" id="3_kbydo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fdedp"]
 radius = 19.0
@@ -91,6 +92,95 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8nxvw"]
+shader = ExtResource("3_kbydo")
+shader_parameter/silhouette_color = Color(0, 0, 0, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85jkn"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(0, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6284"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(130, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8buvn"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(260, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryo11"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(390, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbnl5"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(520, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2a7w"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(650, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7b4b7"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(780, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70xq1"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(910, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4wso"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(1040, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6166"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(1170, 0, 130, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dppuk"]
+atlas = ExtResource("2_gcmmn")
+region = Rect2(1300, 0, 130, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5n2t1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85jkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6284")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8buvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryo11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbnl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2a7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7b4b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70xq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4wso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6166")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dppuk")
+}],
+"loop": true,
+"name": &"Avo_monstro",
+"speed": 12.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_gcmmn"]
 radius = 43.0
 
@@ -109,7 +199,13 @@ visibility_layer = 4
 position = Vector2(-1, -56)
 sprite_frames = SubResource("SpriteFrames_p310o")
 animation = &"Avo_monstro"
-frame_progress = 0.5016619
+
+[node name="SilhouetteAvo" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1750437534]
+light_mask = 4
+z_index = 100
+material = SubResource("ShaderMaterial_8nxvw")
+sprite_frames = SubResource("SpriteFrames_5n2t1")
+animation = &"Avo_monstro"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1094703035]
 path_desired_distance = 3.0

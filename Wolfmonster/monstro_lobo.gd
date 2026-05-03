@@ -8,7 +8,7 @@ enum State {IDLE, CHASE}
 @export var target : CharacterBody2D 
 
 @onready var animation = $AnimatedSprite2D
-@onready var silhouetteavo = $AnimatedSprite2D/SilhouetteAvo
+@onready var silhouetteavo = $AnimatedSprite2D/SilhouetteWolf
 @onready var navegant: NavigationAgent2D = $NavigationAgent2D
 
 var current_state: State = State.IDLE
@@ -45,22 +45,21 @@ func _state_chase (distance:float) -> void:
 	velocity = direction * speed
 	move_and_slide()
 	
-	## inverter sprite
+		## inverter sprite
 	if direction.x < 0:
 		animation.flip_h = true
 		silhouetteavo.flip_h = true
 	else:
 		animation.flip_h = false
 		silhouetteavo.flip_h = false
-
 	
 func _update_target_position() -> void:
 	if target != null and current_state == State.CHASE:
 		navegant.target_position = target.global_position
 
 func _ready() -> void:
-	animation.play("Avo_monstro")
-	silhouetteavo.play("Avo_monstro")
+	animation.play("Lobo_monstro")
+	silhouetteavo.play("Lobo_monstro")
 	await  get_tree().physics_frame
 
 func _on_timer_timeout() -> void:
