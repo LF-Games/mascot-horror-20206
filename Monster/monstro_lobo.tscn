@@ -216,8 +216,12 @@ radius = 23.0
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_j6dgi")
-lose_range = 550.0
+speed = 170.0
+detection_range = 450.0
+lose_range = 600.0
 silhouetteavo = NodePath("AnimatedSprite2D/SilhouetteWolf")
+idle_speed = 80.0
+wander_range = 350.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587782300]
 shape = SubResource("CircleShape2D_r8j7s")
