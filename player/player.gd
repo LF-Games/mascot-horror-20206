@@ -6,7 +6,6 @@ extends CharacterBody2D
 @export var battery: Battery
 @export var recharge_bar: ProgressBar
 @export var recharge_audio: AudioStreamPlayer
-@export var sound_player: AnimationPlayer
 @export var battery_text_animation: AnimationPlayer
 @export var recharge_duration := 2.0
 @export var death_fade_duration := 0.3
@@ -44,12 +43,9 @@ func _physics_process(_delta):
 	if direction.length_squared() == 0:
 		_silhouette_sprite.play("idle")
 		_sprite.play("idle")
-		sound_player.pause()
-
 	else:
 		_silhouette_sprite.play("walk")
 		_sprite.play("walk")
-		sound_player.play("footstep_loop")
 
 	move_and_slide()
 
@@ -70,7 +66,6 @@ func _process(_delta):
 				_silhouette_sprite.play("idle")
 				_silhouette_sprite.frame = 0
 				_silhouette_sprite.pause()
-				sound_player.pause()
 		
 			_can_move = false
 			_can_interact = false
@@ -104,7 +99,6 @@ func _on_timeline_started():
 	_can_interact = false
 	_silhouette_sprite.play("idle")
 	_sprite.play("idle")
-	sound_player.pause()
 	set_process(false)
 
 
@@ -120,6 +114,5 @@ func _on_game_over(_cause):
 	set_physics_process(false)
 	_sprite.play("idle")
 	_silhouette_sprite.play("idle")
-	sound_player.pause()
 	var tween = create_tween()
 	tween.tween_property(_sprite, "modulate", Color.TRANSPARENT, death_fade_duration)

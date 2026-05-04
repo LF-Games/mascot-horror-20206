@@ -9,7 +9,6 @@ extends Interactable
 @export var tileset_source_id := 0
 @export var tileset_atlas_coord: Vector2i
 @export var key_inventory_item := ""
-@export var noise: AudioStreamPlayer
 
 
 func interact():
@@ -18,6 +17,5 @@ func interact():
 		await Dialogic.timeline_ended
 		tilemap_layer.set_cell(map_coords, tileset_source_id, tileset_atlas_coord)
 		queue_free()
-		noise.play()
 	else:
 		Dialogic.start(closed_timeline)
