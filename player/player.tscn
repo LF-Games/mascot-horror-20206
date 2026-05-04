@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://du8qu2wuirakh" path="res://player/low_battery_audio.gd" id="7_rgyib"]
 [ext_resource type="AudioStream" uid="uid://cwcj3xvuln0hc" path="res://player/battery_recharge.wav" id="8_rgyib"]
 [ext_resource type="Script" uid="uid://dcmi4wwybhrn0" path="res://player/death_detector.gd" id="10_8t03j"]
+[ext_resource type="AudioStream" uid="uid://bfnhqmwbpmbuj" path="res://player/Footsteps.wav" id="11_2ieo8"]
+[ext_resource type="AudioStream" uid="uid://dsqypwnl8lmax" path="res://global_state/PickupSound.wav" id="12_ebec5"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hg6s5"]
 
@@ -49,12 +51,34 @@ radius = 18.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg6s5"]
 radius = 16.03122
 
-[node name="Player" type="CharacterBody2D" unique_id=156382088 node_paths=PackedStringArray("recharge_audio", "_sprite", "_silhouette_sprite")]
+[sub_resource type="Animation" id="Animation_ebec5"]
+resource_name = "footstep_loop"
+length = 0.46666667
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FootstepLoop/FootstepSound")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yllr7"]
+_data = {
+&"footstep_loop": SubResource("Animation_ebec5")
+}
+
+[node name="Player" type="CharacterBody2D" unique_id=156382088 node_paths=PackedStringArray("recharge_audio", "sound_player", "_sprite", "_silhouette_sprite")]
 script = ExtResource("1_rkbax")
-_speed = null
 recharge_audio = NodePath("ReloadAudio")
-recharge_duration = null
-death_fade_duration = null
+sound_player = NodePath("FootstepLoop")
 _sprite = NodePath("Sprite")
 _silhouette_sprite = NodePath("Sprite/Silhouette")
 
@@ -137,3 +161,12 @@ script = ExtResource("10_8t03j")
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_hg6s5")
 debug_color = Color(0.9939596, 0, 0.23671135, 0.41960785)
+
+[node name="FootstepLoop" type="AnimationPlayer" parent="." unique_id=1914340332]
+libraries/ = SubResource("AnimationLibrary_yllr7")
+
+[node name="FootstepSound" type="AudioStreamPlayer" parent="FootstepLoop" unique_id=1918513220]
+stream = ExtResource("11_2ieo8")
+
+[node name="ItemPickupSound" type="AudioStreamPlayer" parent="." unique_id=863968078]
+stream = ExtResource("12_ebec5")
