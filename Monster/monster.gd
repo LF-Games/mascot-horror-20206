@@ -1,6 +1,9 @@
+class_name Monster
 extends CharacterBody2D
 
 enum State {IDLE, CHASE}
+
+signal player_detected
 
 @export var speed: float = 100.0 # speed monstro
 @export var detection_range: float = 400.0 # IDLE -> CHASE Quando player entra no range o estado muda
@@ -19,7 +22,7 @@ var _nav_ready: bool = false
 
 # ── READY ───────────────────────────────────────────────
 func _ready() -> void:
-	Dialogic.timeline_ended.connect(_timeline_end)    
+	Dialogic.timeline_ended.connect(_timeline_end)
 	Dialogic.timeline_started.connect(_timeline_start)
 	
 	navegant.path_desired_distance = 4.0
@@ -49,6 +52,7 @@ func _state_idle(delta: float, distance: float) -> void:
 		return
 	if distance < detection_range:
 		current_state = State.CHASE
+		player_detected.emit()
 		return
 
 	_wander_timer -= delta
@@ -126,14 +130,14 @@ func _update_target_position() -> void:
 
 
 func _timeline_start():
-	set_physics_process(false) #Pausa o monstro durante a abertura de um dialogo
-	$AnimatedSprite2D.pause() #Pausa a animação do monstro durante o diálogo
-	silhouetteavo.pause() #Pausa animação "sombra/silhueta"
+	set_physics_process(false) # Pausa o monstro durante a abertura de um dialogo
+	$AnimatedSprite2D.pause() # Pausa a animação do monstro durante o diálogo
+	silhouetteavo.pause() # Pausa animação "sombra/silhueta"
 
 func _timeline_end():
-	set_physics_process(true) #Reativa o monstro quando diálogo é fechado
-	$AnimatedSprite2D.play() #Reativa a animação do monstro ao sair do diálogo
-	silhouetteavo.play() #Reativa animação "sombra/silhueta"
+	set_physics_process(true) # Reativa o monstro quando diálogo é fechado
+	$AnimatedSprite2D.play() # Reativa a animação do monstro ao sair do diálogo
+	silhouetteavo.play() # Reativa animação "sombra/silhueta"
 
 func _on_timer_timeout() -> void:
 	_update_target_position()

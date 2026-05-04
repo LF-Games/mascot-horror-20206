@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bkgs1wul1a222"]
+
+[ext_resource type="Script" uid="uid://bhlhsv08r6c6e" path="res://Monster/monster_alert.gd" id="1_05ivb"]
+
+[node name="MonsterAlert" type="Node" unique_id=981186902 node_paths=PackedStringArray("cooldown")]
+script = ExtResource("1_05ivb")
+cooldown = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="." unique_id=618953228]
+wait_time = 4.0
+one_shot = true
