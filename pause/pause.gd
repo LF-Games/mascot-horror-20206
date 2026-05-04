@@ -4,6 +4,9 @@ extends Node
 @export var pause_ui: Control
 @export var pause_button: Button
 
+func _ready() -> void:
+	pause_button.pressed.connect(_on_button_pressed)
+
 
 func _process(_delta) -> void:
 	if Input.is_action_just_pressed("pause"):

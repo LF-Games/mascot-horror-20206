@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://b5jr5qc0lxppc" path="res://util/runtime_enabler.gd" id="3_wyhsf"]
 [ext_resource type="Texture2D" uid="uid://nyu5y25ngsem" path="res://maps/house_map/player_room/sprites/cama de carro_20260425091102.png" id="4_6nysl"]
 [ext_resource type="Script" uid="uid://35dh8yuu4xlt" path="res://interactable/timeline_interactable.gd" id="4_54nda"]
-[ext_resource type="PackedScene" uid="uid://c4wycvjk03kqm" path="res://monster/monstro.tscn" id="4_pwhhv"]
+[ext_resource type="PackedScene" uid="uid://c4wycvjk03kqm" path="res://Monster/monstro.tscn" id="4_pwhhv"]
 [ext_resource type="Texture2D" uid="uid://cpka541rduynx" path="res://maps/house_map/player_room/sprites/pelúcia SnailCat_20260424220957.png" id="5_8v1h5"]
 [ext_resource type="Script" uid="uid://dkvp0mgbmwahr" path="res://ui/ui_controller.gd" id="5_sl6ml"]
 [ext_resource type="PackedScene" uid="uid://dmmdm2tayg8mw" path="res://ui/gameplay_ui.tscn" id="6_2it02"]
@@ -99,7 +99,7 @@
 [ext_resource type="Texture2D" uid="uid://ltu1hd2tfvn4" path="res://maps/house_map/kitchen/sprites/Botijão.png" id="81_nx4ja"]
 [ext_resource type="Texture2D" uid="uid://cagft6pbwbhbe" path="res://maps/house_map/kitchen/sprites/Freezer.png" id="82_7bapn"]
 [ext_resource type="Texture2D" uid="uid://dybul4thpkwh1" path="res://maps/house_map/kitchen/sprites/Geladeira.png" id="83_erlh7"]
-[ext_resource type="PackedScene" uid="uid://3f30dhan2rba" path="res://monster/monstro_lobo.tscn" id="89_cf860"]
+[ext_resource type="PackedScene" uid="uid://3f30dhan2rba" path="res://Monster/monstro_lobo.tscn" id="89_cf860"]
 [ext_resource type="PackedScene" uid="uid://ccgdwt45hj41c" path="res://test/cheat_panel.tscn" id="93_nqa2f"]
 [ext_resource type="AudioStream" uid="uid://0nel6vyddjja" path="res://music/Main Theme - Eggwatch.mp3" id="97_6woio"]
 
@@ -2185,7 +2185,7 @@ process_mode = 3
 script = ExtResource("9_bxfkl")
 ui_controller = NodePath("../CanvasLayer")
 pause_ui = NodePath("../CanvasLayer/PauseUI")
-pause_button = NodePath("../CanvasLayer/PauseUI/Button")
+pause_button = NodePath("../CanvasLayer/PauseUI/PausedButton")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1023143196]
 stream = ExtResource("97_6woio")
@@ -2193,8 +2193,6 @@ volume_db = 3.0
 autoplay = true
 bus = &"BGM"
 parameters/looping = true
-
-[connection signal="pressed" from="CanvasLayer/PauseUI/Button" to="Pause" method="_on_button_pressed"]
 
 [editable path="EmptyRoom/GlitterDrawing"]
 [editable path="GrandparentsRoom/RedFlower"]

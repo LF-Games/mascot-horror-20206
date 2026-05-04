@@ -114,6 +114,7 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5py3"]
 bg_color = Color(0.15487596, 0.154876, 0.1548759, 0.3764706)
+border_color = Color(0.7649327, 0.76493275, 0.76493275, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bs7q0"]
 font = ExtResource("6_hp7tp")
@@ -124,6 +125,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = 122.0
+offset_right = 83.0
+offset_bottom = 122.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7fgxj")
@@ -265,7 +270,6 @@ libraries/ = SubResource("AnimationLibrary_hp7tp")
 autoplay = &"battery blink"
 
 [node name="InteractButton" type="Label" parent="." unique_id=1428116200]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
