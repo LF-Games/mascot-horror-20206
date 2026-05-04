@@ -1,2 +1,2 @@
-You got a cane.
+You got a cane. #id:c2
 do GlobalState.add_inventory_item("CANE")

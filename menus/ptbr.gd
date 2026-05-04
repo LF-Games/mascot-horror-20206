@@ -1,3 +1,4 @@
 extends TextureButton
-func on_button_up():
+
+func _on_button_up() -> void:
 	TranslationServer.set_locale("pt_BR")

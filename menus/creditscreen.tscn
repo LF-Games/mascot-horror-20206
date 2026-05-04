@@ -62,10 +62,10 @@ metadata/_edit_lock_ = true
 
 [node name="buttonback" type="Button" parent="." unique_id=30245851]
 layout_mode = 0
-offset_left = 632.0
-offset_top = 880.0
-offset_right = 1290.0
-offset_bottom = 1019.0
+offset_left = 184.0
+offset_top = 864.0
+offset_right = 842.0
+offset_bottom = 1003.0
 scale = Vector2(0.6800006, 0.6800006)
 pivot_offset = Vector2(329.4115, 69.11755)
 theme_override_colors/font_color = Color(0.28627452, 0.38431373, 0.4117647, 1)
@@ -79,9 +79,9 @@ icon = SubResource("ImageTexture_m6bpv")
 
 [node name="Game Design" type="Label" parent="." unique_id=90680001]
 layout_mode = 0
-offset_left = 283.0
+offset_left = 272.0
 offset_top = 216.0
-offset_right = 756.0
+offset_right = 752.0
 offset_bottom = 290.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
@@ -92,10 +92,10 @@ horizontal_alignment = 1
 
 [node name="Writing" type="Label" parent="." unique_id=1089458260]
 layout_mode = 0
-offset_left = 1104.0
-offset_top = 632.0
-offset_right = 1390.0
-offset_bottom = 706.0
+offset_left = 1376.0
+offset_top = 216.0
+offset_right = 1662.0
+offset_bottom = 290.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
 theme_override_fonts/font = ExtResource("2_epavv")
@@ -105,9 +105,9 @@ horizontal_alignment = 1
 
 [node name="Art" type="Label" parent="." unique_id=881005702]
 layout_mode = 0
-offset_left = 1176.0
+offset_left = 976.0
 offset_top = 216.0
-offset_right = 1324.0
+offset_right = 1124.0
 offset_bottom = 290.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
@@ -130,10 +130,10 @@ horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=932425227]
 layout_mode = 0
-offset_left = 1016.0
-offset_top = 714.0
-offset_right = 1465.0
-offset_bottom = 821.0
+offset_left = 1288.0
+offset_top = 298.0
+offset_right = 1737.0
+offset_bottom = 405.0
 theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
 theme_override_fonts/font = ExtResource("2_epavv")
 theme_override_font_sizes/font_size = 56
@@ -145,9 +145,9 @@ horizontal_alignment = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.24166666
-anchor_top = -0.05740741
+anchor_top = -0.07037037
 anchor_right = -0.24166666
-anchor_bottom = -0.05740741
+anchor_bottom = 0.08240741
 offset_left = 1288.0
 offset_top = 374.0
 offset_right = 1749.0
@@ -159,21 +159,25 @@ text = "Julia Julio
 Maria Luiza Silva
 Lázaro Fonseca
 João Lucas Melo
-Evelin Gomes"
+Evelin Gomes
+Layra Rocha
+Ana Victória 
+Cardozo Gomes "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Sound and Music" type="Label" parent="." unique_id=92634163]
 layout_mode = 0
-offset_left = 208.0
-offset_top = 688.0
-offset_right = 831.0
-offset_bottom = 762.0
+offset_left = 1200.0
+offset_top = 432.0
+offset_right = 1823.0
+offset_bottom = 583.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
 theme_override_fonts/font = ExtResource("2_epavv")
 theme_override_font_sizes/font_size = 80
-text = "Sound and Music"
+text = "Sound 
+and Music"
 horizontal_alignment = 1
 
 [node name="Programing" type="Label" parent="." unique_id=1674221155]
@@ -183,10 +187,10 @@ anchor_left = 0.004166667
 anchor_top = 0.014814815
 anchor_right = 0.004166667
 anchor_bottom = 0.014814815
-offset_left = 288.0
-offset_top = 376.0
-offset_right = 737.0
-offset_bottom = 450.0
+offset_left = 272.0
+offset_top = 368.0
+offset_right = 736.0
+offset_bottom = 442.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
 theme_override_fonts/font = ExtResource("2_epavv")
@@ -197,27 +201,30 @@ horizontal_alignment = 1
 [node name="Label6" type="Label" parent="." unique_id=407339741]
 layout_mode = 0
 offset_left = 283.0
-offset_top = 488.0
+offset_top = 464.0
 offset_right = 744.0
-offset_bottom = 650.0
+offset_bottom = 736.0
 theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
 theme_override_fonts/font = ExtResource("2_epavv")
 theme_override_font_sizes/font_size = 56
 text = "Edmar Filho
 Luiz Felipe Falcão
-Kevin Oliveira"
+Kevin Oliveira
+Gabriel Barreto
+Matheus Gama
+Kauã"
 horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="." unique_id=1257815019]
 layout_mode = 0
-offset_left = 208.0
-offset_top = 768.0
-offset_right = 831.0
-offset_bottom = 820.0
+offset_left = 1184.0
+offset_top = 592.0
+offset_right = 1807.0
+offset_bottom = 644.0
 theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
 theme_override_fonts/font = ExtResource("2_epavv")
 theme_override_font_sizes/font_size = 56
-text = "Yandra*"
+text = "Yandra"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=1950972908]
@@ -230,4 +237,59 @@ theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
 theme_override_fonts/font = ExtResource("2_epavv")
 theme_override_font_sizes/font_size = 80
 text = "CREDITS"
+horizontal_alignment = 1
+
+[node name="Writing3" type="Label" parent="." unique_id=1135940562]
+layout_mode = 0
+offset_left = 813.0
+offset_top = 768.0
+offset_right = 1247.0
+offset_bottom = 842.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+text = "Production"
+horizontal_alignment = 1
+
+[node name="Writing2" type="Label" parent="." unique_id=588617568]
+layout_mode = 0
+offset_left = 1301.0
+offset_top = 672.0
+offset_right = 1713.0
+offset_bottom = 746.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 80
+text = "Marketing"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="." unique_id=900036162]
+layout_mode = 0
+offset_left = 1285.0
+offset_top = 767.0
+offset_right = 1734.0
+offset_bottom = 984.0
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 56
+text = "Matheus Cosmo
+Haru
+Rafael Paes 
+de Melo"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="." unique_id=715207680]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 863.0
+offset_right = 1257.0
+offset_bottom = 1025.0
+theme_override_colors/font_color = Color(0.1254902, 0.22745098, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("2_epavv")
+theme_override_font_sizes/font_size = 56
+text = "Yasmin Ferreira
+Rafael Leite
+"
 horizontal_alignment = 1
