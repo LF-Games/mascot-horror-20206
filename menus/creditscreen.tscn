@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dscnab7l1alex" path="res://menus/buttongray/pressionado.png" id="4_jqwqe"]
 [ext_resource type="Texture2D" uid="uid://lyct8fp7bt1s" path="res://menus/buttongray/hover.png" id="5_jfdbx"]
 [ext_resource type="Script" uid="uid://b4xp36o7jewfd" path="res://menus/load_scene_button.gd" id="6_pdb3l"]
-[ext_resource type="PackedScene" uid="uid://db7ly5ht776pa" path="res://menus/initialmenu.tscn" id="7_jqwqe"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmsme"]
 content_margin_bottom = 31.0
@@ -79,7 +78,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_8dk0h")
 text = "BACK"
 icon = SubResource("ImageTexture_m6bpv")
 script = ExtResource("6_pdb3l")
-scene = ExtResource("7_jqwqe")
+scene = "res://menus/initialmenu.tscn"
 
 [node name="Game Design" type="Label" parent="." unique_id=90680001]
 layout_mode = 0
