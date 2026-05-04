@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var battery: Battery
 @export var recharge_bar: ProgressBar
 @export var recharge_audio: AudioStreamPlayer
-@export var battery_text_animation : AnimationPlayer
+@export var battery_text_animation: AnimationPlayer
 @export var recharge_duration := 2.0
 @export var death_fade_duration := 0.3
 
@@ -109,7 +109,7 @@ func _on_timeline_ended():
 	set_process(true)
 
 
-func _on_game_over():
+func _on_game_over(_cause):
 	set_process(false)
 	set_physics_process(false)
 	_sprite.play("idle")

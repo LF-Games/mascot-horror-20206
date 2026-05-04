@@ -86,5 +86,5 @@ func _speak():
 	_speaking = true
 	
 
-func _on_game_over():
+func _on_game_over(_cause):
 	set_process(false)

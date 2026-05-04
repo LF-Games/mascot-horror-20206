@@ -249,9 +249,9 @@ target_desired_distance = 3.0
 wait_time = 0.3
 autostart = true
 
-[node name="DeathArea" type="Area2D" parent="." unique_id=553072520 groups=["death"]]
+[node name="Wolf" type="Area2D" parent="." unique_id=553072520 groups=["death"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea" unique_id=471705292]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wolf" unique_id=471705292]
 shape = SubResource("CircleShape2D_g2j3q")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

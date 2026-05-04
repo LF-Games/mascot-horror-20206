@@ -103,6 +103,7 @@
 [ext_resource type="PackedScene" uid="uid://ccgdwt45hj41c" path="res://test/cheat_panel.tscn" id="93_nqa2f"]
 [ext_resource type="AudioStream" uid="uid://0nel6vyddjja" path="res://music/Main Theme - Eggwatch.mp3" id="97_6woio"]
 [ext_resource type="PackedScene" uid="uid://d4euo6pyhkxew" path="res://ui/jumpscares.tscn" id="101_mg8qd"]
+[ext_resource type="Script" uid="uid://bdaevb41ndrw8" path="res://maps/house_map/bgm_player.gd" id="104_hfkem"]
 [ext_resource type="PackedScene" uid="uid://bkgs1wul1a222" path="res://Monster/monster_alert.tscn" id="104_mg8qd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_fdedp"]
@@ -2195,6 +2196,7 @@ volume_db = 3.0
 autoplay = true
 bus = &"BGM"
 parameters/looping = true
+script = ExtResource("104_hfkem")
 
 [node name="MonsterAlert" parent="." unique_id=981186902 node_paths=PackedStringArray("wolf_monster", "grandma_monster", "wolf_anim", "grandma_anim") instance=ExtResource("104_mg8qd")]
 wolf_monster = NodePath("../MonstroLobo")

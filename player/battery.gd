@@ -67,7 +67,7 @@ func is_low_battery():
 	return current_level == 0
 
 
-func _on_game_over():
+func _on_game_over(_cause):
 	set_process(false)
 	if tween:
 			tween.kill()
