@@ -7,6 +7,17 @@ extends Control
 @export var label_scene: PackedScene
 @export var no_items_label: Label
 
+var en_dic = {
+	"BATTERY" : "Battery",
+	"GLITTER" : "Glitter",
+	"FLOWER_ITEM" : "Flower",
+	"CANDLES" : "Candles", 
+	"DOOR_KEY" : "Door Key",
+	"CANE" : "Cane",
+	"LADDER" : "Ladder",
+}
+
+
 func _process(_delta):
 	if Input.is_action_just_pressed("toggle_inventory"):
 		_toggle_display()
@@ -27,5 +38,5 @@ func _update_labels():
 	for item in items:
 		var new_label := label_scene.instantiate() as Label
 		label_parent.add_child(new_label)
-		new_label.text = "%s x%s" % [item.key, item.amount]
+		new_label.text = "%s x%s" % [en_dic[item.key], item.amount]
 	no_items_label.visible = items.size() == 0
