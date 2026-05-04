@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bfg20mlvmwtg3" path="res://menus/buttonpurple/telainicialpadrao.png" id="4_0d3af"]
 [ext_resource type="Texture2D" uid="uid://ddl147lso0agd" path="res://menus/buttonpurple/telainicialpress.png" id="5_i6e26"]
 [ext_resource type="Texture2D" uid="uid://w3c5o7jebarp" path="res://menus/buttonpurple/telainicialhover.png" id="6_5m2mv"]
-[ext_resource type="Script" uid="uid://c3f1c5kya4m2a" path="res://menus/start_button.gd" id="7_5m2mv"]
+[ext_resource type="Script" path="res://menus/start_button.gd" id="7_5m2mv"]
 [ext_resource type="Texture2D" uid="uid://77uepnev3s7b" path="res://menus/flags/Flag-Brazil 1.png" id="7_iusdk"]
 [ext_resource type="Texture2D" uid="uid://cdfonwidwat7o" path="res://menus/flags/brazilsel.png" id="8_571a5"]
 [ext_resource type="PackedScene" uid="uid://yiy71x0sifbu" path="res://menus/intro_cutscene.tscn" id="8_tnhg3"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cha1u8m71y7g2" path="res://menus/flags/usasel.png" id="10_7n5ce"]
 [ext_resource type="Script" uid="uid://b8g206a1qk7dn" path="res://menus/usa.gd" id="12_i6e26"]
 [ext_resource type="AudioStream" uid="uid://byl3fq12dgyxv" path="res://music/Main Menu - Eggwatch.mp3" id="14_iusdk"]
+[ext_resource type="Texture2D" uid="uid://dke4rngyns4ow" path="res://menus/snailcat logo.svg" id="16_tnhg3"]
 
 [sub_resource type="Curve" id="Curve_pt8jw"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5778443, 0.8718097), 0.0, 0.0, 0, 0, Vector2(0.99101794, 0.7285383), 0.0, 0.0, 0, 0]
@@ -37,6 +38,18 @@ texture = ExtResource("6_5m2mv")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_571a5"]
 bg_color = Color(0, 0, 0, 0.5882353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n5ce"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 0.70980394)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="mainmenu" type="Control" unique_id=419227536]
 layout_mode = 3
@@ -175,6 +188,23 @@ text = "*Apenas diálogos."
 stream = ExtResource("14_iusdk")
 autoplay = true
 parameters/looping = false
+
+[node name="Panel" type="Panel" parent="." unique_id=226739845]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036979165
+anchor_top = 0.7861111
+anchor_right = 0.23125
+anchor_bottom = 0.95185184
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7n5ce")
+metadata/_edit_use_anchors_ = true
+
+[node name="SnailcatLogo" type="Sprite2D" parent="." unique_id=1907890736]
+position = Vector2(257.7258, 938.25)
+scale = Vector2(0.82258064, 0.82258064)
+texture = ExtResource("16_tnhg3")
 
 [connection signal="button_up" from="brazil" to="brazil" method="_on_button_up"]
 [connection signal="button_up" from="usa" to="usa" method="_on_button_up"]
