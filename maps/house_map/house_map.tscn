@@ -2185,6 +2185,7 @@ process_mode = 3
 script = ExtResource("9_bxfkl")
 ui_controller = NodePath("../CanvasLayer")
 pause_ui = NodePath("../CanvasLayer/PauseUI")
+pause_button = NodePath("../CanvasLayer/PauseUI/PausedButton")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1023143196]
 stream = ExtResource("97_6woio")

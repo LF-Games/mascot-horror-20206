@@ -3,10 +3,22 @@
 [ext_resource type="Script" uid="uid://y4ncxqbp433i" path="res://ui/volume_slider.gd" id="1_41j1o"]
 [ext_resource type="Texture2D" uid="uid://dtekjqqu1wbii" path="res://ui/interface_sprites/eggwatch_pause_menu.png" id="1_hkaxo"]
 [ext_resource type="Texture2D" uid="uid://di123gr2d0nhg" path="res://ui/interface_sprites/bolinha.png" id="2_tdq1o"]
+[ext_resource type="Texture2D" uid="uid://b03ndkal2ry5a" path="res://ui/interface_sprites/Padrao.png" id="2_tpa82"]
 [ext_resource type="Texture2D" uid="uid://kwspesat60f6" path="res://ui/interface_sprites/barra.png" id="3_tdq1o"]
+[ext_resource type="Texture2D" uid="uid://bhg0rbprs328o" path="res://ui/interface_sprites/Pressionado.png" id="3_ybf3v"]
+[ext_resource type="Texture2D" uid="uid://f5u6g0rrat1n" path="res://ui/interface_sprites/Hover.png" id="4_s1usq"]
 [ext_resource type="Texture2D" uid="uid://kmtwtqwcb60q" path="res://ui/interface_sprites/sound.png" id="5_buud6"]
 [ext_resource type="Script" uid="uid://bkx0jvy6d7gts" path="res://ui/texture_rect.gd" id="6_drqwe"]
 [ext_resource type="Texture2D" uid="uid://c032rqs51u81i" path="res://ui/interface_sprites/sound-off.png" id="7_71da8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bg0kt"]
+texture = ExtResource("2_tpa82")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hmmmp"]
+texture = ExtResource("3_ybf3v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jukdx"]
+texture = ExtResource("4_s1usq")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o21ex"]
 texture = ExtResource("3_tdq1o")
@@ -47,6 +59,9 @@ offset_right = 150.0
 offset_bottom = -63.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_bg0kt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hmmmp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jukdx")
 toggle_mode = true
 action_mode = 0
 text = "Paused"
