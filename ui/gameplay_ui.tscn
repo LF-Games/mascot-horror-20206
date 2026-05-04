@@ -204,6 +204,7 @@ vertical_alignment = 1
 script = ExtResource("3_7e4rd")
 speech_lines = Array[String](["I AM SPEAKING PLACEHOLDER TEXT", "Lorem ipsum dolor sit amet", "Replace this with real text"])
 reveal_speed = 0.325
+volume = -8.0
 audio_stream = ExtResource("4_w5py3")
 
 [node name="TextureRect" type="TextureRect" parent="EggwatchDisplay/EggwatchSpeech" unique_id=784344321]

@@ -9,4 +9,4 @@ func _ready():
 
 func _on_area_entered(area: Area2D):
 	if area.is_in_group(DEATH_GROUP):
-		GameManager.game_over()
+		GameManager.game_over(area.name)

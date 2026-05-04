@@ -34,5 +34,5 @@ func _on_timeline_ended():
 	current_ui.show()
 
 
-func _on_game_over():
+func _on_game_over(_cause):
 	current_ui.hide()
