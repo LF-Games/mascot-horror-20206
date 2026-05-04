@@ -15,8 +15,9 @@ extends RichTextLabel
 @export var max_cooldown := 12.0
 @export var reveal_speed := 1.0
 @export var linger_duration := 1.0
+@export var volume := 0.0
 @export var audio_stream: AudioStream
-@export var battery : Battery
+@export var battery: Battery
 
 var speech_low_battery: Array[String] = [
 	"oww I'm feeling sooooo\n good Weak...",
@@ -52,6 +53,7 @@ func _process(delta):
 				var stream_player := AudioStreamPlayer.new()
 				add_child(stream_player)
 				stream_player.stream = audio_stream
+				stream_player.volume_db = volume
 				stream_player.play()
 				stream_player.pitch_scale = [1.0, 1.0, 1.0, 1.0, 1.0, 1.1].pick_random()
 				await stream_player.finished
@@ -70,6 +72,9 @@ func _reset_cooldown():
 
 
 func _speak():
+	if Dialogic.current_timeline:
+		return
+	
 	show()
 	var chosen_line: String
 
@@ -84,6 +89,5 @@ func _speak():
 	_speaking = true
 	
 
-
-func _on_game_over():
+func _on_game_over(_cause):
 	set_process(false)

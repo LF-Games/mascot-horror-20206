@@ -15,6 +15,9 @@ const red_paint_delivered_flag := "RED_PAINT_RETURNED"
 @export var candles_sprite: Node2D
 @export var glitter_sprite: Node2D
 @export var red_paint_sprite: Node2D
+@export var battery: Battery
+@export var fade_anim: AnimationPlayer
+@export var credits_scene: PackedScene
 
 
 func _ready():
@@ -48,4 +51,10 @@ func interact():
 	
 	if GlobalState.get_flag(candle_delivered_flag) and GlobalState.get_flag(glitter_delivered_flag) and GlobalState.get_flag(red_paint_delivered_flag):
 		await Dialogic.timeline_ended
+		await get_tree().process_frame
+		battery.set_process(false)
 		Dialogic.start(final_timeline)
+		await Dialogic.timeline_ended
+		fade_anim.play("fade")
+		await fade_anim.animation_finished
+		get_tree().change_scene_to_packed(credits_scene)

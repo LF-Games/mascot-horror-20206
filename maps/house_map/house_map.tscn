@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://tdym3w07iao5" path="res://maps/house_map/grandparents_room/sprites/Cama.png" id="20_767af"]
 [ext_resource type="Texture2D" uid="uid://bjr567yqtic7e" path="res://maps/house_map/empty_room/relógio velho 2.png" id="21_c8wsn"]
 [ext_resource type="Script" uid="uid://bbmygs5ofxev0" path="res://interactable/quest_delivery_interactable.gd" id="21_cklsf"]
+[ext_resource type="PackedScene" uid="uid://dqhkr5hjhbh8e" path="res://menus/creditscreen.tscn" id="22_27xnw"]
 [ext_resource type="Texture2D" uid="uid://ctraa6ql42f6d" path="res://maps/house_map/empty_room/caixa aberta 1.png" id="22_ij0h1"]
 [ext_resource type="Texture2D" uid="uid://b08l8h4e0jc4j" path="res://maps/house_map/player_room/quest_items/pote de glitter vazio_20260424213647.png" id="23_8g47l"]
 [ext_resource type="Texture2D" uid="uid://pmws2de6wc3i" path="res://maps/house_map/empty_room/caixas fechadas 3.png" id="23_cs2b2"]
@@ -103,6 +104,10 @@
 [ext_resource type="PackedScene" uid="uid://3f30dhan2rba" path="res://Monster/monstro_lobo.tscn" id="89_cf860"]
 [ext_resource type="PackedScene" uid="uid://ccgdwt45hj41c" path="res://test/cheat_panel.tscn" id="93_nqa2f"]
 [ext_resource type="AudioStream" uid="uid://0nel6vyddjja" path="res://music/Main Theme - Eggwatch.mp3" id="97_6woio"]
+[ext_resource type="PackedScene" uid="uid://d4euo6pyhkxew" path="res://ui/jumpscares.tscn" id="101_mg8qd"]
+[ext_resource type="Script" uid="uid://bdaevb41ndrw8" path="res://maps/house_map/bgm_player.gd" id="104_hfkem"]
+[ext_resource type="PackedScene" uid="uid://bkgs1wul1a222" path="res://Monster/monster_alert.tscn" id="104_mg8qd"]
+[ext_resource type="Script" uid="uid://0cuvphaewfiv" path="res://cutscene_auto_start.gd" id="106_74bex"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_fdedp"]
 vertices = PackedVector2Array(-656, -767, -1406, -767, -1406, -1214, -656, -1214, -660, 889, -660, 1633, -662, 1277, -662, 1170, 1012, 2058, 1012, 2430, 1010, 2278, 1010, 2239, 960, 2239, 398, 2197, 398, 2148, -401.5, -932, -401.5, -990, 950, -1031, 1012, -1031, 1012, -766, 841, -766, 661, -767, 268, 2129, 921, 2058, 337, 2148, 280, 2054, 268, 2073, -688, 1087.5, -795, 1170, -804, 1146, -779, 1087.5, 893, 13, 893, -104, 1012, -413, 1012, 581, -688, 993, -798.1172, 1325.3672, -795, 1277, 1002, 989, 1012, 993, 874, 993, 910, 989, -443.8203, 1434.8125, -431, 1421.9922, -431, 1432, -606, 1633, -606, 1418.9922, -590.1797, 1434.8125, -590.1797, 1145.1875, -606, 1161.0078, -606, 889, -860.3672, 1267.7266, -940, 1146, 215, 2054, 203, 2073, -804, 1038, -779, 993, 1012, 886, 1002, 930, 841, -413, 817, -104, 817, -186, -803.3594, 1338.1875, -1005, 889, -604, 85, -592.0703, 85, -596.3594, 101, -683, 203, -437.64063, 101, -441.9297, 85, -438, 85, -493, -37, -493, 28.0625, -517, 21.640625, -566, -37, -551.9531, 31, -604, 31, 876, 886, 910, 930, 817, 13, 876, 581, 817, 76, -563.3203, 1138, -545.0078, 889, -539.21094, 910.6797, -563.3203, 1442, 103, 1633, -470.6797, 1442, -311, 1432, 17, 1456, -519.6797, 930.21094, -470.6797, 1138, -494.3203, 937, -437.6797, 937, -443.8203, 1145.1875, 841, -467, 751, -197, 661, -413, 661, -467, -940, 1038, -1095, 889, 251, 1868, 251, 1808, 816, 1811, 921, 1850, 308, 1920, 257, 1890, 192, 2430, 960, 2278, 34, 290, 34, 354.5, -204, 533, -297, 533, -479, 350, -479, 273, -16, 287.5, 942, -1101, 1012, -1101, 1012, -1089, 950, -1089, 841, -712, 1012, -712, 1012, -467, 661, -713, 128, -570.5, 128, -467, -48, -570.5, -48, -467, -107, -467, -107, -497, -399, -497, -399, -467, -443, -467, -443, -498, -728, -498, -728, -467, -1154, -467, -1406, -713, -1154, -461.25, -1158, -461.25, -1158, 533, -1161, 533, -1104, 533, -1104, 489, -683, 489, -989, 203, -989, 85, -696, 85, -696, 31, -1104, 31, -1104, -413, -728, -341, -566, -219, -728, -413, -493, -341, -493, -219, -585.7422, 140.67969, -438, 31, -439, 31, -439, -413, -399, -413, -399, -365, -107, -365, -107, -413, -48, -413, -48, -113.5, 103, -113.5, 103, -14, -16, -14, 103, 287.5, 103, 290, -448.2578, 140.67969, 103, 354.5, 103, 533, 158, 533, 157, 533, 157, -413, 291, -106, 291, 11, 751, -186, 665, -197, 511, -255, 665, -186, 511, -186, 425, -255, 425, -186, 374, -186, 374, -106, 374, 11, 374, 76, 405, 76, 405, 138, 509, 138, 509, 76, 656, 76, 656, 138, 760, 138, 760, 76, 874, 1380, 1012, 1380, 1012, 1633, 696, 1633, 696, 1687, 777.25, 1687, 777.25, 1761.9375, 544, 1733, 816, 1761.9375, 922, 1811, 922, 1776, 975, 1776, 975, 1687, 1012, 1687, 1012, 1850, 192, 1946, 251, 1946, 251, 1970, 215, 1998, 257, 1920, 197, 1808, 192, 1687, 263, 1687, 263, 1708, 327, 1708, 327, 1687, 360, 1687, 360, 1733, 544, 1687, 607, 1687, 607, 1633, 157, 1633, 157, 1363, 213, 1363, 213, 1303, 157, 1303, 157, 1281, 228, 1281, 228, 1088, 157, 1088, 157, 889, 159, 889, 159, 835, 157, 835, 157, 831.5, 103, 831.5, 103, 835, -203, 835, -204, 587, -203, 889, 103, 889, 103, 1126, 17, 1126, 103, 1456, -311, 1343, -416, 1343, -416, 1174, -1406, 1633, -1406, 1509, -987, 1509, -884.3281, 1335.8828, -987, 1225, -1406, 1225, -1406, 1133, -1324, 1133, -1324, 973, -1406, 973, -1406, 889, -602, -767, -602, -1101.5, -531, -1101.5, -484.5, -990, -484.5, -932, -531, -1214, 942, -1214, 280, 1998, 308, 1970, 337, 2197, -1406, 835, -1161, 587, -1095, 835, -297, 587, -477.3203, 169.74219, -517, 180.35938, -566, 273, -556.6797, 169.74219, -566, 350, -292, 835, -392.78906, 910.6797, -386.9922, 889, -292, 889, -421, 1174, -423.1875, 1165.8203, -412.3203, 930.21094, -934.6172, 1284.4063, -930.0625, 1272.4609, 203, 2129, 192, 1890, 197, 1868, -1005, 835, -509.2578, 835, -494.3203, 831, -437.6797, 831, -422.7422, 835, 158, 587)
@@ -430,6 +435,41 @@ data = PackedByteArray("cW9hZgAAUiYCAXcAFAAQKAAAAAAAAAAAAAAAAOAAQAAAAAAAAAAAAAAA
 format = 3
 mix_rate = 96000
 stereo = true
+[sub_resource type="Animation" id="Animation_74bex"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_27xnw"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3qag1"]
+_data = {
+&"RESET": SubResource("Animation_74bex"),
+&"fade": SubResource("Animation_27xnw")
+}
 
 [node name="MockupMap" type="Node2D" unique_id=1890274910]
 y_sort_enabled = true
@@ -447,7 +487,7 @@ tile_set = ExtResource("1_esqt2")
 [node name="Walls" type="TileMapLayer" parent="." unique_id=331267175]
 light_mask = 2
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAABAAIAAAABAAAAAAD+/wIAAAABAAAAAAD9/wIAAAABAAAAAAACAAIAAAABAAAAAAADAAIAAAABAAAAAAD8/wIAAAABAAAAAAD//wIAAAAEAAAAAAD8////AAABAAAAAAD9////AAABAAAAAAD+////AAABAAAAAAD/////AAAEAAAAAAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAD8/woAAAABAAAAAAD9/woAAAABAAAAAAD+/woAAAABAAAAAAD//woAAAABAAAAAAAAAAoAAAABAAAAAAABAAoAAAABAAAAAAACAAoAAAABAAAAAAADAAoAAAABAAAAAAD5////AAABAAAAAAD6////AAABAAAAAAD7////AAABAAAAAAD0/woAAAABAAAAAAD1/woAAAABAAAAAAD2/woAAAABAAAAAAD3/woAAAABAAAAAAD4/woAAAABAAAAAAD5/woAAAABAAAAAAD6/woAAAABAAAAAAD7/woAAAABAAAAAAD7/wIAAAABAAAAAAD6/wIAAAABAAAAAAD5/wIAAAABAAAAAAD2/wIAAAABAAAAAAD1/wIAAAABAAAAAAD0/wIAAAABAAAAAAD3/wIAAAAAAAQAAAD3////AAABAAAAAAD4////AAABAAAAAAD5//r/AAABAAAAAAD6//r/AAABAAAAAAD7//r/AAAAAAQAAAD9//r/AAABAAAAAAD4//r/AAABAAAAAAD3//r/AAABAAAAAAD4//X/AAABAAAAAAD5//X/AAABAAAAAAD6//X/AAABAAAAAAD7//X/AAABAAAAAAD8//X/AAABAAAAAAD9//X/AAABAAAAAAD3//X/AAABAAAAAAD+//X/AAABAAAAAAD///X/AAABAAAAAAAAAPX/AAABAAAAAAABAPX/AAABAAAAAAACAPX/AAABAAAAAAADAPX/AAABAAAAAAAEAPX/AAABAAAAAAAFAPX/AAABAAAAAAAGAPX/AAABAAAAAAAHAPX/AAABAAAAAAAIAPX/AAABAAAAAAALAPX/AAABAAAAAAAMAPX/AAABAAAAAAALAPL/AAABAAAAAAAMAPL/AAABAAAAAAAIAPL/AAABAAAAAAAHAPL/AAABAAAAAAAGAPL/AAABAAAAAAAFAPL/AAABAAAAAAAEAPL/AAABAAAAAAADAPL/AAABAAAAAAACAPL/AAABAAAAAAABAPL/AAABAAAAAAAAAPL/AAABAAAAAAD///L/AAABAAAAAAD+//L/AAABAAAAAAD9//L/AAABAAAAAAD8//L/AAABAAAAAAD7//L/AAABAAAAAAD6//L/AAABAAAAAAD5//L/AAABAAAAAAD2//L/AAABAAAAAAD1//L/AAABAAAAAAD0//L/AAABAAAAAAAEAAoAAAABAAAAAAAFAAoAAAABAAAAAAAGAAoAAAABAAAAAAAHAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAAEABIAAAABAAAAAAAFABIAAAABAAAAAAAGABIAAAABAAAAAAAHABIAAAABAAAAAAALABIAAAABAAAAAAAMABIAAAABAAAAAAAIABIAAAAEAAIAAAAKABIAAAABAAAAAAAIAAoAAAAEAAAAAAD3//L/AAAAAAQAAAAMAO3/AAABAAAAAAALAO3/AAABAAAAAAAKAO3/AAABAAAAAAAJAO3/AAABAAAAAAAIAO3/AAABAAAAAAAHAO3/AAABAAAAAAAGAO3/AAABAAAAAAAFAO3/AAABAAAAAAAEAO3/AAABAAAAAAADAO3/AAABAAAAAAACAO3/AAABAAAAAAABAO3/AAABAAAAAAAAAO3/AAABAAAAAAD//+3/AAABAAAAAAD+/+3/AAABAAAAAAD9/+3/AAABAAAAAAD8/+3/AAABAAAAAAD7/+3/AAABAAAAAAD6/+3/AAABAAAAAAD5/+3/AAABAAAAAAD4/+3/AAABAAAAAAD3/+3/AAABAAAAAAD2/+3/AAABAAAAAAD1/+3/AAABAAAAAAD0/+3/AAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAABAAIAAAABAAAAAAD+/wIAAAABAAAAAAD9/wIAAAABAAAAAAACAAIAAAABAAAAAAADAAIAAAABAAAAAAD8/wIAAAABAAAAAAD//wIAAAAEAAAAAAD8////AAABAAAAAAD9////AAABAAAAAAD+////AAABAAAAAAD/////AAAEAAAAAAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAgD8/woAAAABAAAAAAD9/woAAAABAAAAAAD+/woAAAABAAAAAAD//woAAAABAAAAAAAAAAoAAAABAAAAAAABAAoAAAABAAAAAAACAAoAAAABAAAAAAADAAoAAAABAAAAAAD5////AAABAAAAAAD6////AAABAAAAAAD7////AAABAAAAAAD0/woAAAABAAAAAAD1/woAAAABAAAAAAD2/woAAAABAAAAAAD3/woAAAABAAAAAAD4/woAAAABAAAAAAD5/woAAAABAAAAAAD6/woAAAABAAAAAAD7/woAAAABAAAAAAD7/wIAAAABAAAAAAD6/wIAAAABAAAAAAD5/wIAAAABAAAAAAD2/wIAAAABAAAAAAD1/wIAAAABAAAAAAD0/wIAAAABAAAAAAD3/wIAAAAAAAQAAAD3////AAABAAAAAQD4////AAABAAAAAAD5//r/AAABAAAAAAD6//r/AAABAAAAAAD7//r/AAAAAAQAAAD9//r/AAABAAAAAAD4//r/AAABAAAAAAD3//r/AAABAAAAAAD4//X/AAABAAAAAAD5//X/AAABAAAAAAD6//X/AAABAAAAAAD7//X/AAABAAAAAAD8//X/AAABAAAAAAD9//X/AAABAAAAAAD3//X/AAABAAAAAAD+//X/AAABAAAAAAD///X/AAABAAAAAAAAAPX/AAABAAAAAAABAPX/AAABAAAAAAACAPX/AAABAAAAAAADAPX/AAABAAAAAAAEAPX/AAABAAAAAAAFAPX/AAABAAAAAAAGAPX/AAABAAAAAAAHAPX/AAABAAAAAAAIAPX/AAABAAAAAAALAPX/AAABAAAAAAAMAPX/AAABAAAAAAALAPL/AAABAAAAAAAMAPL/AAABAAAAAAAIAPL/AAABAAAAAAAHAPL/AAABAAAAAAAGAPL/AAABAAAAAAAFAPL/AAABAAAAAAAEAPL/AAABAAAAAAADAPL/AAABAAAAAAACAPL/AAABAAAAAAABAPL/AAABAAAAAAAAAPL/AAABAAAAAAD///L/AAABAAAAAAD+//L/AAABAAAAAAD9//L/AAABAAAAAAD8//L/AAABAAAAAAD7//L/AAABAAAAAAD6//L/AAABAAAAAAD5//L/AAABAAAAAAD2//L/AAABAAAAAAD1//L/AAABAAAAAAD0//L/AAABAAAAAAAEAAoAAAABAAAAAAAFAAoAAAABAAAAAAAGAAoAAAABAAAAAAAHAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAAEABIAAAABAAAAAAAFABIAAAABAAAAAAAGABIAAAABAAAAAAAHABIAAAABAAAAAAALABIAAAABAAAAAAAMABIAAAABAAAAAAAIABIAAAAEAAIAAAAKABIAAAABAAAAAAAIAAoAAAAEAAAAAAD3//L/AAAAAAQAAAAMAO3/AAABAAAAAAALAO3/AAABAAAAAAAKAO3/AAABAAAAAAAJAO3/AAABAAAAAAAIAO3/AAABAAAAAAAHAO3/AAABAAAAAAAGAO3/AAABAAAAAAAFAO3/AAABAAAAAAAEAO3/AAABAAAAAAADAO3/AAABAAAAAAACAO3/AAABAAAAAAABAO3/AAABAAAAAAAAAO3/AAABAAAAAAD//+3/AAABAAAAAAD+/+3/AAABAAAAAAD9/+3/AAABAAAAAAD8/+3/AAABAAAAAAD7/+3/AAABAAAAAAD6/+3/AAABAAAAAAD5/+3/AAABAAAAAAD4/+3/AAABAAAAAAD3/+3/AAABAAAAAAD2/+3/AAABAAAAAAD1/+3/AAABAAAAAAD0/+3/AAABAAAAAAA=")
 tile_set = ExtResource("1_esqt2")
 
 [node name="Colliders" type="Node2D" parent="Walls" unique_id=1204986000 groups=["nav_obstacle"]]
@@ -842,17 +882,20 @@ position = Vector2(117, -386.00003)
 scale = Vector2(0.41484123, 0.41484123)
 texture = ExtResource("18_u4u11")
 
-[node name="QuestDelivery" type="Area2D" parent="PlayerRoom" unique_id=76634032 node_paths=PackedStringArray("candles_sprite", "glitter_sprite", "red_paint_sprite")]
+[node name="QuestDelivery" type="Area2D" parent="PlayerRoom" unique_id=76634032 node_paths=PackedStringArray("candles_sprite", "glitter_sprite", "red_paint_sprite", "battery", "fade_anim")]
 position = Vector2(23, 3)
 script = ExtResource("21_cklsf")
 no_delivery_timeline = "no_delivery"
 candles_delivery_timeline = "candles_delivery"
 glitter_delivery_timeline = "glitter_delivery"
 red_paint_delivery_timeline = "red_paint_delivery"
-final_timeline = "final_cutscene"
+final_timeline = "Endquest_tml"
 candles_sprite = NodePath("Velas")
 glitter_sprite = NodePath("Glitter")
 red_paint_sprite = NodePath("Tinta")
+battery = NodePath("../../Player/Battery")
+fade_anim = NodePath("../../CanvasLayer/FadeToBlack/AnimationPlayer")
+credits_scene = ExtResource("22_27xnw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRoom/QuestDelivery" unique_id=1448171963]
 shape = SubResource("CircleShape2D_epkg2")
@@ -2147,7 +2190,6 @@ target = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=250710723 node_paths=PackedStringArray("default_ui")]
 process_mode = 3
-visible = false
 script = ExtResource("5_sl6ml")
 default_ui = NodePath("GameplayUI")
 
@@ -2157,6 +2199,10 @@ metadata/_custom_type_script = "uid://b5jr5qc0lxppc"
 
 [node name="GameplayUI" parent="CanvasLayer" unique_id=1269869551 node_paths=PackedStringArray("battery") instance=ExtResource("6_2it02")]
 process_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 battery = NodePath("../../Player/Battery")
 
 [node name="RechargeBar" parent="CanvasLayer/GameplayUI" index="0" unique_id=543826916]
@@ -2191,6 +2237,32 @@ offset_bottom = 0.0
 visible = false
 ui_controller = NodePath("..")
 
+[node name="Jumpscares" parent="CanvasLayer" unique_id=1919103664 instance=ExtResource("101_mg8qd")]
+
+[node name="FadeToBlack" type="Control" parent="CanvasLayer" unique_id=1989338783]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/FadeToBlack" unique_id=783760403]
+modulate = Color(1, 1, 1, 0)
+z_index = 4096
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/FadeToBlack" unique_id=1521691828]
+libraries/ = SubResource("AnimationLibrary_3qag1")
+
 [node name="Pause" type="Node" parent="." unique_id=231805595 node_paths=PackedStringArray("ui_controller", "pause_ui", "pause_button")]
 process_mode = 3
 script = ExtResource("9_bxfkl")
@@ -2204,6 +2276,18 @@ volume_db = 3.0
 autoplay = true
 bus = &"BGM"
 parameters/looping = true
+script = ExtResource("104_hfkem")
+
+[node name="MonsterAlert" parent="." unique_id=981186902 node_paths=PackedStringArray("wolf_monster", "grandma_monster", "wolf_anim", "grandma_anim") instance=ExtResource("104_mg8qd")]
+wolf_monster = NodePath("../MonstroLobo")
+grandma_monster = NodePath("../Monstro")
+wolf_anim = NodePath("../CanvasLayer/Jumpscares/WolfAnimations")
+grandma_anim = NodePath("../CanvasLayer/Jumpscares/GrandmaAnimations")
+
+[node name="CutsceneAutostart" type="Node" parent="." unique_id=1896278817]
+script = ExtResource("106_74bex")
+timeline_name = "bedroomstart_tml"
+check_flag = "GAME_INTRO_CUTSCENE"
 
 [editable path="EmptyRoom/GlitterDrawing"]
 [editable path="GrandparentsRoom/RedFlower"]
@@ -2215,3 +2299,4 @@ parameters/looping = true
 [editable path="Player"]
 [editable path="CanvasLayer/GameplayUI"]
 [editable path="CanvasLayer/PauseUI"]
+[editable path="CanvasLayer/Jumpscares"]

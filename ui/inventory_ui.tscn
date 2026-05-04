@@ -2,26 +2,14 @@
 
 [ext_resource type="Script" uid="uid://s8ml7ryevwv1" path="res://ui/inventory_ui.gd" id="1_wij5n"]
 [ext_resource type="PackedScene" uid="uid://ckcfpjp82rovv" path="res://ui/inventory_label.tscn" id="2_j1vmf"]
+[ext_resource type="Texture2D" uid="uid://oahqhbgmtvjc" path="res://menus/eggwatchinterface.png" id="3_j1vmf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wvpk"]
-content_margin_left = 32.0
-content_margin_top = 32.0
-content_margin_right = 32.0
-content_margin_bottom = 32.0
-bg_color = Color(0.60784316, 0.23529412, 0.9254902, 0.6039216)
-border_width_left = 24
-border_width_top = 24
-border_width_right = 24
-border_width_bottom = 24
-border_color = Color(1, 1, 1, 0.8784314)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-expand_margin_left = 12.0
-expand_margin_top = 12.0
-expand_margin_right = 12.0
-expand_margin_bottom = 12.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lsmr7"]
+texture = ExtResource("3_j1vmf")
+texture_margin_left = 100.0
+texture_margin_top = 100.0
+texture_margin_right = 100.0
+texture_margin_bottom = 100.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_wij5n"]
 font_size = 48
@@ -40,18 +28,18 @@ no_items_label = NodePath("NoItemLabel")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1944424328]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -572.0
-offset_top = -811.0
-offset_right = 572.0
-offset_bottom = -107.0
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -420.0
+offset_right = 640.0
+offset_bottom = 420.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_7wvpk")
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lsmr7")
 
 [node name="VFlowContainer" type="VFlowContainer" parent="PanelContainer" unique_id=935926667]
 custom_minimum_size = Vector2(1080, 640)
