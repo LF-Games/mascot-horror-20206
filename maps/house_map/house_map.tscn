@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://tdym3w07iao5" path="res://maps/house_map/grandparents_room/sprites/Cama.png" id="20_767af"]
 [ext_resource type="Texture2D" uid="uid://bjr567yqtic7e" path="res://maps/house_map/empty_room/relógio velho 2.png" id="21_c8wsn"]
 [ext_resource type="Script" uid="uid://bbmygs5ofxev0" path="res://interactable/quest_delivery_interactable.gd" id="21_cklsf"]
+[ext_resource type="PackedScene" uid="uid://dqhkr5hjhbh8e" path="res://menus/creditscreen.tscn" id="22_27xnw"]
 [ext_resource type="Texture2D" uid="uid://ctraa6ql42f6d" path="res://maps/house_map/empty_room/caixa aberta 1.png" id="22_ij0h1"]
 [ext_resource type="Texture2D" uid="uid://b08l8h4e0jc4j" path="res://maps/house_map/player_room/quest_items/pote de glitter vazio_20260424213647.png" id="23_8g47l"]
 [ext_resource type="Texture2D" uid="uid://pmws2de6wc3i" path="res://maps/house_map/empty_room/caixas fechadas 3.png" id="23_cs2b2"]
@@ -427,6 +428,42 @@ size = Vector2(30, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ai0ry"]
 size = Vector2(33.999992, 32)
+
+[sub_resource type="Animation" id="Animation_74bex"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_27xnw"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3qag1"]
+_data = {
+&"RESET": SubResource("Animation_74bex"),
+&"fade": SubResource("Animation_27xnw")
+}
 
 [node name="MockupMap" type="Node2D" unique_id=1890274910]
 y_sort_enabled = true
@@ -839,17 +876,20 @@ position = Vector2(117, -386.00003)
 scale = Vector2(0.41484123, 0.41484123)
 texture = ExtResource("18_u4u11")
 
-[node name="QuestDelivery" type="Area2D" parent="PlayerRoom" unique_id=76634032 node_paths=PackedStringArray("candles_sprite", "glitter_sprite", "red_paint_sprite")]
+[node name="QuestDelivery" type="Area2D" parent="PlayerRoom" unique_id=76634032 node_paths=PackedStringArray("candles_sprite", "glitter_sprite", "red_paint_sprite", "battery", "fade_anim")]
 position = Vector2(23, 3)
 script = ExtResource("21_cklsf")
 no_delivery_timeline = "no_delivery"
 candles_delivery_timeline = "candles_delivery"
 glitter_delivery_timeline = "glitter_delivery"
 red_paint_delivery_timeline = "red_paint_delivery"
-final_timeline = "final_cutscene"
+final_timeline = "Endquest_tml"
 candles_sprite = NodePath("Velas")
 glitter_sprite = NodePath("Glitter")
 red_paint_sprite = NodePath("Tinta")
+battery = NodePath("../../Player/Battery")
+fade_anim = NodePath("../../CanvasLayer/FadeToBlack/AnimationPlayer")
+credits_scene = ExtResource("22_27xnw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRoom/QuestDelivery" unique_id=1448171963]
 shape = SubResource("CircleShape2D_epkg2")
@@ -2188,6 +2228,30 @@ visible = false
 ui_controller = NodePath("..")
 
 [node name="Jumpscares" parent="CanvasLayer" unique_id=1919103664 instance=ExtResource("101_mg8qd")]
+
+[node name="FadeToBlack" type="Control" parent="CanvasLayer" unique_id=1989338783]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/FadeToBlack" unique_id=783760403]
+modulate = Color(1, 1, 1, 0)
+z_index = 4096
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/FadeToBlack" unique_id=1521691828]
+libraries/ = SubResource("AnimationLibrary_3qag1")
 
 [node name="Pause" type="Node" parent="." unique_id=231805595 node_paths=PackedStringArray("ui_controller", "pause_ui", "pause_button")]
 process_mode = 3

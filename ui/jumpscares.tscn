@@ -308,6 +308,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Grandma Rect" type="ColorRect" parent="." unique_id=2031981015]
 modulate = Color(1, 1, 1, 0)
@@ -317,6 +318,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.8980392, 0.8901961, 0.69803923, 1)
 
 [node name="WolfRect" type="ColorRect" parent="." unique_id=1101800035]
@@ -327,6 +329,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.6313726, 0.23529412, 0.9372549, 1)
 
 [node name="WolfEyes" type="TextureRect" parent="." unique_id=413305037]
@@ -340,6 +343,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("1_olt1w")
 expand_mode = 1
 stretch_mode = 3
@@ -359,6 +363,7 @@ offset_right = 635.0
 offset_bottom = 276.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_xch6u")
 
 [node name="GrandmaAnimations" type="AnimationPlayer" parent="." unique_id=1905403034]
