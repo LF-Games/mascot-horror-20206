@@ -10,6 +10,7 @@ var _flags: Dictionary[StringName, bool] = {}
 var _inventory_items: Dictionary[StringName, int] = {}
 var _saved_flags: Dictionary[StringName, bool] = {}
 var _saved_items: Dictionary[StringName, int] = {}
+@onready var _item_pickup := $/root/MockupMap/Player/ItemPickupSound as AudioStreamPlayer
 
 func set_flag(key: StringName, value := true) -> bool:
 	_flags[key] = value
@@ -28,6 +29,7 @@ func add_inventory_item(key: StringName) -> void:
 		_inventory_items[key] = 1
 	else:
 		_inventory_items[key] += 1
+	_item_pickup.play()
 	item_added.emit(key)
 
 
