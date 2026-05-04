@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dmmdm2tayg8mw"]
 
 [ext_resource type="Script" uid="uid://dg5dyblh2s7xd" path="res://ui/gameplay_ui.gd" id="1_7fgxj"]
-[ext_resource type="Texture2D" uid="uid://cmjck4uvs2vfx" path="res://ui/eggwatch_sprites/eggwatch_serious.png" id="2_hirpm"]
 [ext_resource type="Script" uid="uid://dwtfo8h87ttty" path="res://ui/speech/eggwatch_speech.gd" id="3_7e4rd"]
 [ext_resource type="AudioStream" uid="uid://cohfta0h04k68" path="res://ui/speech/eggwatch_voice.mp3" id="4_w5py3"]
 [ext_resource type="Texture2D" uid="uid://djvrt732u1cj5" path="res://ui/speech/minicaixa_dialogo_tamagochi.png" id="5_w5py3"]
+[ext_resource type="Texture2D" uid="uid://82ubi1vsock0" path="res://ui/eggwatch_sprites/eggwatch_happy.png" id="5_yvhg4"]
 [ext_resource type="FontFile" uid="uid://dh8yr3sl1ka7u" path="res://Junction-regular.otf" id="6_hp7tp"]
 [ext_resource type="FontFile" uid="uid://bsx6t4q8efypk" path="res://Junction-bold.otf" id="7_bs7q0"]
 [ext_resource type="Script" uid="uid://b0qtyx8ycedsi" path="res://ui/objective_display_label.gd" id="8_yvhg4"]
@@ -179,7 +179,7 @@ anchor_bottom = 1.0
 offset_top = -512.0
 offset_right = 512.0
 grow_vertical = 0
-texture = ExtResource("2_hirpm")
+texture = ExtResource("5_yvhg4")
 expand_mode = 1
 stretch_mode = 5
 

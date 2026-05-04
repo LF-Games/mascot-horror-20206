@@ -72,6 +72,9 @@ func _reset_cooldown():
 
 
 func _speak():
+	if Dialogic.current_timeline:
+		return
+	
 	show()
 	var chosen_line: String
 
