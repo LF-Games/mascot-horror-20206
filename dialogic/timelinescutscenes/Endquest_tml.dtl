@@ -1,18 +1,18 @@
 join eggwatch_char (egghappy) center
-eggwatch_char: First, to build our scene, you need to draw the symbol of Azarothe on the floor (⇀‸↼‶). #id:1e
+eggwatch_char: First, to build our scene, you need to draw the symbol of Azarothe on the floor (>o<‶). #id:1e
 join Boy_char (boybase) left
 
 Boy_char: Huh… Aza what?? What does that look like? #id:1f
 
-eggwatch_char (eggmad): Like a circle on the floor with- WE DON'T HAVE TIME, JUST DO YOUR BEST (╬ಠ益ಠ)!!! #id:20
+eggwatch_char (eggmad): Like a circle on the floor with- WE DON'T HAVE TIME, JUST DO YOUR BEST (ó_ó)!!! #id:20
 
 Boy_char (boyhappy): You're really in a hurry to play, I'll do something like this… hm.. done, what else? #id:21
 
-eggwatch_char (eggmad): Now place the five ritual candles around and LIGHT THEM ಠ益ಠ)凸!!! #id:22
+eggwatch_char (eggmad): Now place the five ritual candles around and LIGHT THEM (>_<)!!! #id:22
 
 Boy_char (boyscared): Light? But Grandma said not to play with fire, I might get burned. #id:23
 
-eggwatch_char (eggmad): FORGET ABOUT THAT, now put the sand of souls and place me in the middle of the circle, I'LL FIND A WAY OUT ((╬◣﹏◢))!!! #id:24
+eggwatch_char (eggmad): FORGET ABOUT THAT, now put the sand of souls and place me in the middle of the circle, I'LL FIND A WAY OUT ((#>_<#))!!! #id:24
 Boy_char: *The eggwatch begins to tremble in the middle of the circle and all the candles are lit in order, the room begins to get hotter.* #id:25
 
 Boy_char (boyscared): Hmm... you're scaring me, I don't want to play with you anymore. #id:26
