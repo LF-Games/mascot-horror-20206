@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtekjqqu1wbii" path="res://ui/interface_sprites/eggwatch_pause_menu.png" id="1_hkaxo"]
 [ext_resource type="Texture2D" uid="uid://di123gr2d0nhg" path="res://ui/interface_sprites/bolinha.png" id="2_tdq1o"]
 [ext_resource type="Texture2D" uid="uid://b03ndkal2ry5a" path="res://ui/interface_sprites/Padrao.png" id="2_tpa82"]
+[ext_resource type="FontVariation" uid="uid://bg2yoc5voer2e" path="res://dialogic/eggwatchstyle/eggwatchfont.tres" id="2_ybf3v"]
 [ext_resource type="Texture2D" uid="uid://kwspesat60f6" path="res://ui/interface_sprites/barra.png" id="3_tdq1o"]
 [ext_resource type="Texture2D" uid="uid://bhg0rbprs328o" path="res://ui/interface_sprites/Pressionado.png" id="3_ybf3v"]
 [ext_resource type="Texture2D" uid="uid://f5u6g0rrat1n" path="res://ui/interface_sprites/Hover.png" id="4_s1usq"]
@@ -59,6 +60,7 @@ offset_right = 150.0
 offset_bottom = -63.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ybf3v")
 theme_override_styles/normal = SubResource("StyleBoxTexture_bg0kt")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hmmmp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_jukdx")
@@ -79,6 +81,7 @@ offset_right = 55.0
 offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ybf3v")
 text = "Volume"
 
 [node name="VolumeSlider" type="HSlider" parent="." unique_id=1030656773]

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://s8ml7ryevwv1" path="res://ui/inventory_ui.gd" id="1_wij5n"]
 [ext_resource type="PackedScene" uid="uid://ckcfpjp82rovv" path="res://ui/inventory_label.tscn" id="2_j1vmf"]
 [ext_resource type="Texture2D" uid="uid://oahqhbgmtvjc" path="res://menus/eggwatchinterface.png" id="3_j1vmf"]
+[ext_resource type="FontVariation" uid="uid://bg2yoc5voer2e" path="res://dialogic/eggwatchstyle/eggwatchfont.tres" id="4_lsmr7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lsmr7"]
 texture = ExtResource("3_j1vmf")
@@ -60,5 +61,6 @@ offset_right = 105.0
 offset_bottom = 122.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_lsmr7")
 text = "No Items"
 label_settings = SubResource("LabelSettings_wij5n")
